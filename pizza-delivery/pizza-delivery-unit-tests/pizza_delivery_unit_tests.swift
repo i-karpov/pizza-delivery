@@ -22,15 +22,8 @@ class pizza_delivery_unit_tests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        // Arrange
-        let testService = TestService()
-        
-        // Act
-        let is123Palindrome = testService.checkIsPalindrome(123)
-        
-        // Assert
-        XCTAssertFalse(is123Palindrome, "Wrong: treats 123 as palindrom.")
+
+        XCTAssertTrue(true)
     }
 
 }

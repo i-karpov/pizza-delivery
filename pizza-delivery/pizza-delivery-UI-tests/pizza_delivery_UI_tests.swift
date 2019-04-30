@@ -29,7 +29,6 @@ class pizza_delivery_UI_tests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        Thread.sleep(forTimeInterval: 6)
         XCTAssert(XCUIApplication().staticTexts["Pizza Delivery"].exists)
     }
 
