@@ -1,0 +1,6 @@
+framework module Pods_pizza_delivery {
+  umbrella header "Pods-pizza-delivery-umbrella.h"
+
+  export *
+  module * { export * }
+}
