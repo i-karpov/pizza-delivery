@@ -198,6 +198,7 @@
 				DE4CF3797F2293185C411778 /* [CP] Check Pods Manifest.lock */,
 				48FE4C942278D83D00881D72 /* Sources */,
 				48FE4C952278D83D00881D72 /* Frameworks */,
+				48063748227903D100E006E5 /* ShellScript */,
 				48FE4C962278D83D00881D72 /* Resources */,
 			);
 			buildRules = (
@@ -280,6 +281,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		48063748227903D100E006E5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 		DE4CF3797F2293185C411778 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

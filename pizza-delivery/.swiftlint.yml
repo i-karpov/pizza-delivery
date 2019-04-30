@@ -1,0 +1,48 @@
+disabled_rules:
+  - trailing_whitespace
+opt_in_rules:
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - conditional_returns_on_newline
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+  - first_where
+  - force_unwrapping
+  - nimble_operator
+  - object_literal
+  - operator_usage_whitespace
+  - overridden_super_call
+  - private_outlet
+  - prohibited_super_call
+  - redundant_nil_coalescing
+  - switch_case_on_newline
+included:
+excluded:
+  - Carthage
+  - Pods
+  - pizza-delivery-UI-tests
+  - pizza-delivery-unit-tests
+
+type_body_length:
+  warning: 100
+  error: 200
+function_body_length:
+  warning: 20
+  error: 25
+cyclomatic_complexity:
+  warning: 5
+  error: 10
+nesting:
+  statement_level:
+    warning: 3
+function_parameter_count:
+  warning: 4
+  error: 5
+file_length:
+  warning: 200
+  error: 400
+line_length:
+  warning: 120
+  error: 130

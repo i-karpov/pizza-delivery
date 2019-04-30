@@ -11,6 +11,7 @@ import Foundation
 class TestService {
     
     func checkIsPalindrome(_ string: String) -> Bool {
+        // efkesfliseuhfilweshf liawef lawe fwile fewfwe weilfuhwaf wlfhawlief wf walifu hwa fwefi ulwahf w
         return string == String(string.reversed())
     }
     
