@@ -15,4 +15,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    private func f1() {
+        print("hello")
+    }
+    
+    private func f2() {
+        print("hello")
+    }
+    
+    private func f3() {
+        print("hello")
+    }
+    
+    private func f4() {
+        print("hello")
+    }
 }
