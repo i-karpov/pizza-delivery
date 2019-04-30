@@ -1,5 +1,5 @@
 language: objective-c
-xcode_workspace: pizza-deliver/pizza-delivery.xcworkspace
+xcode_workspace: pizza-delivery/pizza-delivery.xcworkspace
 xcode_scheme: pizza-delivery
 xcode_destination: platform=iOS Simulator,OS=12.2,name=iPhone 8
 podfile: pizza-deliver/Podfile
