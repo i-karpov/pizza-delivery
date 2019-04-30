@@ -1,0 +1,10 @@
+platform :ios, '11.0'
+
+target 'pizza-delivery' do
+
+  use_frameworks!
+
+  # Pods for pizza-delivery
+  pod 'SwiftLint'
+  
+end
