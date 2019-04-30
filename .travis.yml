@@ -4,3 +4,5 @@ xcode_scheme: pizza-delivery
 osx_image: xcode10.2
 xcode_destination: platform=iOS Simulator,OS=12.2,name=iPhone 8
 podfile: pizza-deliverу/Podfile
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
