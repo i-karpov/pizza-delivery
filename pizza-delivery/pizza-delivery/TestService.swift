@@ -20,7 +20,7 @@ class TestService {
         }
         
         let isPalindrome = checkIsPalindrome("\(int)")
-        return true//isPalindrome
+        return isPalindrome
     }
     
 }
