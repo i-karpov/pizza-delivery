@@ -20,6 +20,11 @@ class TestService {
             return false
         }
         
+        f1()
+        f2()
+        f3()
+        f4()
+        
         let isPalindrome = checkIsPalindrome("\(int)")
         return isPalindrome
     }
