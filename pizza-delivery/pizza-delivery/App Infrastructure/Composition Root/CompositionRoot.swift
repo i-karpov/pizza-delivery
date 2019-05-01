@@ -13,8 +13,19 @@ class CompositionRoot {
     var navigator: SceneNavigatorProtocol!
     private let serviceFactory: ServiceFactoryProtocol
     
+    private let urlsConfig: UrlsConfigProtocol
+    private let api: APIProtocol
+    private let dtoToModelMapper: DtoToModelMapper
+    private let menuService: MenuServiceProtocol
+    
     init(serviceFactory: ServiceFactoryProtocol) {
         self.serviceFactory = serviceFactory
+        
+        urlsConfig = ProdUrlsConfig()
+        api = API(urlsConfig: urlsConfig)
+        dtoToModelMapper = DtoToModelMapper()
+        menuService = MenuService(api: api,
+                                  mapper: dtoToModelMapper)
     }
     
     func composeScene(_ scene: Scene) -> UIViewController {
@@ -35,7 +46,8 @@ class CompositionRoot {
                 SceneFactory.makeSplash(navigator: self.navigator)
             },
             .menu: { [unowned self] in
-                SceneFactory.makeMenu(navigator: self.navigator)
+                SceneFactory.makeMenu(navigator: self.navigator,
+                                      menuService: self.menuService)
             },
             .ordersHistory: { [unowned self] in
                 SceneFactory.makeOrdersHistory(navigator: self.navigator)
