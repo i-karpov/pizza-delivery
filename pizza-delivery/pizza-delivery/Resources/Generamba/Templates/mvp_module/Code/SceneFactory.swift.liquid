@@ -1,0 +1,18 @@
+import UIKit
+
+extension SceneFactory {
+    
+    internal static func make{{ module_info.name }}(
+        navigator: SceneNavigatorProtocol,
+        initData: {{ module_info.name }}InitData) -> UIViewController {
+            
+        let viewController: {{ module_info.name }}ViewController = {{ module_info.name }}ViewController.storyboardInstance()
+        let presenter = {{ module_info.name }}Presenter(
+            view: viewController,
+            navigator: navigator,
+            initData: initData)
+        viewController.presenter = presenter
+        
+        return viewController
+    }
+}
