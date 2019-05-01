@@ -1,0 +1,28 @@
+import Foundation
+
+class {{ module_info.name }}Presenter {
+
+    private unowned let view: {{ module_info.name }}ViewProtocol
+    private unowned let navigator: SceneNavigatorProtocol
+    
+    private let initData: {{ module_info.name }}InitData
+
+    init(view: {{ module_info.name }}ViewProtocol,
+         navigator: SceneNavigatorProtocol,
+         initData: {{ module_info.name }}InitData) {
+        self.view = view
+        self.navigator = navigator
+        self.initData = initData
+    }
+
+}
+
+// MARK: - Presenter Protocol
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}PresenterProtocol {
+
+    func handleViewLoaded() {
+        // Method is called after view loading is finished.
+    }
+
+}
