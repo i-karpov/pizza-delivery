@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		480637312278DBC800E006E5 /* pizza_delivery_integration_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480637302278DBC800E006E5 /* pizza_delivery_integration_tests.swift */; };
 		4806373F2278DC1300E006E5 /* pizza_delivery_unit_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4806373E2278DC1300E006E5 /* pizza_delivery_unit_tests.swift */; };
 		4867D8CB2279A5250051461E /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8C52279A5250051461E /* Scene.swift */; };
 		4867D8CC2279A5250051461E /* SceneNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8C72279A5250051461E /* SceneNavigatorProtocol.swift */; };
@@ -26,6 +25,11 @@
 		4867D8E92279AF650051461E /* SplashViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8E22279AF650051461E /* SplashViewProtocol.swift */; };
 		4867D8EA2279AF650051461E /* SceneFactory+Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8E32279AF650051461E /* SceneFactory+Splash.swift */; };
 		4867D8ED2279AFCB0051461E /* UIViewController+StoryboardInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8EC2279AFCB0051461E /* UIViewController+StoryboardInstance.swift */; };
+		4867D8F02279CA0E0051461E /* SplashScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8EF2279CA0E0051461E /* SplashScene.swift */; };
+		4867D8F22279CA2C0051461E /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8F12279CA2C0051461E /* MenuScene.swift */; };
+		4867D8F52279CDBB0051461E /* menu_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8F42279CDBB0051461E /* menu_tests.swift */; };
+		4867D8F72279D4FC0051461E /* BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8F62279D4FC0051461E /* BaseScene.swift */; };
+		4867D8F92279D60E0051461E /* ScenesRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8F82279D60E0051461E /* ScenesRegistry.swift */; };
 		48FE4C9C2278D83E00881D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FE4C9B2278D83E00881D72 /* AppDelegate.swift */; };
 		48FE4CA32278D83F00881D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA22278D83F00881D72 /* Assets.xcassets */; };
 		48FE4CA62278D83F00881D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA42278D83F00881D72 /* LaunchScreen.storyboard */; };
@@ -52,7 +56,6 @@
 /* Begin PBXFileReference section */
 		131812E1F70C52197D495546 /* Pods_pizza_delivery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pizza_delivery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4806372E2278DBC800E006E5 /* pizza-delivery-integration-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pizza-delivery-integration-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		480637302278DBC800E006E5 /* pizza_delivery_integration_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pizza_delivery_integration_tests.swift; sourceTree = "<group>"; };
 		480637322278DBC800E006E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4806373C2278DC1300E006E5 /* pizza-delivery-unit-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pizza-delivery-unit-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4806373E2278DC1300E006E5 /* pizza_delivery_unit_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pizza_delivery_unit_tests.swift; sourceTree = "<group>"; };
@@ -83,6 +86,11 @@
 		4867D8E22279AF650051461E /* SplashViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewProtocol.swift; sourceTree = "<group>"; };
 		4867D8E32279AF650051461E /* SceneFactory+Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneFactory+Splash.swift"; sourceTree = "<group>"; };
 		4867D8EC2279AFCB0051461E /* UIViewController+StoryboardInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInstance.swift"; sourceTree = "<group>"; };
+		4867D8EF2279CA0E0051461E /* SplashScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScene.swift; sourceTree = "<group>"; };
+		4867D8F12279CA2C0051461E /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		4867D8F42279CDBB0051461E /* menu_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_tests.swift; sourceTree = "<group>"; };
+		4867D8F62279D4FC0051461E /* BaseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScene.swift; sourceTree = "<group>"; };
+		4867D8F82279D60E0051461E /* ScenesRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenesRegistry.swift; sourceTree = "<group>"; };
 		48FE4C982278D83D00881D72 /* pizza-delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pizza-delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FE4C9B2278D83E00881D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48FE4CA22278D83F00881D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,7 +138,8 @@
 		4806372F2278DBC800E006E5 /* pizza-delivery-integration-tests */ = {
 			isa = PBXGroup;
 			children = (
-				480637302278DBC800E006E5 /* pizza_delivery_integration_tests.swift */,
+				4867D8F42279CDBB0051461E /* menu_tests.swift */,
+				4867D8FA2279D6950051461E /* Supporting */,
 				480637322278DBC800E006E5 /* Info.plist */,
 			);
 			path = "pizza-delivery-integration-tests";
@@ -312,6 +321,25 @@
 				4867D8EC2279AFCB0051461E /* UIViewController+StoryboardInstance.swift */,
 			);
 			path = "Common Extensions";
+			sourceTree = "<group>";
+		};
+		4867D8EE2279C9E70051461E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4867D8EF2279CA0E0051461E /* SplashScene.swift */,
+				4867D8F12279CA2C0051461E /* MenuScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4867D8FA2279D6950051461E /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				4867D8F82279D60E0051461E /* ScenesRegistry.swift */,
+				4867D8F62279D4FC0051461E /* BaseScene.swift */,
+				4867D8EE2279C9E70051461E /* Scenes */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 		48FE4C8F2278D83D00881D72 = {
@@ -534,7 +562,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				480637312278DBC800E006E5 /* pizza_delivery_integration_tests.swift in Sources */,
+				4867D8F02279CA0E0051461E /* SplashScene.swift in Sources */,
+				4867D8F92279D60E0051461E /* ScenesRegistry.swift in Sources */,
+				4867D8F52279CDBB0051461E /* menu_tests.swift in Sources */,
+				4867D8F22279CA2C0051461E /* MenuScene.swift in Sources */,
+				4867D8F72279D4FC0051461E /* BaseScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
