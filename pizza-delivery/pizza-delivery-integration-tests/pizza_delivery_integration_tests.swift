@@ -8,7 +8,7 @@
 
 import XCTest
 
-class pizza_delivery_UI_tests: XCTestCase {
+class pizza_delivery_integration_tests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
