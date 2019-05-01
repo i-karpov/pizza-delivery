@@ -10,4 +10,7 @@ import Foundation
 
 enum Scene {
     case splash
+    case tabs
+    case menu
+    case ordersHistory
 }
