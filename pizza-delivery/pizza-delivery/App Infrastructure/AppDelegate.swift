@@ -11,11 +11,15 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    private var navigator: SceneNavigatorProtocol!
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        navigator = SceneNavigator(window: UIWindow(frame: UIScreen.main.bounds),
+                                   rootScene: .splash,
+                                   compositionRoot: makeCompositionRoot())
+        
         return true
     }
 }
