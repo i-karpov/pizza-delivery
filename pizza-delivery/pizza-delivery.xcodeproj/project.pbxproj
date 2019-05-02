@@ -60,6 +60,7 @@
 		4867D945227A4E2E0051461E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D944227A4E2E0051461E /* API.swift */; };
 		4867D947227A52170051461E /* UrlsConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D946227A52170051461E /* UrlsConfigProtocol.swift */; };
 		4867D949227A53930051461E /* ProdUrlsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D948227A53930051461E /* ProdUrlsConfig.swift */; };
+		4867D94B227AE5730051461E /* PizzasResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D94A227AE5730051461E /* PizzasResponseDto.swift */; };
 		48FE4C9C2278D83E00881D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FE4C9B2278D83E00881D72 /* AppDelegate.swift */; };
 		48FE4CA32278D83F00881D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA22278D83F00881D72 /* Assets.xcassets */; };
 		48FE4CA62278D83F00881D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA42278D83F00881D72 /* LaunchScreen.storyboard */; };
@@ -151,6 +152,7 @@
 		4867D944227A4E2E0051461E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4867D946227A52170051461E /* UrlsConfigProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlsConfigProtocol.swift; sourceTree = "<group>"; };
 		4867D948227A53930051461E /* ProdUrlsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdUrlsConfig.swift; sourceTree = "<group>"; };
+		4867D94A227AE5730051461E /* PizzasResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasResponseDto.swift; sourceTree = "<group>"; };
 		48FE4C982278D83D00881D72 /* pizza-delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pizza-delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FE4C9B2278D83E00881D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48FE4CA22278D83F00881D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 			isa = PBXGroup;
 			children = (
 				4867D93C227A4A460051461E /* PizzaDto.swift */,
+				4867D94A227AE5730051461E /* PizzasResponseDto.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 				48FE4C952278D83D00881D72 /* Frameworks */,
 				48063748227903D100E006E5 /* ShellScript */,
 				48FE4C962278D83D00881D72 /* Resources */,
+				9F182879D0262A3655733A96 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -724,6 +728,28 @@
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
+		9F182879D0262A3655733A96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pizza-delivery/Pods-pizza-delivery-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pizza-delivery/Pods-pizza-delivery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DE4CF3797F2293185C411778 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -791,6 +817,7 @@
 				4867D9262279EA1D0051461E /* MenuViewController.swift in Sources */,
 				4867D936227A47D80051461E /* CommonError.swift in Sources */,
 				4867D8CC2279A5250051461E /* SceneNavigatorProtocol.swift in Sources */,
+				4867D94B227AE5730051461E /* PizzasResponseDto.swift in Sources */,
 				4867D947227A52170051461E /* UrlsConfigProtocol.swift in Sources */,
 				4867D940227A4CA50051461E /* DtoToModelMapper.swift in Sources */,
 				4867D9172279EA020051461E /* OrdersHistoryPresenter.swift in Sources */,

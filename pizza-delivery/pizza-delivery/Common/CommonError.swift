@@ -12,6 +12,7 @@ enum CommonError: Error {
     case serverCommunicationError(ServerCommunicationError)
     case serverBusinessError(String)
     case appError(AppError)
+    case unknown
 }
 
 enum ServerCommunicationError: Error {

@@ -7,29 +7,66 @@
 //
 
 import Foundation
+import Alamofire
 
 class API: APIProtocol {
     
-    private let urlsConfig: UrlsConfigProtocol
+    private let baseUrl: String
     
     init(urlsConfig: UrlsConfigProtocol) {
-        self.urlsConfig = urlsConfig
+        self.baseUrl = urlsConfig.baseUrl
     }
     
     func getPizzas(_ completion: @escaping CommonBlock.ResultCompletionBlock<[PizzaDto]>) {
         
-        completion(.success([
-                PizzaDto(id: "1",
-                         title: "Pizza 1",
-                         priceCentsForMediumSize: 12600,
-                         description: "Description 1",
-                         smallImageUrl: "https://tinyurl.com/y2owbr6b"),
-                PizzaDto(id: "2",
-                      title: "Pizza 2",
-                      priceCentsForMediumSize: 17600,
-                      description: "Description 2",
-                      smallImageUrl: "https://tinyurl.com/y2owbr6b")
-            ]))
+        let urlString = baseUrl + "/pizzas"
+        let parameters = [
+            "filter": "meal_only:0",
+            "order": "position:asc"
+        ]
+        
+        AF.request(urlString,
+                   parameters: parameters)
+            .validate()
+            .responseDecodable { (response: DataResponse<PizzasResponseDto>) in
+                let result = response.result
+                    .map({ $0.response.data })
+                    .mapError(self.mapErrorToCommonError)
+                completion(result)
+            }
     }
     
+    private func mapErrorToCommonError(_ error: Error) -> CommonError {
+        if let urlError = error as? URLError {
+            return mapURLErrorToCommon(urlError)
+        } else if let afError = error as? AFError {
+            return mapAFErrorToCommon(afError)
+        } else {
+            return .unknown
+        }
+    }
+    
+    private func mapURLErrorToCommon(_ urlError: URLError) -> CommonError {
+        if urlError.code == URLError.Code.notConnectedToInternet {
+            return .serverCommunicationError(.noConnection)
+        } else {
+            return .serverCommunicationError(.unknown)
+        }
+    }
+    
+    private func mapAFErrorToCommon(_ afError: AFError) -> CommonError {
+        switch afError {
+        case .responseSerializationFailed(let reason):
+            switch reason {
+            case .decodingFailed(_):
+                return .appError(.parsingFailure)
+            case .inputDataNilOrZeroLength:
+                return .appError(.invalidData)
+            default:
+                return .serverCommunicationError(.unknown)
+            }
+        default:
+            return .serverCommunicationError(.unknown)
+        }
+    }
 }
