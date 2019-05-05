@@ -1,20 +1,28 @@
 PODS:
   - Alamofire (5.0.0-beta.6)
+  - Kingfisher (5.4.0)
+  - MBProgressHUD (1.1.0)
   - SwiftLint (0.30.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.5)
+  - Kingfisher (~> 5.4.0)
+  - MBProgressHUD (~> 1.1.0)
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Kingfisher
+    - MBProgressHUD
     - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
+  Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   SwiftLint: a54bf1fe12b55c68560eb2a7689dfc81458508f7
 
-PODFILE CHECKSUM: 77826342910283a6e218f03109b7379f6efd2db4
+PODFILE CHECKSUM: d2eee053f4470153f36761ac5d99296f214944e5
 
 COCOAPODS: 1.6.0

@@ -66,6 +66,9 @@
 		4867D97B227F3E8F0051461E /* OrdersHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D96F227F3E8F0051461E /* OrdersHistoryViewController.swift */; };
 		4867D97C227F3E8F0051461E /* OrdersHistoryViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D970227F3E8F0051461E /* OrdersHistoryViewProtocol.swift */; };
 		4867D97D227F3E8F0051461E /* OrdersHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D971227F3E8F0051461E /* OrdersHistoryViewController.storyboard */; };
+		4867D97F227F41C30051461E /* PizzaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D97E227F41C30051461E /* PizzaCollectionViewCell.swift */; };
+		4867D981227F41DA0051461E /* PizzaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4867D980227F41DA0051461E /* PizzaCollectionViewCell.xib */; };
+		4867D984227F48380051461E /* UICollectionView+ReusableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D983227F48380051461E /* UICollectionView+ReusableCells.swift */; };
 		48FE4C9C2278D83E00881D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FE4C9B2278D83E00881D72 /* AppDelegate.swift */; };
 		48FE4CA32278D83F00881D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA22278D83F00881D72 /* Assets.xcassets */; };
 		48FE4CA62278D83F00881D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA42278D83F00881D72 /* LaunchScreen.storyboard */; };
@@ -163,6 +166,9 @@
 		4867D96F227F3E8F0051461E /* OrdersHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersHistoryViewController.swift; sourceTree = "<group>"; };
 		4867D970227F3E8F0051461E /* OrdersHistoryViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersHistoryViewProtocol.swift; sourceTree = "<group>"; };
 		4867D971227F3E8F0051461E /* OrdersHistoryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OrdersHistoryViewController.storyboard; sourceTree = "<group>"; };
+		4867D97E227F41C30051461E /* PizzaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PizzaCollectionViewCell.swift; path = ../PizzaCollectionViewCell.swift; sourceTree = "<group>"; };
+		4867D980227F41DA0051461E /* PizzaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PizzaCollectionViewCell.xib; path = ../PizzaCollectionViewCell.xib; sourceTree = "<group>"; };
+		4867D983227F48380051461E /* UICollectionView+ReusableCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableCells.swift"; sourceTree = "<group>"; };
 		48FE4C982278D83D00881D72 /* pizza-delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pizza-delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FE4C9B2278D83E00881D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48FE4CA22278D83F00881D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -403,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				4867D8EC2279AFCB0051461E /* UIViewController+StoryboardInstance.swift */,
+				4867D983227F48380051461E /* UICollectionView+ReusableCells.swift */,
 			);
 			path = "Common Extensions";
 			sourceTree = "<group>";
@@ -556,6 +563,7 @@
 		4867D965227F3E8F0051461E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4867D982227F41E50051461E /* Views */,
 				4867D966227F3E8F0051461E /* MenuViewController.storyboard */,
 				4867D967227F3E8F0051461E /* MenuViewController.swift */,
 				4867D968227F3E8F0051461E /* MenuViewProtocol.swift */,
@@ -590,6 +598,15 @@
 				4867D971227F3E8F0051461E /* OrdersHistoryViewController.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4867D982227F41E50051461E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4867D980227F41DA0051461E /* PizzaCollectionViewCell.xib */,
+				4867D97E227F41C30051461E /* PizzaCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		48FE4C8F2278D83D00881D72 = {
@@ -762,6 +779,7 @@
 			files = (
 				48FE4CA62278D83F00881D72 /* LaunchScreen.storyboard in Resources */,
 				4867D97D227F3E8F0051461E /* OrdersHistoryViewController.storyboard in Resources */,
+				4867D981227F41DA0051461E /* PizzaCollectionViewCell.xib in Resources */,
 				4867D9092279E8DF0051461E /* TabsViewController.storyboard in Resources */,
 				4867D8E72279AF650051461E /* SplashViewController.storyboard in Resources */,
 				48FE4CA32278D83F00881D72 /* Assets.xcassets in Resources */,
@@ -799,12 +817,16 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-pizza-delivery/Pods-pizza-delivery-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -869,6 +891,7 @@
 				4867D8E62279AF650051461E /* SplashPresenter.swift in Sources */,
 				4867D974227F3E8F0051461E /* MenuPresenter.swift in Sources */,
 				4867D8D72279A61A0051461E /* SceneFactory.swift in Sources */,
+				4867D984227F48380051461E /* UICollectionView+ReusableCells.swift in Sources */,
 				4867D978227F3E8F0051461E /* SceneFactory+OrdersHistory.swift in Sources */,
 				4867D9072279E8DF0051461E /* TabsPresenter.swift in Sources */,
 				4867D8CF2279A5250051461E /* SceneNavigator.swift in Sources */,
@@ -908,6 +931,7 @@
 				4867D945227A4E2E0051461E /* API.swift in Sources */,
 				4867D949227A53930051461E /* ProdUrlsConfig.swift in Sources */,
 				4867D977227F3E8F0051461E /* MenuViewProtocol.swift in Sources */,
+				4867D97F227F41C30051461E /* PizzaCollectionViewCell.swift in Sources */,
 				4867D938227A48B00051461E /* MenuService.swift in Sources */,
 				4867D8E52279AF650051461E /* SplashPresenterProtocol.swift in Sources */,
 			);
@@ -1123,7 +1147,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4X8U3759K8;
+				DEVELOPMENT_TEAM = 6EH9W39T8X;
 				INFOPLIST_FILE = "$(SRCROOT)/pizza-delivery/App Infrastructure/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1140,7 +1164,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4X8U3759K8;
+				DEVELOPMENT_TEAM = 6EH9W39T8X;
 				INFOPLIST_FILE = "$(SRCROOT)/pizza-delivery/App Infrastructure/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

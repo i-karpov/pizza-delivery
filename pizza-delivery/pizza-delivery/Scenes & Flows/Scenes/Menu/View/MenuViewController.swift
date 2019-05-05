@@ -1,4 +1,5 @@
 import UIKit
+import MBProgressHUD
 
 class MenuViewController: UIViewController {
 
@@ -14,6 +15,14 @@ class MenuViewController: UIViewController {
     
     // MARK: - Properties
 
+    private var hud: MBProgressHUD?
+    
+    @IBOutlet weak private var errorWithRetryView: UIView!
+    @IBOutlet weak private var contentWrapperView: UIView!
+    @IBOutlet weak private var pizzasCollectionView: UICollectionView!
+    
+    private var pizzas: [Pizza]!
+    
     // MARK: - Init & Setup
 
     override func viewDidLoad() {
@@ -24,10 +33,36 @@ class MenuViewController: UIViewController {
     }
 
     private func setupSelf() {
-
+        pizzas = []
+        pizzasCollectionView.dataSource = self
+        pizzasCollectionView.registerNib(PizzaCollectionViewCell.self)
+        
+        if let flowLayout = pizzasCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
+        
     }
 
     // MARK: -
+}
+
+// MARK: - Collection View Data Source
+
+extension MenuViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return pizzas.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: PizzaCollectionViewCell = pizzasCollectionView.dequeueReusableCell(for: indexPath)
+        let pizza = pizzas[indexPath.row]
+        cell.configureWithPizza(pizzas[indexPath.row],
+                                onOrderTapped: { [weak self] in
+                                    guard let strongSelf = self else { return }
+                                    strongSelf.presenter.handleOrderPizzaTapped(pizza: pizza)
+        })
+        return cell
+    }
 }
 
 // MARK: - View Protocol
@@ -35,7 +70,13 @@ class MenuViewController: UIViewController {
 extension MenuViewController: MenuViewProtocol {
 
     func setIsAcitityIndicatorVisible(_ isVisible: Bool) {
-        fatalError("Not implemented")
+        if isVisible {
+            if hud == nil {
+                hud = MBProgressHUD.showAdded(to: view, animated: true)
+            }
+        } else {
+            hud?.hide(animated: true)
+        }
     }
     
     func showTextForError(_ error: CommonError) {
@@ -43,11 +84,16 @@ extension MenuViewController: MenuViewProtocol {
     }
     
     func showTextWithRetryForError(_ error: CommonError) {
-        fatalError("Not implemented")
+        // error label =
+        errorWithRetryView.isHidden = false
+        contentWrapperView.isHidden = true
     }
     
     func setPizzas(_ pizzas: [Pizza]) {
-        fatalError("Not implemented")
+        self.pizzas = pizzas
+        pizzasCollectionView.reloadData()
+        contentWrapperView.isHidden = false
+        errorWithRetryView.isHidden = true
     }
     
 }
