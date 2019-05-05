@@ -64,6 +64,8 @@
 		4867D951227EF3F40051461E /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D950227EF3F40051461E /* Flow.swift */; };
 		4867D955227EF4680051461E /* OrderFlowInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D954227EF4680051461E /* OrderFlowInitData.swift */; };
 		4867D958227EF6520051461E /* MockSceneNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D957227EF6520051461E /* MockSceneNavigator.swift */; };
+		4867D95D227EFB310051461E /* MockMenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D95C227EFB310051461E /* MockMenuService.swift */; };
+		4867D95F227EFB410051461E /* MockMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D95E227EFB410051461E /* MockMenuView.swift */; };
 		48FE4C9C2278D83E00881D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FE4C9B2278D83E00881D72 /* AppDelegate.swift */; };
 		48FE4CA32278D83F00881D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA22278D83F00881D72 /* Assets.xcassets */; };
 		48FE4CA62278D83F00881D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA42278D83F00881D72 /* LaunchScreen.storyboard */; };
@@ -159,6 +161,8 @@
 		4867D950227EF3F40051461E /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		4867D954227EF4680051461E /* OrderFlowInitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFlowInitData.swift; sourceTree = "<group>"; };
 		4867D957227EF6520051461E /* MockSceneNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSceneNavigator.swift; sourceTree = "<group>"; };
+		4867D95C227EFB310051461E /* MockMenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMenuService.swift; sourceTree = "<group>"; };
+		4867D95E227EFB410051461E /* MockMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMenuView.swift; sourceTree = "<group>"; };
 		48FE4C982278D83D00881D72 /* pizza-delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pizza-delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FE4C9B2278D83E00881D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48FE4CA22278D83F00881D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -228,7 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				4867D94C227EEF790051461E /* Presenters Tests */,
-				4867D956227EF5250051461E /* Supporting */,
+				4867D956227EF5250051461E /* Mocks */,
 				480637402278DC1300E006E5 /* Info.plist */,
 			);
 			path = "pizza-delivery-unit-tests";
@@ -553,12 +557,30 @@
 			path = "Scenes & Flows";
 			sourceTree = "<group>";
 		};
-		4867D956227EF5250051461E /* Supporting */ = {
+		4867D956227EF5250051461E /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
 				4867D957227EF6520051461E /* MockSceneNavigator.swift */,
+				4867D95B227EFB130051461E /* Services */,
+				4867D95A227EFB080051461E /* Views */,
 			);
-			path = Supporting;
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		4867D95A227EFB080051461E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4867D95E227EFB410051461E /* MockMenuView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4867D95B227EFB130051461E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4867D95C227EFB310051461E /* MockMenuService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		48FE4C8F2278D83D00881D72 = {
@@ -834,6 +856,8 @@
 			files = (
 				4867D958227EF6520051461E /* MockSceneNavigator.swift in Sources */,
 				4867D94E227EEFBB0051461E /* menu_presenter_tests.swift in Sources */,
+				4867D95D227EFB310051461E /* MockMenuService.swift in Sources */,
+				4867D95F227EFB410051461E /* MockMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
