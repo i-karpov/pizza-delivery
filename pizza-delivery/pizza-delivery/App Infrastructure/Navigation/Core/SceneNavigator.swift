@@ -120,4 +120,14 @@ class SceneNavigator: SceneNavigatorProtocol {
             fatalError("can't navigate back from \(String(describing: tabBarController.selectedViewController))")
         }
     }
+    
+    // MARK: - Flows
+    
+    func startFlow(_ flow: Flow, transitionType: SceneTransitionType) {
+        fatalError("Not implemented")
+    }
+    
+    func exitCurrentFlow(animated: Bool) {
+        fatalError("Not implemented")
+    }
 }

@@ -58,7 +58,7 @@ class API: APIProtocol {
         switch afError {
         case .responseSerializationFailed(let reason):
             switch reason {
-            case .decodingFailed(_):
+            case .decodingFailed:
                 return .appError(.parsingFailure)
             case .inputDataNilOrZeroLength:
                 return .appError(.invalidData)
