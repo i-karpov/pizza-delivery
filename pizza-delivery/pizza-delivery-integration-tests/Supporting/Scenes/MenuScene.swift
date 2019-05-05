@@ -11,24 +11,24 @@ import XCTest
 class MenuScene: BaseScene {
     
     override func isDisplayed() {
-        // TODO: assert that screen is present
-        XCTAssertFalse(true)
-        fatalError("not implemented")
+        let menuView = app.otherElements[AccessibilityIdentitier.Menu.rootView]
+        XCTAssert(menuView.exists, "Splash screen is not displayed.")
     }
     
     func waitUntilMenuIsLoaded() {
-        fatalError("not implemented")
+        let firstCell = app.cells[String(format: AccessibilityIdentitier.Menu.pizzaCellFormat, "0")]
+        XCTAssert(firstCell.waitForExistence(timeout: 10))
     }
     
     func firstPizzaTitleIs(_ expectedTitle: String) {
-        let actualTitle = "" // TODO: retreive real title
+        let firstCell = app.cells[String(format: AccessibilityIdentitier.Menu.pizzaCellFormat, "0")]
+        let actualTitle = firstCell.staticTexts[AccessibilityIdentitier.Menu.pizzaCellTitle].label
         XCTAssertEqual(actualTitle, expectedTitle, "First pizza name is not correct.")
-        fatalError("not implemented")
     }
     
     func firstPizzaPriceIs(_ expectedPrice: String) {
-        let actualPrice = "" // TODO: retreive real title
+        let firstCell = app.cells[String(format: AccessibilityIdentitier.Menu.pizzaCellFormat, "0")]
+        let actualPrice = firstCell.staticTexts[AccessibilityIdentitier.Menu.pizzaCellPrice].label
         XCTAssertEqual(actualPrice, expectedPrice, "First pizza price is not correct.")
-        fatalError("not implemented")
     }
 }

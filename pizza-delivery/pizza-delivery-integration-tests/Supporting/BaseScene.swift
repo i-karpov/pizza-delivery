@@ -10,10 +10,12 @@ import XCTest
 
 class BaseScene {
     
-    private let app: XCUIApplication
+    let app: XCUIApplication
+    let testCase: XCTestCase
     
-    init(app: XCUIApplication) {
+    init(app: XCUIApplication, testCase: XCTestCase) {
         self.app = app
+        self.testCase = testCase
     }
     
     func isDisplayed() {

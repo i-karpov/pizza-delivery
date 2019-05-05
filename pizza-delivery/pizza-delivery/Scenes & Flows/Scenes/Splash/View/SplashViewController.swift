@@ -24,7 +24,7 @@ class SplashViewController: UIViewController {
     }
 
     private func setupSelf() {
-
+        view.accessibilityIdentifier = AccessibilityIdentitier.Splash.rootView
     }
 
     // MARK: -

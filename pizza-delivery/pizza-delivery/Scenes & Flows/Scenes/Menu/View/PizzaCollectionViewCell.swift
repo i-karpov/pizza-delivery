@@ -27,6 +27,8 @@ class PizzaCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         widthConstraint.constant = UIScreen.main.bounds.size.width
         contentView.addSubview(contentWrapper)
+        titleLabel.accessibilityIdentifier = AccessibilityIdentitier.Menu.pizzaCellTitle
+        priceLabel.accessibilityIdentifier = AccessibilityIdentitier.Menu.pizzaCellPrice
     }
     
     func configureWithPizza(_ pizza: Pizza,

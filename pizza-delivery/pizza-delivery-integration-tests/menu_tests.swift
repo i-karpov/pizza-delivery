@@ -16,7 +16,7 @@ class menu_tests: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         let app = XCUIApplication()
-        scenesRegistry = ScenesRegistry(app: app)
+        scenesRegistry = ScenesRegistry(app: app, testCase: self)
         app.launch()
         
         // Arrange
@@ -35,7 +35,7 @@ class menu_tests: XCTestCase {
     func test_menu_gets_loaded_and_first_pizza_is_correct() {
         menuScene.waitUntilMenuIsLoaded()
         menuScene.firstPizzaTitleIs("Гавайская")
-        menuScene.firstPizzaPriceIs("12,60")
+        menuScene.firstPizzaPriceIs("12,90")
     }
 
 }

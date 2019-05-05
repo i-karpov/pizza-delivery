@@ -11,13 +11,17 @@ import XCTest
 class SplashScene: BaseScene {
     
     override func isDisplayed() {
-        // TODO: assert that screen is present
-        XCTAssertFalse(true)
-        fatalError("not implemented")
+        let splashView = app.otherElements[AccessibilityIdentitier.Splash.rootView]
+        XCTAssert(splashView.exists, "Splash screen is not displayed.")
     }
     
     func waitUntilPassed() {
-        // TODO: implement
+        let splashView = app.otherElements[AccessibilityIdentitier.Splash.rootView]
+        let doesNotExistPredicate = NSPredicate(format: "hittable == FALSE")
+        testCase.expectation(for: doesNotExistPredicate,
+                             evaluatedWith: splashView,
+                             handler: nil)
+        testCase.waitForExpectations(timeout: 5, handler: nil)
     }
     
 }

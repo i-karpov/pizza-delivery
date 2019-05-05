@@ -69,6 +69,8 @@
 		4867D97F227F41C30051461E /* PizzaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D97E227F41C30051461E /* PizzaCollectionViewCell.swift */; };
 		4867D981227F41DA0051461E /* PizzaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4867D980227F41DA0051461E /* PizzaCollectionViewCell.xib */; };
 		4867D984227F48380051461E /* UICollectionView+ReusableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D983227F48380051461E /* UICollectionView+ReusableCells.swift */; };
+		4867D988227F804B0051461E /* AccessibilityIdentitier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D987227F804B0051461E /* AccessibilityIdentitier.swift */; };
+		4867D98B227F84540051461E /* AccessibilityIdentitier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D987227F804B0051461E /* AccessibilityIdentitier.swift */; };
 		48FE4C9C2278D83E00881D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FE4C9B2278D83E00881D72 /* AppDelegate.swift */; };
 		48FE4CA32278D83F00881D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA22278D83F00881D72 /* Assets.xcassets */; };
 		48FE4CA62278D83F00881D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA42278D83F00881D72 /* LaunchScreen.storyboard */; };
@@ -169,6 +171,7 @@
 		4867D97E227F41C30051461E /* PizzaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PizzaCollectionViewCell.swift; path = ../PizzaCollectionViewCell.swift; sourceTree = "<group>"; };
 		4867D980227F41DA0051461E /* PizzaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PizzaCollectionViewCell.xib; path = ../PizzaCollectionViewCell.xib; sourceTree = "<group>"; };
 		4867D983227F48380051461E /* UICollectionView+ReusableCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableCells.swift"; sourceTree = "<group>"; };
+		4867D987227F804B0051461E /* AccessibilityIdentitier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentitier.swift; sourceTree = "<group>"; };
 		48FE4C982278D83D00881D72 /* pizza-delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pizza-delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FE4C9B2278D83E00881D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48FE4CA22278D83F00881D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -236,6 +239,7 @@
 		4867D8A5227998930051461E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4867D987227F804B0051461E /* AccessibilityIdentitier.swift */,
 				4867D8EB2279AFAE0051461E /* Common Extensions */,
 				4867D8DA2279AF650051461E /* Splash */,
 				4867D8FB2279E8DF0051461E /* Tabs */,
@@ -863,6 +867,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4867D8F02279CA0E0051461E /* SplashScene.swift in Sources */,
+				4867D98B227F84540051461E /* AccessibilityIdentitier.swift in Sources */,
 				4867D8F92279D60E0051461E /* ScenesRegistry.swift in Sources */,
 				4867D8F52279CDBB0051461E /* menu_tests.swift in Sources */,
 				4867D8F22279CA2C0051461E /* MenuScene.swift in Sources */,
@@ -926,6 +931,7 @@
 				4867D8CB2279A5250051461E /* Scene.swift in Sources */,
 				4867D9082279E8DF0051461E /* SceneFactory+Tabs.swift in Sources */,
 				4867D973227F3E8F0051461E /* MenuPresenterProtocol.swift in Sources */,
+				4867D988227F804B0051461E /* AccessibilityIdentitier.swift in Sources */,
 				4867D9052279E8DF0051461E /* TabsPresenterProtocol.swift in Sources */,
 				4867D90B2279E8DF0051461E /* TabsViewProtocol.swift in Sources */,
 				4867D945227A4E2E0051461E /* API.swift in Sources */,

@@ -33,6 +33,8 @@ class MenuViewController: UIViewController {
     }
 
     private func setupSelf() {
+        view.accessibilityIdentifier = AccessibilityIdentitier.Menu.rootView
+        
         pizzas = []
         pizzasCollectionView.dataSource = self
         pizzasCollectionView.registerNib(PizzaCollectionViewCell.self)
@@ -53,12 +55,17 @@ extension MenuViewController: UICollectionViewDataSource {
         return pizzas.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: PizzaCollectionViewCell = pizzasCollectionView.dequeueReusableCell(for: indexPath)
         let pizza = pizzas[indexPath.row]
+        cell.accessibilityIdentifier = String(format: AccessibilityIdentitier.Menu.pizzaCellFormat,
+                                              "\(indexPath.row)")
         cell.configureWithPizza(pizzas[indexPath.row],
                                 onOrderTapped: { [weak self] in
-                                    guard let strongSelf = self else { return }
+                                    guard let strongSelf = self else {
+                                        return
+                                    }
                                     strongSelf.presenter.handleOrderPizzaTapped(pizza: pizza)
         })
         return cell
