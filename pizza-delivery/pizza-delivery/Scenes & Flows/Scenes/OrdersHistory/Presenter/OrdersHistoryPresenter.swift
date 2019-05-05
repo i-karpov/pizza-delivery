@@ -5,14 +5,10 @@ class OrdersHistoryPresenter {
     private unowned let view: OrdersHistoryViewProtocol
     private unowned let navigator: SceneNavigatorProtocol
     
-    private let initData: OrdersHistoryInitData
-
     init(view: OrdersHistoryViewProtocol,
-         navigator: SceneNavigatorProtocol,
-         initData: OrdersHistoryInitData) {
+         navigator: SceneNavigatorProtocol) {
         self.view = view
         self.navigator = navigator
-        self.initData = initData
     }
 
 }

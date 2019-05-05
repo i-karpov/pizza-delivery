@@ -5,16 +5,38 @@ class MenuPresenter {
     private unowned let view: MenuViewProtocol
     private unowned let navigator: SceneNavigatorProtocol
     
-    private let initData: MenuInitData
-
+    private let menuService: MenuServiceProtocol
+    
     init(view: MenuViewProtocol,
          navigator: SceneNavigatorProtocol,
-         initData: MenuInitData) {
+         menuService: MenuServiceProtocol) {
         self.view = view
         self.navigator = navigator
-        self.initData = initData
+        self.menuService = menuService
     }
 
+    private func reloadPizzasList(isRetryOnErrorAvailable: Bool = true) {
+        view.setIsAcitityIndicatorVisible(true)
+        menuService.getPizzas { [weak self] (result) in
+            guard let strongSelf = self else {
+                return
+                
+            }
+            strongSelf.view.setIsAcitityIndicatorVisible(false)
+            
+            switch result {
+            case .success(let pizzas):
+                strongSelf.view.setPizzas(pizzas)
+            case .failure(let error):
+                if isRetryOnErrorAvailable {
+                    strongSelf.view.showTextWithRetryForError(error)
+                } else {
+                    strongSelf.view.showTextForError(error)
+                }
+                
+            }
+        }
+    }
 }
 
 // MARK: - Presenter Protocol
@@ -22,7 +44,19 @@ class MenuPresenter {
 extension MenuPresenter: MenuPresenterProtocol {
 
     func handleViewLoaded() {
-        // Method is called after view loading is finished.
+        reloadPizzasList()
     }
-
+    
+    func handleOrderPizzaTapped(pizza: Pizza) {
+        navigator.startFlow(.order(OrderFlowInitData(pizza: pizza)),
+                            transitionType: .modal)
+    }
+    
+    func handleRefreshRequested() {
+        reloadPizzasList(isRetryOnErrorAvailable: false)
+    }
+    
+    func handleRetryTapped() {
+        reloadPizzasList()
+    }
 }

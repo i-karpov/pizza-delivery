@@ -34,4 +34,20 @@ class MenuViewController: UIViewController {
 
 extension MenuViewController: MenuViewProtocol {
 
+    func setIsAcitityIndicatorVisible(_ isVisible: Bool) {
+        fatalError("Not implemented")
+    }
+    
+    func showTextForError(_ error: CommonError) {
+        fatalError("Not implemented")
+    }
+    
+    func showTextWithRetryForError(_ error: CommonError) {
+        fatalError("Not implemented")
+    }
+    
+    func setPizzas(_ pizzas: [Pizza]) {
+        fatalError("Not implemented")
+    }
+    
 }
