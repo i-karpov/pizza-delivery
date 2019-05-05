@@ -12,14 +12,14 @@ struct PizzaDto: Codable {
     
     let id: Int
     let title: String
-    let priceCentsForMediumSize: Int
+    let priceForMediumSize: Int
     let description: String
     let smallImageUrl: String
     
     enum CodingKeys: String, CodingKey {
         case id
         case title
-        case priceCentsForMediumSize = "medium_price"
+        case priceForMediumSize = "medium_price"
         case description = "anonce"
         case smallImageUrl = "photo_small"
     }
