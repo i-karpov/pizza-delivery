@@ -83,7 +83,7 @@ class menu_presenter_tests: XCTestCase {
         
         // Act
         var updatedPizzas = makePizzas(count: 3)
-        mockMenuService.responses.getPizzas = .success(originalPizzas)
+        mockMenuService.responses.getPizzas = .success(updatedPizzas)
         menuPresenter.handleRefreshRequested()
         
         // Assert
@@ -111,8 +111,12 @@ class menu_presenter_tests: XCTestCase {
         XCTAssertEqual(setPizzasOperations.count, 2, "View recevied pizzas lists not exactly 2 times.")
         XCTAssertEqual(firstShownPizzasList?.count, originalPizzas.count, "First pizzas list received by view has incorrect count.")
         XCTAssertEqual(secondShownPizzasList?.count, updatedPizzas.count, "First pizzas list received by view has incorrect count.")
-        for i in 0..<updatedPizzas.count {
-            XCTAssertEqual(secondShownPizzasList?[i].id, updatedPizzas[i].id, "Pizza with index \(i) in second received list does not match expectation.")
+        if secondShownPizzasList != nil && secondShownPizzasList!.count == updatedPizzas.count {
+            for i in 0..<updatedPizzas.count {
+                XCTAssertEqual(secondShownPizzasList![i].id,
+                               updatedPizzas[i].id,
+                               "Pizza with index \(i) in second received list does not match expectation.")
+            }
         }
     }
     
