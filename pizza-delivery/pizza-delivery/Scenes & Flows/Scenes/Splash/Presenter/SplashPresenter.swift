@@ -18,7 +18,7 @@ class SplashPresenter {
 extension SplashPresenter: SplashPresenterProtocol {
 
     func handleViewLoaded() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
             self?.navigator.navigateTo(.tabs, transitionType: .modal)
         }
     }
