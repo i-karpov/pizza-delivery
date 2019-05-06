@@ -12,8 +12,10 @@
 "common.errorMessage.noConnection" = "Oops, smth. went wrong :(";
 "common.retryButtonTitle" = "Retry";
 
+"splash.title" = "Pizza Fox";
+
 "tabs.menuTitle" = "Menu";
 "tabs.historyTitle" = "History";
 
-"menu.screenTitle" = "Today's Menu";
+"menu.screenTitle" = "TODAYS'S MENU";
 "menu.orderButtonTitle" = "Order";

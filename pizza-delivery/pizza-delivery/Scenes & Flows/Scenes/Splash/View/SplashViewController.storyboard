@@ -18,8 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Splash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYr-QI-osY">
-                                <rect key="frame" x="143.5" y="325.5" width="88" height="36"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PizzaFox" translatesAutoresizingMaskIntoConstraints="NO" id="qEp-zn-cXO" userLabel="Logo Image">
+                                <rect key="frame" x="95" y="185.5" width="185" height="246"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="246" id="I64-yd-AVr"/>
+                                    <constraint firstAttribute="width" constant="185" id="UqE-Jv-mct"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Splash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYr-QI-osY" userLabel="Title Label">
+                                <rect key="frame" x="143.5" y="453.5" width="88" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -27,15 +34,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="RYr-QI-osY" firstAttribute="centerY" secondItem="YWU-9O-L7t" secondAttribute="centerY" id="R0T-YE-q7t"/>
+                            <constraint firstItem="RYr-QI-osY" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="POM-0A-puP"/>
+                            <constraint firstItem="qEp-zn-cXO" firstAttribute="centerX" secondItem="YWU-9O-L7t" secondAttribute="centerX" id="Sey-Ef-qJA"/>
                             <constraint firstItem="RYr-QI-osY" firstAttribute="centerX" secondItem="YWU-9O-L7t" secondAttribute="centerX" id="bPE-Ye-g3p"/>
+                            <constraint firstItem="RYr-QI-osY" firstAttribute="top" secondItem="qEp-zn-cXO" secondAttribute="bottom" constant="22" id="cX2-nQ-XKX"/>
+                            <constraint firstItem="qEp-zn-cXO" firstAttribute="centerY" secondItem="YWU-9O-L7t" secondAttribute="centerY" constant="-35" id="ib1-y6-HhB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="RYr-QI-osY" id="wEL-X6-1Do"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="575" y="-231"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PizzaFox" width="184.5" height="245.5"/>
+    </resources>
 </document>
