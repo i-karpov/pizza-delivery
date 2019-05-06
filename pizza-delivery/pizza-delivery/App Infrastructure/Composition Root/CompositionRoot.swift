@@ -58,7 +58,8 @@ class CompositionRoot {
     private func composeOrderScene(_ orderScene: Scene.Order) -> UIViewController {
         switch orderScene {
         case .selectAddress(let initData):
-            return SceneFactory.makeSelectAddress(navigator: navigator, initData: initData)
+            let viewController = SceneFactory.makeSelectAddress(navigator: navigator, initData: initData)
+            return UINavigationController(rootViewController: viewController)
         case .enterDeliveryDetails(let initData):
             return SceneFactory.makeEnterDeliveryDetails(navigator: navigator, initData: initData)
         case .selectPaymentMethod(let initData):

@@ -28,6 +28,10 @@ class SelectAddressViewController: UIViewController {
     }
 
     // MARK: -
+    
+    @IBAction func handleNextButtonTapped() {
+        presenter.handleNextTapped()
+    }
 }
 
 // MARK: - View Protocol

@@ -24,5 +24,12 @@ extension SelectAddressPresenter: SelectAddressPresenterProtocol {
     func handleViewLoaded() {
         // Method is called after view loading is finished.
     }
+    
+    func handleNextTapped() {
+        let street = Street(id: 1, title: "1")
+        let building = Building(id: 1, title: "1")
+        initData.handleEnteringFinished(SelectAddressInitData.SelectAddressSceneOutput(street: street,
+                                                                                       buidling: building))
+    }
 
 }
