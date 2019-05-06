@@ -37,7 +37,7 @@
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUo-1M-aX2" userLabel="Order Button">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUo-1M-aX2" userLabel="Order Button" customClass="OrderButton" customModule="pizza_delivery">
                             <rect key="frame" x="233" y="180" width="124" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="aW2-jS-WlV"/>

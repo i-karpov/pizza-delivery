@@ -127,6 +127,8 @@
 		4867DA132280A1170051461E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA122280A1170051461E /* Button.swift */; };
 		4867DA152280A1250051461E /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA142280A1250051461E /* Input.swift */; };
 		4867DA172280A1320051461E /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA162280A1320051461E /* Picker.swift */; };
+		4867DA1A2280DF350051461E /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA192280DF350051461E /* UIView+Gradient.swift */; };
+		4867DA1C2280DFAF0051461E /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA1B2280DFAF0051461E /* OrderButton.swift */; };
 		48FE4C9C2278D83E00881D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FE4C9B2278D83E00881D72 /* AppDelegate.swift */; };
 		48FE4CA32278D83F00881D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA22278D83F00881D72 /* Assets.xcassets */; };
 		48FE4CA62278D83F00881D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA42278D83F00881D72 /* LaunchScreen.storyboard */; };
@@ -284,6 +286,8 @@
 		4867DA122280A1170051461E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		4867DA142280A1250051461E /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		4867DA162280A1320051461E /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		4867DA192280DF350051461E /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		4867DA1B2280DFAF0051461E /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		48FE4C982278D83D00881D72 /* pizza-delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pizza-delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FE4C9B2278D83E00881D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48FE4CA22278D83F00881D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -539,6 +543,7 @@
 				4867D8EC2279AFCB0051461E /* UIViewController+StoryboardInstance.swift */,
 				4867D98C228027B70051461E /* UIViewController+Alerts.swift */,
 				4867D983227F48380051461E /* UICollectionView+ReusableCells.swift */,
+				4867DA192280DF350051461E /* UIView+Gradient.swift */,
 			);
 			path = "Common Extensions";
 			sourceTree = "<group>";
@@ -741,6 +746,7 @@
 			children = (
 				4867D980227F41DA0051461E /* PizzaCollectionViewCell.xib */,
 				4867D97E227F41C30051461E /* PizzaCollectionViewCell.swift */,
+				4867DA1B2280DFAF0051461E /* OrderButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1293,6 +1299,7 @@
 				4867D8D52279A61A0051461E /* ServiceFactoryProtocol.swift in Sources */,
 				4867D9DD22804C020051461E /* SceneFactory+SelectPaymentMethod.swift in Sources */,
 				4867D9E222804C020051461E /* EnterDeliveryDetailsPresenterProtocol.swift in Sources */,
+				4867DA1C2280DFAF0051461E /* OrderButton.swift in Sources */,
 				4867D8E82279AF650051461E /* SplashViewController.swift in Sources */,
 				4867D9D722804C020051461E /* OrderSuccessScreenViewController.swift in Sources */,
 				4867D9F1228068840051461E /* Street.swift in Sources */,
@@ -1325,6 +1332,7 @@
 				4867D9D622804C020051461E /* SceneFactory+OrderSuccessScreen.swift in Sources */,
 				4867D9E122804C020051461E /* EnterDeliveryDetailsInitData.swift in Sources */,
 				4867D977227F3E8F0051461E /* MenuViewProtocol.swift in Sources */,
+				4867DA1A2280DF350051461E /* UIView+Gradient.swift in Sources */,
 				4867D9E422804C020051461E /* SceneFactory+EnterDeliveryDetails.swift in Sources */,
 				4867D9F722806A700051461E /* PaymentMethod.swift in Sources */,
 				4867D97F227F41C30051461E /* PizzaCollectionViewCell.swift in Sources */,
