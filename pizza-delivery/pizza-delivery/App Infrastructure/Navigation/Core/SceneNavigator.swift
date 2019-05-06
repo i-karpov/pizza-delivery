@@ -78,6 +78,7 @@ class SceneNavigator: SceneNavigatorProtocol {
     }
     
     private func presentAsModal(_ targetViewController: UIViewController) {
+        targetViewController.modalTransitionStyle = .crossDissolve
         currentViewController.present(targetViewController, animated: true)
         currentViewController = actualViewController(for: targetViewController)
     }

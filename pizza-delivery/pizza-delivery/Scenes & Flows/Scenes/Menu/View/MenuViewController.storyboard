@@ -33,6 +33,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9b-vD-QjF">
                                         <rect key="frame" x="144.5" y="324" width="86" height="30"/>
                                         <state key="normal" title="Retry Button"/>
+                                        <connections>
+                                            <action selector="handleRetryTapped" destination="h3k-bK-TNO" eventType="touchUpInside" id="UbY-7E-0sM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,8 +85,10 @@
                     </view>
                     <connections>
                         <outlet property="contentWrapperView" destination="cXT-24-Yqh" id="XPZ-e8-nlT"/>
+                        <outlet property="errorLabel" destination="hEJ-PR-RPv" id="MUv-g8-kWT"/>
                         <outlet property="errorWithRetryView" destination="kmu-YD-JJB" id="n47-J8-2Jg"/>
                         <outlet property="pizzasCollectionView" destination="O54-la-SEw" id="oi7-kE-L00"/>
+                        <outlet property="retryButton" destination="v9b-vD-QjF" id="WV0-Hn-toH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>

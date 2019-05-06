@@ -18,6 +18,9 @@ class MenuViewController: UIViewController {
     private var hud: MBProgressHUD?
     
     @IBOutlet weak private var errorWithRetryView: UIView!
+    @IBOutlet weak private var errorLabel: UILabel!
+    @IBOutlet weak private var retryButton: UIButton!
+    
     @IBOutlet weak private var contentWrapperView: UIView!
     @IBOutlet weak private var pizzasCollectionView: UICollectionView!
     
@@ -43,9 +46,19 @@ class MenuViewController: UIViewController {
             flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         }
         
+        setupLocalizedStrings()
+    }
+    
+    private func setupLocalizedStrings() {
+        navigationItem.title = R.string.localizable.menuScreenTitle()
+        retryButton.titleLabel?.text = R.string.localizable.commonRetryButtonTitle()
     }
 
-    // MARK: -
+    // MARK: - Signals
+    
+    @IBAction func handleRetryTapped() {
+        presenter.handleRetryTapped()
+    }
 }
 
 // MARK: - Collection View Data Source
@@ -87,11 +100,12 @@ extension MenuViewController: MenuViewProtocol {
     }
     
     func showTextForError(_ error: CommonError) {
-        fatalError("Not implemented")
+        let errorText = makeErrorTextForError(error)
+        showOKAlert(title: "", message: errorText)
     }
     
     func showTextWithRetryForError(_ error: CommonError) {
-        // error label =
+        errorLabel.text = makeErrorTextForError(error)
         errorWithRetryView.isHidden = false
         contentWrapperView.isHidden = true
     }
@@ -103,4 +117,14 @@ extension MenuViewController: MenuViewProtocol {
         errorWithRetryView.isHidden = true
     }
     
+    private func makeErrorTextForError(_ error: CommonError) -> String {
+        switch error {
+        case .serverBusinessError(let errorText):
+            return errorText
+        case .serverCommunicationError(.noConnection):
+            return R.string.localizable.commonErrorMessageNoConnection()
+        default:
+            return R.string.localizable.commonErrorMessageGeneric()
+        }
+    }
 }
