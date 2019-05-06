@@ -10,4 +10,6 @@ import Foundation
 
 enum CommonBlock {
     typealias ResultCompletionBlock<T> = (_ response: Result<T, CommonError>) -> Void
+    typealias EmptyAction = () -> Void
+    typealias Action<TParameter> = (_ parameter: TParameter) -> Void
 }

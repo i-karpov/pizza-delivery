@@ -259,7 +259,7 @@ class menu_presenter_tests: XCTestCase {
             let pizza = Pizza(
                 id: nextPizzaId,
                 title: "Pizza \(id)",
-                price: Price(cents: id * 1000),
+                price: MoneyAmount(cents: id * 1000),
                 description: "Description \(id)",
                 smallImageUrl: "Url \(id)"
             )

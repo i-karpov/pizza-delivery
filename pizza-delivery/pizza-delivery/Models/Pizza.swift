@@ -11,7 +11,7 @@ import Foundation
 struct Pizza {
     let id: Int
     let title: String
-    let price: Price
+    let price: MoneyAmount
     let description: String
     let smallImageUrl: String
 }

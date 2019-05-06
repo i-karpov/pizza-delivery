@@ -14,5 +14,5 @@ protocol SceneNavigatorProtocol: class {
     func returnToPreviousScene(animated: Bool)
     
     func startFlow(_ flow: Flow, transitionType: SceneTransitionType)
-    func exitCurrentFlow(animated: Bool)
+    func navigateTo(_ scene: Scene, retainingFlow flowToRetain: Any, transitionType: SceneTransitionType)
 }

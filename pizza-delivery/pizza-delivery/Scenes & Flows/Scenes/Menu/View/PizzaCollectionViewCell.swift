@@ -42,7 +42,7 @@ class PizzaCollectionViewCell: UICollectionViewCell {
         self.handleOrderTapped = handleOrderTapped
     }
     
-    private func makeFormattedStringFromPrice(_ price: Price) -> String {
+    private func makeFormattedStringFromPrice(_ price: MoneyAmount) -> String {
         let mainPart = price.cents / 100
         let centsPart = price.cents % 100
         return "\(mainPart),\(centsPart)"

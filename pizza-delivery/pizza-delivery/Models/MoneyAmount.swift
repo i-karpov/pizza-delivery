@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Price {
+struct MoneyAmount {
     let cents: Int
 }

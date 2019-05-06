@@ -1,5 +1,13 @@
 import Foundation
 
-class OrderSuccessScreenInitData {
+struct OrderSuccessScreenInitData {
+    
+    // MARK: - Input
+    
+    let deliveryWaitingTime: DeliveryWaitingTime
+    
+    // MARK: - Output
+    
+    let handleCloseTapped: CommonBlock.EmptyAction
     
 }
