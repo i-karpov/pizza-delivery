@@ -1,2 +1,4 @@
 ignore:
-  - "pizza-delivery/Pods"  # ignore folders and all its contents
+  - "pizza-delivery/Pods"
+  - "pizza-delivery-integration-tests"
+  - "pizza-delivery-unit-tests"
