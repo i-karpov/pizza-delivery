@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DeliveryDetails {
+struct DeliveryDetails: Equatable {
     
     let street: Street
     let building: Building

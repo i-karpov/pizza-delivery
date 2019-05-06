@@ -8,6 +8,6 @@ struct SelectAddressInitData {
     }
     
     let handleCloseTapped: CommonBlock.EmptyAction
-    let handleEntering: CommonBlock.Action<SelectAddressSceneOutput>
+    let handleEnteringFinished: CommonBlock.Action<SelectAddressSceneOutput>
     
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Pizza {
+struct Pizza: Equatable {
     let id: Int
     let title: String
     let price: MoneyAmount

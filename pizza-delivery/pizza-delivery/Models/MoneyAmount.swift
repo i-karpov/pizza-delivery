@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct MoneyAmount {
+struct MoneyAmount: Equatable {
     let cents: Int
 }

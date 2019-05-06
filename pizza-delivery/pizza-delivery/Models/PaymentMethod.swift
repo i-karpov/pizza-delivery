@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum PaymentMethod {
+enum PaymentMethod: Equatable {
     case byCard
     case byCash(cashAmountToCalculateChange: MoneyAmount)
 }

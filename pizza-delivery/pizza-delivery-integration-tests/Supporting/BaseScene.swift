@@ -17,9 +17,4 @@ class BaseScene {
         self.app = app
         self.testCase = testCase
     }
-    
-    func isDisplayed() {
-        fatalError("Abstract method should be implemented in successors.")
-    }
-    
 }

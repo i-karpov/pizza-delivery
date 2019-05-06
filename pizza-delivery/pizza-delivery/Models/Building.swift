@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Building {
+struct Building: Equatable {
     let id: Int
     let title: String
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct OrderDraft {
+struct OrderDraft: Equatable {
     
     let pizza: Pizza
     let deliveryDetails: DeliveryDetails

@@ -10,7 +10,7 @@ import XCTest
 
 class SplashScene: BaseScene {
     
-    override func isDisplayed() {
+    func isDisplayed() {
         let splashView = app.otherElements[AccessibilityIdentitier.Splash.rootView]
         XCTAssert(splashView.exists, "Splash screen is not displayed.")
     }

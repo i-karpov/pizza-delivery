@@ -25,4 +25,24 @@ class ScenesRegistry {
     func getMenuScene() -> MenuScene {
         return MenuScene(app: app, testCase: testCase)
     }
+    
+    func getSelectAddressScene() -> SelectAddressScene {
+        return SelectAddressScene(app: app, testCase: testCase)
+    }
+    
+    func getDeliveryDetailsScene() -> DeliveryDetailsScene {
+        return DeliveryDetailsScene(app: app, testCase: testCase)
+    }
+    
+    func getPaymentMethodScene() -> PaymentMethodScene {
+        return PaymentMethodScene(app: app, testCase: testCase)
+    }
+    
+    func getOrderConfirmationScene() -> OrderConfirmationScene {
+        return OrderConfirmationScene(app: app, testCase: testCase)
+    }
+    
+    func getOrderSuccessScene() -> OrderSuccessScene {
+        return OrderSuccessScene(app: app, testCase: testCase)
+    }
 }

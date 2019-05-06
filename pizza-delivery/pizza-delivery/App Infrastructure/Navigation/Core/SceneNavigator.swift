@@ -131,5 +131,8 @@ class SceneNavigator: SceneNavigatorProtocol {
     func navigateTo(_ scene: Scene, retainingFlow flowToRetain: Any, transitionType: SceneTransitionType) {
         fatalError("Not implemented")
     }
-
+    
+    func exitCurrentFlow(animated: Bool) {
+        fatalError("Not implemented")
+    }
 }
