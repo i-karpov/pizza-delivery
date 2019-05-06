@@ -3,13 +3,13 @@ company: Igor Karpov
 
 ### Xcode project settings
 project_name: pizza-delivery
-xcodeproj_path: ../../pizza-delivery.xcodeproj
+xcodeproj_path: ../../../pizza-delivery.xcodeproj
 
 ### Code generation settings section
 # The main project target name
 project_target: pizza-delivery
 
-project_file_path: ../Scenes
+project_file_path: ../../Scenes
 project_group_path: pizza-delivery/Scenes
 
 ### Dependencies settings section

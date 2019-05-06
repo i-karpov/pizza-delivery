@@ -1,5 +1,6 @@
 disabled_rules:
   - trailing_whitespace
+  - identifier_name
 opt_in_rules:
   - attributes
   - closure_end_indentation
@@ -22,8 +23,9 @@ included:
 excluded:
   - Carthage
   - Pods
-  - pizza-delivery-UI-tests
+  - pizza-delivery-integration-tests
   - pizza-delivery-unit-tests
+  - pizza-delivery/Resources/R.generated.swift
 
 type_body_length:
   warning: 100

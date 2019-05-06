@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  pizza-delivery
+
+  Created by Igor Karpov on 06.05.19.
+  Copyright © 2019 Igor Karpov. All rights reserved.
+*/
+
+"common.alert.okButton" = "Ok";
+
+"common.errorMessage.generic" = "Oops, smth. went wrong :(";
+"common.errorMessage.noConnection" = "Oops, smth. went wrong :(";
+"common.retryButtonTitle" = "Retry";
+
+"tabs.menuTitle" = "Menu";
+"tabs.historyTitle" = "History";
+
+"menu.screenTitle" = "Today's Menu";
+"menu.orderButtonTitle" = "Order";

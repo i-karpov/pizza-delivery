@@ -44,8 +44,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4806372D2278DBC800E006E5"
-               BuildableName = "pizza-delivery-UI-tests.xctest"
-               BlueprintName = "pizza-delivery-UI-tests"
+               BuildableName = "pizza-delivery-integration-tests.xctest"
+               BlueprintName = "pizza-delivery-integration-tests"
                ReferencedContainer = "container:pizza-delivery.xcodeproj">
             </BuildableReference>
          </TestableReference>

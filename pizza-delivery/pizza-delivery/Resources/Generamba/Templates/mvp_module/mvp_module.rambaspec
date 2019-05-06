@@ -7,19 +7,14 @@ license: "MIT"
 
 code_files:
 
-
 - {name: +SceneFactory.swift, path: Code/SceneFactory.swift.liquid}
 
 # Presenter layer
+- {name: Presenter/PresenterProtocol.swift, path: Code/Presenter/PresenterProtocol.swift.liquid}
 - {name: Presenter/InitData.swift, path: Code/Presenter/InitData.swift.liquid}
 - {name: Presenter/Presenter.swift, path: Code/Presenter/Presenter.swift.liquid}
-- {name: Presenter/PresenterProtocol.swift, path: Code/Presenter/PresenterProtocol.swift.liquid}
 
 # View layer
+- {name: View/ViewProtocol.swift, path: Code/View/ViewProtocol.swift.liquid}
 - {name: View/ViewController.swift, path: Code/View/ViewController.swift.liquid}
 - {name: View/ViewController.storyboard, path: Code/View/ViewController.storyboard.liquid}
-- {name: View/ViewProtocol.swift, path: Code/View/ViewProtocol.swift.liquid}
-
-
-
-

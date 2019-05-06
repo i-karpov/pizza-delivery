@@ -78,6 +78,7 @@ class SceneNavigator: SceneNavigatorProtocol {
     }
     
     private func presentAsModal(_ targetViewController: UIViewController) {
+        targetViewController.modalTransitionStyle = .crossDissolve
         currentViewController.present(targetViewController, animated: true)
         currentViewController = actualViewController(for: targetViewController)
     }
@@ -119,5 +120,15 @@ class SceneNavigator: SceneNavigatorProtocol {
         guard navigationController.popViewController(animated: animated) != nil else {
             fatalError("can't navigate back from \(String(describing: tabBarController.selectedViewController))")
         }
+    }
+    
+    // MARK: - Flows
+    
+    func startFlow(_ flow: Flow, transitionType: SceneTransitionType) {
+        fatalError("Not implemented")
+    }
+    
+    func exitCurrentFlow(animated: Bool) {
+        fatalError("Not implemented")
     }
 }
