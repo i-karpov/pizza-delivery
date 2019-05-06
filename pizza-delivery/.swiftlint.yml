@@ -25,6 +25,7 @@ excluded:
   - Pods
   - pizza-delivery-integration-tests
   - pizza-delivery-unit-tests
+  - pizza-delivery/Resources/R.generated.swift
 
 type_body_length:
   warning: 100

@@ -29,6 +29,8 @@ class PizzaCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(contentWrapper)
         titleLabel.accessibilityIdentifier = AccessibilityIdentitier.Menu.pizzaCellTitle
         priceLabel.accessibilityIdentifier = AccessibilityIdentitier.Menu.pizzaCellPrice
+        
+        orderButton.titleLabel?.text = R.string.localizable.menuOrderButtonTitle()
     }
     
     func configureWithPizza(_ pizza: Pizza,

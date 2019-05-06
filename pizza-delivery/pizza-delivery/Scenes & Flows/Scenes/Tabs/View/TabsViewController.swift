@@ -22,8 +22,8 @@ class TabsViewController: UITabBarController {
     func setupViewControllers(menuScene: MenuViewController,
                               ordersHistoryScene: OrdersHistoryViewController) {
         viewControllers = [
-            makeTabChildController(from: menuScene, tabTitle: "Menu"),
-            makeTabChildController(from: ordersHistoryScene, tabTitle: "History")
+            makeTabChildController(from: menuScene, tabTitle: R.string.localizable.tabsMenuTitle()),
+            makeTabChildController(from: ordersHistoryScene, tabTitle: R.string.localizable.tabsHistoryTitle())
         ]
     }
 

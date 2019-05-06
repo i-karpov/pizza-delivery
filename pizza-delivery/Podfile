@@ -9,5 +9,6 @@ target 'pizza-delivery' do
   pod 'Alamofire', '~> 5.0.0-beta.5'
   pod 'Kingfisher', '~> 5.4.0'
   pod 'MBProgressHUD', '~> 1.1.0'
-  
+  pod 'R.swift', '~> 5.0.3'
+
 end
