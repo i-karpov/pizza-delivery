@@ -14,8 +14,9 @@ class SelectAddressViewController: UIViewController {
     
     // MARK: - Properties
 
-    @IBOutlet weak var streetDropdown: DropdownButton!
-    @IBOutlet weak var buildingDropdown: DropdownButton!
+    @IBOutlet weak private var streetDropdown: DropdownButton!
+    @IBOutlet weak private var buildingDropdown: DropdownButton!
+    @IBOutlet weak private var nextButton: Button!
     
     // MARK: - Init & Setup
 
@@ -41,6 +42,9 @@ class SelectAddressViewController: UIViewController {
         
         streetDropdown.setTitle(R.string.localizable.orderFlowFieldNameStreet())
         buildingDropdown.setTitle(R.string.localizable.orderFlowFieldNameBuilding())
+        
+        nextButton.setTitle(R.string.localizable.orderFlowButtonTitleNext().uppercased(),
+                            for: .normal)
         
         buildingDropdown.isEnabled = false
     }

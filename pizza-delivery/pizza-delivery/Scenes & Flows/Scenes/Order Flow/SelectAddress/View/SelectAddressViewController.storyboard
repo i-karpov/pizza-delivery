@@ -57,6 +57,7 @@
                     <navigationItem key="navigationItem" id="pEw-zc-bWJ"/>
                     <connections>
                         <outlet property="buildingDropdown" destination="A9n-NH-LrQ" id="OzB-MM-Nmo"/>
+                        <outlet property="nextButton" destination="tZM-d1-ZnP" id="wMv-Js-aDB"/>
                         <outlet property="streetDropdown" destination="fYA-ko-f3a" id="FuC-ov-DDp"/>
                     </connections>
                 </viewController>

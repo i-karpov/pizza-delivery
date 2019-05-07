@@ -91,19 +91,23 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbS-TF-Ja7" userLabel="Next Button" customClass="Button" customModule="pizza_delivery" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQ0-VA-MVF" userLabel="Next Button" customClass="Button" customModule="pizza_delivery" customModuleProvider="target">
                                         <rect key="frame" x="18" y="616" width="339" height="56"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="7vT-7K-Wxb"/>
+                                            <constraint firstAttribute="height" constant="56" id="TJz-WN-oxT"/>
                                         </constraints>
-                                    </view>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="handleNextButtonTap" destination="h3k-bK-TNO" eventType="touchUpInside" id="XNi-o9-jJv"/>
+                                            <action selector="handleNextButtonTapped" destination="psv-Wb-mBc" eventType="touchUpInside" id="8Gz-bA-b8T"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="UQ0-VA-MVF" firstAttribute="top" secondItem="6ST-Xd-U2s" secondAttribute="bottom" constant="30" id="JTH-mP-7VP"/>
+                                    <constraint firstAttribute="bottom" secondItem="UQ0-VA-MVF" secondAttribute="bottom" constant="30" id="RLO-Wn-fp0"/>
                                     <constraint firstItem="6ST-Xd-U2s" firstAttribute="top" secondItem="qTh-G8-KAm" secondAttribute="top" constant="25" id="fgu-Be-0bM"/>
-                                    <constraint firstAttribute="bottom" secondItem="tbS-TF-Ja7" secondAttribute="bottom" constant="30" id="xgp-5V-kT5"/>
-                                    <constraint firstItem="tbS-TF-Ja7" firstAttribute="top" secondItem="6ST-Xd-U2s" secondAttribute="bottom" constant="30" id="xwc-5b-6pZ"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -112,14 +116,25 @@
                             <constraint firstItem="qTh-G8-KAm" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" id="Ed3-5P-zzl"/>
                             <constraint firstItem="qTh-G8-KAm" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" id="JuF-4D-TVs"/>
                             <constraint firstItem="6ST-Xd-U2s" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="OwU-ei-erW"/>
-                            <constraint firstItem="tbS-TF-Ja7" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="QY1-0j-Es8"/>
+                            <constraint firstItem="UQ0-VA-MVF" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="Tnh-RM-Nf7"/>
+                            <constraint firstItem="UQ0-VA-MVF" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="auA-co-i9g"/>
                             <constraint firstItem="qTh-G8-KAm" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" id="uVL-MN-oUD"/>
                             <constraint firstItem="qTh-G8-KAm" firstAttribute="bottom" secondItem="YWU-9O-L7t" secondAttribute="bottom" id="uet-vw-aJI"/>
                             <constraint firstItem="6ST-Xd-U2s" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="xYU-U4-F0c"/>
-                            <constraint firstItem="tbS-TF-Ja7" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="zdI-fe-jPf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
                     </view>
+                    <connections>
+                        <outlet property="apartmentInput" destination="3Jo-5x-nhg" id="m6a-Vm-JuY"/>
+                        <outlet property="buildingInput" destination="QxD-ya-8rA" id="n2o-zd-Dke"/>
+                        <outlet property="commentInput" destination="Hf6-cm-XCV" id="I5u-Fj-pxe"/>
+                        <outlet property="entranceInput" destination="xBs-Ou-pk4" id="tFy-zH-Z1c"/>
+                        <outlet property="floorInput" destination="OyU-zE-inT" id="g6r-Rf-FgF"/>
+                        <outlet property="nameInput" destination="AVy-wl-g0N" id="cHu-0S-8mB"/>
+                        <outlet property="nextButton" destination="UQ0-VA-MVF" id="3l4-Bq-ZPb"/>
+                        <outlet property="phoneNumberInput" destination="y9j-wq-Wk2" id="fbZ-FZ-sbb"/>
+                        <outlet property="streetInput" destination="dql-DO-DSV" id="hoe-N2-tFV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
