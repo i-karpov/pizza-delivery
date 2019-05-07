@@ -14,6 +14,9 @@ class SelectAddressViewController: UIViewController {
     
     // MARK: - Properties
 
+    @IBOutlet weak var streetDropdown: DropdownButton!
+    @IBOutlet weak var buildingDropdown: DropdownButton!
+    
     // MARK: - Init & Setup
 
     override func viewDidLoad() {
@@ -35,6 +38,11 @@ class SelectAddressViewController: UIViewController {
                                                                 target: nil,
                                                                 action: nil)
         self.navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
+        
+        streetDropdown.setTitle(R.string.localizable.orderFlowFieldNameStreet())
+        buildingDropdown.setTitle(R.string.localizable.orderFlowFieldNameBuilding())
+        
+        buildingDropdown.isEnabled = false
     }
 
     // MARK: -
