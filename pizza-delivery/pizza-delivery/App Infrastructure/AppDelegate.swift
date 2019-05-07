@@ -20,6 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                    rootScene: .splash,
                                    compositionRoot: makeCompositionRoot())
         
+        setupAppearance()
+        
         return true
+    }
+    
+    private func setupAppearance() {
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
+            NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
+        ]
+        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
+        UITabBar.appearance().barTintColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
     }
 }

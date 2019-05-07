@@ -24,7 +24,8 @@ class EnterDeliveryDetailsViewController: UIViewController {
     }
 
     private func setupSelf() {
-
+        navigationItem.title = R.string.localizable.orderFlowEnterDeliveryDetailsSceneTitle().uppercased()
+        view.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
     }
 
     // MARK: -

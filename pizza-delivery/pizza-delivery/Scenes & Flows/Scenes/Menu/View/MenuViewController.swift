@@ -50,7 +50,7 @@ class MenuViewController: UIViewController {
     }
     
     private func setupLocalizedStrings() {
-        navigationItem.title = R.string.localizable.menuScreenTitle()
+        navigationItem.title = R.string.localizable.menuScreenTitle().uppercased()
         retryButton.titleLabel?.text = R.string.localizable.commonRetryButtonTitle()
     }
 

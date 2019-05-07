@@ -17,5 +17,26 @@
 "tabs.menuTitle" = "Menu";
 "tabs.historyTitle" = "History";
 
-"menu.screenTitle" = "TODAYS'S MENU";
+"menu.screenTitle" = "Today's menu";
 "menu.orderButtonTitle" = "Order";
+
+"orderFlow.buttonTitle.next" = "Next";
+"orderFlow.buttonTitle.confirmAndPlaceOrder" = "Order";
+"orderFlow.buttonTitle.finish" = "Thank you";
+
+"orderFlow.fieldName.street" = "Street";
+"orderFlow.fieldName.building" = "Building";
+"orderFlow.fieldName.entrance" = "Entrance";
+"orderFlow.fieldName.floor" = "Floor";
+"orderFlow.fieldName.apartment" = "Apt.";
+"orderFlow.fieldName.name" = "Name";
+"orderFlow.fieldName.phoneNumber" = "Phone number";
+"orderFlow.fieldName.comment" = "Comment to the order";
+"orderFlow.fieldName.paymentMethod" = "Payment method";
+"orderFlow.fieldName.cashAmountToCalculateChange" = "For what amount of cash to prepare change";
+
+"orderFlow.selectAddresScene.title" = "Your Address";
+"orderFlow.enterDeliveryDetailsScene.title" = "Additional Info";
+"orderFlow.selectPaymentMethodScene.title" = "Payment Method";
+"orderFlow.confirmationScene.title" = "Check you info";
+

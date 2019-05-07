@@ -24,11 +24,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-d1-ZnP" userLabel="Next Button">
-                                <rect key="frame" x="47.5" y="557" width="280" height="80"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-ko-f3a" userLabel="Street Dropdown Button" customClass="DropdownButton" customModule="pizza_delivery" customModuleProvider="target">
+                                <rect key="frame" x="18" y="70" width="257" height="89"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-d1-ZnP" userLabel="Next Button" customClass="Button" customModule="pizza_delivery" customModuleProvider="target">
+                                <rect key="frame" x="18" y="581" width="339" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="gQP-0c-vez"/>
-                                    <constraint firstAttribute="width" constant="280" id="lWG-op-r6p"/>
+                                    <constraint firstAttribute="height" constant="56" id="gQP-0c-vez"/>
                                 </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
@@ -38,9 +41,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fYA-ko-f3a" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-100" id="2df-ks-g6b"/>
+                            <constraint firstItem="tZM-d1-ZnP" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="6YA-ap-WWY"/>
                             <constraint firstItem="eQT-xW-JZ0" firstAttribute="centerY" secondItem="YWU-9O-L7t" secondAttribute="centerY" id="BAp-KT-5aq"/>
                             <constraint firstItem="eQT-xW-JZ0" firstAttribute="centerX" secondItem="YWU-9O-L7t" secondAttribute="centerX" id="KsA-aG-b4b"/>
+                            <constraint firstItem="tZM-d1-ZnP" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="UTa-iJ-HqI"/>
                             <constraint firstItem="tZM-d1-ZnP" firstAttribute="bottom" secondItem="YWU-9O-L7t" secondAttribute="bottom" constant="-30" id="e6h-PP-WQZ"/>
+                            <constraint firstItem="fYA-ko-f3a" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="50" id="ti3-Cb-Nmb"/>
+                            <constraint firstItem="fYA-ko-f3a" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="uwC-tJ-aFa"/>
                             <constraint firstItem="tZM-d1-ZnP" firstAttribute="centerX" secondItem="YWU-9O-L7t" secondAttribute="centerX" id="xkh-3T-Sfi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
