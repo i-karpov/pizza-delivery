@@ -47,8 +47,10 @@ class DropdownButton: UIView, LoadableFromNib {
     
     private func commonInit() {
         loadFromNib()
-    tappableArea.layer.cornerRadius = 5.0
+        
+        tappableArea.layer.cornerRadius = 5.0
         tappableArea.layer.masksToBounds = true
+        tappableArea.backgroundColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
         
         valueLabel.text = .none
     }

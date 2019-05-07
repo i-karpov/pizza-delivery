@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                    compositionRoot: makeCompositionRoot())
         
         setupAppearance()
+        setupKeyboardManager()
         
         return true
     }
@@ -32,5 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ]
         UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
         UITabBar.appearance().barTintColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
+    }
+    
+    private func setupKeyboardManager() {
+        IQKeyboardManager.shared.enable = true
     }
 }
