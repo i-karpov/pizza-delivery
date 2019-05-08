@@ -59,5 +59,32 @@ class SelectAddressViewController: UIViewController {
 // MARK: - View Protocol
 
 extension SelectAddressViewController: SelectAddressViewProtocol {
-
+    func setIsAcitityIndicatorVisible(_ isVisible: Bool) {
+        // TODO: Implement
+    }
+    
+    func showTextForError(_ error: CommonError) {
+        // TODO: Implement
+    }
+    
+    func setIsStreetInputEnabled(_ isEnabled: Bool) {
+        // TODO: Implement
+    }
+    
+    func setIsBuildingInputEnabled(_ isEnabled: Bool) {
+        // TODO: Implement
+    }
+    
+    func setIsNextButtonEnabled(_ isEnabled: Bool) {
+        // TODO: Implement
+    }
+    
+    func setAvailableStreets(_ streets: [Street]) {
+        // TODO: Implement
+    }
+    
+    func setAvailableBuildings(_ streets: [Building]) {
+        // TODO: Implement
+    }
+    
 }

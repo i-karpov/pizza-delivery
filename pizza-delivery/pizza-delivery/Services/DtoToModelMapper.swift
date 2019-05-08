@@ -17,5 +17,5 @@ class DtoToModelMapper {
                      description: pizzaDto.description,
                      smallImageUrl: pizzaDto.smallImageUrl)
     }
-
+    
 }

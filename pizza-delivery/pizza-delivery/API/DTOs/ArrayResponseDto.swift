@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct PizzasResponseDto: Codable {
+struct ArrayResponseDto<T>: Codable where T: Codable {
     struct ResponseDto: Codable {
-        let data: [PizzaDto]
+        let data: [T]
     }
     
     let error: Bool

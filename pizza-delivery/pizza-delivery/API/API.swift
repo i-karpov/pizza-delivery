@@ -28,12 +28,21 @@ class API: APIProtocol {
         AF.request(urlString,
                    parameters: parameters)
             .validate()
-            .responseDecodable { (response: DataResponse<PizzasResponseDto>) in
+            .responseDecodable { (response: DataResponse<ArrayResponseDto<PizzaDto>>) in
                 let result = response.result
                     .map({ $0.response.data })
                     .mapError(self.mapErrorToCommonError)
                 completion(result)
             }
+    }
+    
+    func getStreets(_ completion: @escaping CommonBlock.ResultCompletionBlock<[StreetDto]>) {
+        fatalError("Not implemented")
+    }
+    
+    func getBuildingsByStreetId(_ streetId: Int,
+                                _ completion: @escaping CommonBlock.ResultCompletionBlock<[BuildingDto]>) {
+        fatalError("Not implemented")
     }
     
     private func mapErrorToCommonError(_ error: Error) -> CommonError {

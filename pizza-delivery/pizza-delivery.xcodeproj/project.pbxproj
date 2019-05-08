@@ -47,7 +47,7 @@
 		4867D945227A4E2E0051461E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D944227A4E2E0051461E /* API.swift */; };
 		4867D947227A52170051461E /* UrlsConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D946227A52170051461E /* UrlsConfigProtocol.swift */; };
 		4867D949227A53930051461E /* ProdUrlsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D948227A53930051461E /* ProdUrlsConfig.swift */; };
-		4867D94B227AE5730051461E /* PizzasResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D94A227AE5730051461E /* PizzasResponseDto.swift */; };
+		4867D94B227AE5730051461E /* ArrayResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D94A227AE5730051461E /* ArrayResponseDto.swift */; };
 		4867D94E227EEFBB0051461E /* menu_presenter_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D94D227EEFBB0051461E /* menu_presenter_tests.swift */; };
 		4867D951227EF3F40051461E /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D950227EF3F40051461E /* Flow.swift */; };
 		4867D955227EF4680051461E /* OrderFlowInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D954227EF4680051461E /* OrderFlowInitData.swift */; };
@@ -136,6 +136,10 @@
 		4867DA2D2281A11D0051461E /* LoadableFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA2C2281A11D0051461E /* LoadableFromNib.swift */; };
 		4867DA2F2281BA9D0051461E /* SingleLineTextInput.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4867DA2E2281BA9D0051461E /* SingleLineTextInput.xib */; };
 		4867DA332281BD720051461E /* SingleLineTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA322281BD720051461E /* SingleLineTextInput.swift */; };
+		4867DA352282BB690051461E /* StreetDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA342282BB690051461E /* StreetDto.swift */; };
+		4867DA372282BB7C0051461E /* BuildingDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA362282BB7C0051461E /* BuildingDto.swift */; };
+		4867DA392282BE610051461E /* OrderServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA382282BE610051461E /* OrderServiceProtocol.swift */; };
+		4867DA3B2282BE730051461E /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA3A2282BE730051461E /* OrderService.swift */; };
 		48FE4C9C2278D83E00881D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FE4C9B2278D83E00881D72 /* AppDelegate.swift */; };
 		48FE4CA32278D83F00881D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA22278D83F00881D72 /* Assets.xcassets */; };
 		48FE4CA62278D83F00881D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA42278D83F00881D72 /* LaunchScreen.storyboard */; };
@@ -214,7 +218,7 @@
 		4867D944227A4E2E0051461E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4867D946227A52170051461E /* UrlsConfigProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlsConfigProtocol.swift; sourceTree = "<group>"; };
 		4867D948227A53930051461E /* ProdUrlsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdUrlsConfig.swift; sourceTree = "<group>"; };
-		4867D94A227AE5730051461E /* PizzasResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasResponseDto.swift; sourceTree = "<group>"; };
+		4867D94A227AE5730051461E /* ArrayResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayResponseDto.swift; sourceTree = "<group>"; };
 		4867D94D227EEFBB0051461E /* menu_presenter_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_presenter_tests.swift; sourceTree = "<group>"; };
 		4867D950227EF3F40051461E /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		4867D954227EF4680051461E /* OrderFlowInitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFlowInitData.swift; sourceTree = "<group>"; };
@@ -302,6 +306,10 @@
 		4867DA2C2281A11D0051461E /* LoadableFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableFromNib.swift; sourceTree = "<group>"; };
 		4867DA2E2281BA9D0051461E /* SingleLineTextInput.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleLineTextInput.xib; sourceTree = "<group>"; };
 		4867DA322281BD720051461E /* SingleLineTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineTextInput.swift; sourceTree = "<group>"; };
+		4867DA342282BB690051461E /* StreetDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetDto.swift; sourceTree = "<group>"; };
+		4867DA362282BB7C0051461E /* BuildingDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDto.swift; sourceTree = "<group>"; };
+		4867DA382282BE610051461E /* OrderServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServiceProtocol.swift; sourceTree = "<group>"; };
+		4867DA3A2282BE730051461E /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
 		48FE4C982278D83D00881D72 /* pizza-delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pizza-delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FE4C9B2278D83E00881D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48FE4CA22278D83F00881D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -473,6 +481,8 @@
 				4867D93F227A4CA50051461E /* DtoToModelMapper.swift */,
 				4867D92C2279FB5F0051461E /* MenuServiceProtocol.swift */,
 				4867D937227A48B00051461E /* MenuService.swift */,
+				4867DA382282BE610051461E /* OrderServiceProtocol.swift */,
+				4867DA3A2282BE730051461E /* OrderService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -632,8 +642,10 @@
 		4867D93B227A4A2F0051461E /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
+				4867D94A227AE5730051461E /* ArrayResponseDto.swift */,
 				4867D93C227A4A460051461E /* PizzaDto.swift */,
-				4867D94A227AE5730051461E /* PizzasResponseDto.swift */,
+				4867DA342282BB690051461E /* StreetDto.swift */,
+				4867DA362282BB7C0051461E /* BuildingDto.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -781,9 +793,9 @@
 		4867D99522804C010051461E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				4867D99822804C010051461E /* SelectAddressPresenterProtocol.swift */,
 				4867D9FA22806F5D0051461E /* SelectAddressInitData.swift */,
 				4867D99622804C010051461E /* SelectAddressPresenter.swift */,
-				4867D99822804C010051461E /* SelectAddressPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -791,8 +803,8 @@
 		4867D99922804C010051461E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4867D99A22804C010051461E /* SelectAddressViewController.swift */,
 				4867D99B22804C010051461E /* SelectAddressViewProtocol.swift */,
+				4867D99A22804C010051461E /* SelectAddressViewController.swift */,
 				4867D99C22804C010051461E /* SelectAddressViewController.storyboard */,
 			);
 			path = View;
@@ -1294,6 +1306,7 @@
 				4867D8E62279AF650051461E /* SplashPresenter.swift in Sources */,
 				4867D9D322804C020051461E /* OrderSuccessScreenPresenterProtocol.swift in Sources */,
 				4867D974227F3E8F0051461E /* MenuPresenter.swift in Sources */,
+				4867DA372282BB7C0051461E /* BuildingDto.swift in Sources */,
 				4867D9E322804C020051461E /* EnterDeliveryDetailsPresenter.swift in Sources */,
 				4867D8D72279A61A0051461E /* SceneFactory.swift in Sources */,
 				4867D984227F48380051461E /* UICollectionView+ReusableCells.swift in Sources */,
@@ -1330,7 +1343,7 @@
 				4867D936227A47D80051461E /* CommonError.swift in Sources */,
 				4867DA332281BD720051461E /* SingleLineTextInput.swift in Sources */,
 				4867D8CC2279A5250051461E /* SceneNavigatorProtocol.swift in Sources */,
-				4867D94B227AE5730051461E /* PizzasResponseDto.swift in Sources */,
+				4867D94B227AE5730051461E /* ArrayResponseDto.swift in Sources */,
 				4867D947227A52170051461E /* UrlsConfigProtocol.swift in Sources */,
 				4867D9C922804C020051461E /* SelectAddressViewController.swift in Sources */,
 				4867D9DA22804C020051461E /* SelectPaymentMethodPresenter.swift in Sources */,
@@ -1368,6 +1381,7 @@
 				4867D9082279E8DF0051461E /* SceneFactory+Tabs.swift in Sources */,
 				4867D973227F3E8F0051461E /* MenuPresenterProtocol.swift in Sources */,
 				4867D988227F804B0051461E /* AccessibilityIdentitier.swift in Sources */,
+				4867DA352282BB690051461E /* StreetDto.swift in Sources */,
 				4867D9052279E8DF0051461E /* TabsPresenterProtocol.swift in Sources */,
 				4867D9E522804C020051461E /* EnterDeliveryDetailsViewProtocol.swift in Sources */,
 				4867D9CE22804C020051461E /* ConfirmOrderInitData.swift in Sources */,
@@ -1378,9 +1392,11 @@
 				4867D9E122804C020051461E /* EnterDeliveryDetailsInitData.swift in Sources */,
 				4867D977227F3E8F0051461E /* MenuViewProtocol.swift in Sources */,
 				4867DA1A2280DF350051461E /* UIView+Gradient.swift in Sources */,
+				4867DA392282BE610051461E /* OrderServiceProtocol.swift in Sources */,
 				4867D9E422804C020051461E /* SceneFactory+EnterDeliveryDetails.swift in Sources */,
 				4867D9F722806A700051461E /* PaymentMethod.swift in Sources */,
 				4867D97F227F41C30051461E /* PizzaCollectionViewCell.swift in Sources */,
+				4867DA3B2282BE730051461E /* OrderService.swift in Sources */,
 				4867D938227A48B00051461E /* MenuService.swift in Sources */,
 				4867D8E52279AF650051461E /* SplashPresenterProtocol.swift in Sources */,
 				4867D9C522804C020051461E /* SelectAddress+SceneFactory.swift in Sources */,
