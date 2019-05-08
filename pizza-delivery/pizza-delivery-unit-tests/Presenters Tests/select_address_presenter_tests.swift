@@ -41,7 +41,48 @@ class select_address_presenter_tests: XCTestCase {
     // MARK: - Tests
     
     func test_when_view_loaded_then_inputs_and_next_button_are_disabled() {
-        XCTFail("Not implemented")
+        
+        // Arrange
+        
+        // Act
+        presenter.handleViewLoaded()
+        
+        // Assert
+        
+        let isStreetEnabled = { (isEnabled: Bool, operation: MockSelectAddresssView.Operation) -> Bool in
+            if case .setIsStreetInputEnabled(isEnabled) = operation {
+                return true
+            }
+            return false
+        }
+        let isBuildingEnabled = { (isEnabled: Bool, operation: MockSelectAddresssView.Operation) -> Bool in
+            if case .setIsBuildingInputEnabled(isEnabled) = operation {
+                return true
+            }
+            return false
+        }
+        let isNextButtonEnabled = { (isEnabled: Bool, operation: MockSelectAddresssView.Operation) -> Bool in
+            if case .setIsNextButtonEnabled(isEnabled) = operation {
+                return true
+            }
+            return false
+        }
+        
+        XCTAssert(mockSelectAddressView.recordedOperations.contains { isStreetEnabled(false, $0) },
+                  "Street input was not disabled.")
+        XCTAssertFalse(mockSelectAddressView.recordedOperations.contains { isStreetEnabled(true, $0) },
+                       "Street input was not disabled.")
+        
+        XCTAssert(mockSelectAddressView.recordedOperations.contains { isBuildingEnabled(false, $0) },
+                  "Building input was not disabled.")
+        XCTAssertFalse(mockSelectAddressView.recordedOperations.contains { isBuildingEnabled(true, $0) },
+                       "Building input was not disabled.")
+        
+        XCTAssert(mockSelectAddressView.recordedOperations.contains { isNextButtonEnabled(false, $0) },
+                  "Next button was not disabled.")
+        XCTAssertFalse(mockSelectAddressView.recordedOperations.contains { isNextButtonEnabled(true, $0) },
+                       "Next button was not disabled.")
+        
     }
     
     func test_when_view_loaded_then_streets_get_loaded_and_then_only_street_input_becomes_enabled() {

@@ -26,7 +26,9 @@ class SelectAddressPresenter {
 extension SelectAddressPresenter: SelectAddressPresenterProtocol {
 
     func handleViewLoaded() {
-        // Method is called after view loading is finished.
+        view.setIsStreetInputEnabled(false)
+        view.setIsBuildingInputEnabled(false)
+        view.setIsNextButtonEnabled(false)
     }
     
     func handleStreetValueChanged(_ newStreet: Street) {
