@@ -17,6 +17,7 @@ class CompositionRoot {
     private let api: APIProtocol
     private let dtoToModelMapper: DtoToModelMapper
     private let menuService: MenuServiceProtocol
+    private let orderService: OrderServiceProtocol
     
     init(serviceFactory: ServiceFactoryProtocol) {
         self.serviceFactory = serviceFactory
@@ -26,6 +27,7 @@ class CompositionRoot {
         dtoToModelMapper = DtoToModelMapper()
         menuService = MenuService(api: api,
                                   mapper: dtoToModelMapper)
+        orderService = OrderService()
     }
     
     func composeFlow(_ flow: Flow) -> FlowProtocol {
@@ -58,7 +60,9 @@ class CompositionRoot {
     private func composeOrderScene(_ orderScene: Scene.Order) -> UIViewController {
         switch orderScene {
         case .selectAddress(let initData):
-            let viewController = SceneFactory.makeSelectAddress(navigator: navigator, initData: initData)
+            let viewController = SceneFactory.makeSelectAddress(navigator: navigator,
+                                                                initData: initData,
+                                                                orderService: orderService)
             return UINavigationController(rootViewController: viewController)
         case .enterDeliveryDetails(let initData):
             return SceneFactory.makeEnterDeliveryDetails(navigator: navigator, initData: initData)

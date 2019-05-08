@@ -5,14 +5,18 @@ class SelectAddressPresenter {
     private unowned let view: SelectAddressViewProtocol
     private unowned let navigator: SceneNavigatorProtocol
     
+    private let orderService: OrderServiceProtocol
+    
     private let initData: SelectAddressInitData
 
     init(view: SelectAddressViewProtocol,
          navigator: SceneNavigatorProtocol,
-         initData: SelectAddressInitData) {
+         initData: SelectAddressInitData,
+         orderService: OrderServiceProtocol) {
         self.view = view
         self.navigator = navigator
         self.initData = initData
+        self.orderService = orderService
     }
 
 }
@@ -30,6 +34,14 @@ extension SelectAddressPresenter: SelectAddressPresenterProtocol {
     }
     
     func handleBuildingValueChanged(_ newBuilding: Building) {
+        // TODO: Implement
+    }
+    
+    func handleCloseTapped() {
+        // TODO: Implement
+    }
+    
+    func handleErrorDismissed() {
         // TODO: Implement
     }
     

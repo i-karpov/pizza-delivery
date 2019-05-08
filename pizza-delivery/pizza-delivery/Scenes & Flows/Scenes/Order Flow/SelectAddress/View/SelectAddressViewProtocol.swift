@@ -10,6 +10,6 @@ protocol SelectAddressViewProtocol: class {
     func setIsNextButtonEnabled(_ isEnabled: Bool)
     
     func setAvailableStreets(_ streets: [Street])
-    func setAvailableBuildings(_ streets: [Building])
+    func setAvailableBuildings(_ buildings: [Building])
     
 }

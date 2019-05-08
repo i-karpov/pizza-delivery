@@ -8,7 +8,7 @@
 
 import Foundation
 
-class OrderService {
+class OrderService: OrderServiceProtocol {
     
     func getStreets(_ completion: @escaping CommonBlock.ResultCompletionBlock<[Street]>) {
         // TODO: Implement

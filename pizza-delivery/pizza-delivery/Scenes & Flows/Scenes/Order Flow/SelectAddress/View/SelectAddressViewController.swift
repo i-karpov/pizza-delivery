@@ -83,7 +83,7 @@ extension SelectAddressViewController: SelectAddressViewProtocol {
         // TODO: Implement
     }
     
-    func setAvailableBuildings(_ streets: [Building]) {
+    func setAvailableBuildings(_ buildings: [Building]) {
         // TODO: Implement
     }
     

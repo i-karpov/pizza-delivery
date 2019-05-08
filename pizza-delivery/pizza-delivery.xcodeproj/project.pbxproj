@@ -140,6 +140,9 @@
 		4867DA372282BB7C0051461E /* BuildingDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA362282BB7C0051461E /* BuildingDto.swift */; };
 		4867DA392282BE610051461E /* OrderServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA382282BE610051461E /* OrderServiceProtocol.swift */; };
 		4867DA3B2282BE730051461E /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA3A2282BE730051461E /* OrderService.swift */; };
+		4867DA3D2282BF3E0051461E /* MockOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA3C2282BF3E0051461E /* MockOrderService.swift */; };
+		4867DA3F2282C0720051461E /* select_address_presenter_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA3E2282C0720051461E /* select_address_presenter_tests.swift */; };
+		4867DA412282C0F40051461E /* MockSelectAddresssView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA402282C0F40051461E /* MockSelectAddresssView.swift */; };
 		48FE4C9C2278D83E00881D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FE4C9B2278D83E00881D72 /* AppDelegate.swift */; };
 		48FE4CA32278D83F00881D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA22278D83F00881D72 /* Assets.xcassets */; };
 		48FE4CA62278D83F00881D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA42278D83F00881D72 /* LaunchScreen.storyboard */; };
@@ -310,6 +313,9 @@
 		4867DA362282BB7C0051461E /* BuildingDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDto.swift; sourceTree = "<group>"; };
 		4867DA382282BE610051461E /* OrderServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServiceProtocol.swift; sourceTree = "<group>"; };
 		4867DA3A2282BE730051461E /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
+		4867DA3C2282BF3E0051461E /* MockOrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOrderService.swift; sourceTree = "<group>"; };
+		4867DA3E2282C0720051461E /* select_address_presenter_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = select_address_presenter_tests.swift; sourceTree = "<group>"; };
+		4867DA402282C0F40051461E /* MockSelectAddresssView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSelectAddresssView.swift; sourceTree = "<group>"; };
 		48FE4C982278D83D00881D72 /* pizza-delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pizza-delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FE4C9B2278D83E00881D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48FE4CA22278D83F00881D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -663,6 +669,7 @@
 			isa = PBXGroup;
 			children = (
 				4867D94D227EEFBB0051461E /* menu_presenter_tests.swift */,
+				4867DA3E2282C0720051461E /* select_address_presenter_tests.swift */,
 			);
 			path = "Presenters Tests";
 			sourceTree = "<group>";
@@ -699,6 +706,7 @@
 			isa = PBXGroup;
 			children = (
 				4867D95E227EFB410051461E /* MockMenuView.swift */,
+				4867DA402282C0F40051461E /* MockSelectAddresssView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -707,6 +715,7 @@
 			isa = PBXGroup;
 			children = (
 				4867D95C227EFB310051461E /* MockMenuService.swift */,
+				4867DA3C2282BF3E0051461E /* MockOrderService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1290,7 +1299,10 @@
 			files = (
 				4867D958227EF6520051461E /* MockSceneNavigator.swift in Sources */,
 				4867DA0422807E9B0051461E /* order_flow_test.swift in Sources */,
+				4867DA3F2282C0720051461E /* select_address_presenter_tests.swift in Sources */,
+				4867DA3D2282BF3E0051461E /* MockOrderService.swift in Sources */,
 				4867D94E227EEFBB0051461E /* menu_presenter_tests.swift in Sources */,
+				4867DA412282C0F40051461E /* MockSelectAddresssView.swift in Sources */,
 				4867D95D227EFB310051461E /* MockMenuService.swift in Sources */,
 				4867D95F227EFB410051461E /* MockMenuView.swift in Sources */,
 			);
