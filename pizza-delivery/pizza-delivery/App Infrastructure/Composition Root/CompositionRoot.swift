@@ -18,6 +18,7 @@ class CompositionRoot {
     private let dtoToModelMapper: DtoToModelMapper
     private let menuService: MenuServiceProtocol
     private let orderService: OrderServiceProtocol
+    private let errorToTextMapper: ErrorToTextMapper
     
     init(serviceFactory: ServiceFactoryProtocol) {
         self.serviceFactory = serviceFactory
@@ -25,9 +26,9 @@ class CompositionRoot {
         urlsConfig = ProdUrlsConfig()
         api = API(urlsConfig: urlsConfig)
         dtoToModelMapper = DtoToModelMapper()
-        menuService = MenuService(api: api,
-                                  mapper: dtoToModelMapper)
-        orderService = OrderService()
+        menuService = MenuService(api: api, mapper: dtoToModelMapper)
+        orderService = OrderService(api: api, mapper: dtoToModelMapper)
+        errorToTextMapper = ErrorToTextMapper()
     }
     
     func composeFlow(_ flow: Flow) -> FlowProtocol {
@@ -42,7 +43,9 @@ class CompositionRoot {
         case .splash:
             return SceneFactory.makeSplash(navigator: navigator)
         case .menu:
-            return SceneFactory.makeMenu(navigator: navigator, menuService: menuService)
+            return SceneFactory.makeMenu(navigator: navigator,
+                                         menuService: menuService,
+                                         errorToTextMapper: errorToTextMapper)
         case .ordersHistory:
             return SceneFactory.makeOrdersHistory(navigator: navigator)
         case .tabs:
@@ -62,7 +65,8 @@ class CompositionRoot {
         case .selectAddress(let initData):
             let viewController = SceneFactory.makeSelectAddress(navigator: navigator,
                                                                 initData: initData,
-                                                                orderService: orderService)
+                                                                orderService: orderService,
+                                                                errorToTextMapper: errorToTextMapper)
             return UINavigationController(rootViewController: viewController)
         case .enterDeliveryDetails(let initData):
             return SceneFactory.makeEnterDeliveryDetails(navigator: navigator, initData: initData)

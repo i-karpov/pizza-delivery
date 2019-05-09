@@ -10,13 +10,15 @@ import UIKit
 
 extension UIViewController {
     
-    func showOKAlert(title: String, message: String) {
+    func showOKAlert(title: String, message: String, onDismissed completion: (() -> Void)? = .none) {
         let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)
         
         let buttonTitle = R.string.localizable.commonAlertOkButton()
-        alert.addAction(UIAlertAction(title: buttonTitle, style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: buttonTitle, style: .cancel, handler: { _ in
+            completion?()
+        }))
         
         present(alert, animated: true, completion: nil)
     }

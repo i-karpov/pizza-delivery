@@ -12,6 +12,9 @@
 "common.errorMessage.noConnection" = "Oops, smth. went wrong :(";
 "common.retryButtonTitle" = "Retry";
 
+"common.pickerButtons.done" = "Select";
+"common.pickerButtons.cancel" = "Cancel";
+
 "splash.title" = "Pizza Fox";
 
 "tabs.menuTitle" = "Menu";

@@ -6,8 +6,8 @@ protocol SelectAddressPresenterProtocol: class {
 
     func handleViewLoaded()
     
-    func handleStreetValueChanged(_ newStreet: Street)
-    func handleBuildingValueChanged(_ newBuilding: Building)
+    func handleStreetValueChanged(_ newStreet: Street?)
+    func handleBuildingValueChanged(_ newBuilding: Building?)
     
     func handleCloseTapped()
     func handleErrorDismissed()

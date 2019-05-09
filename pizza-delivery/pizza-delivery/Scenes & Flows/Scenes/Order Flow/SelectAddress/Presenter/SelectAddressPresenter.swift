@@ -75,17 +75,21 @@ extension SelectAddressPresenter: SelectAddressPresenterProtocol {
         loadStreetsAndEnablePicker()
     }
     
-    func handleStreetValueChanged(_ newStreet: Street) {
+    func handleStreetValueChanged(_ newStreet: Street?) {
         selectedStreet = newStreet
         selectedBuilding = .none
         view.eraseBuildingInput()
         view.setIsNextButtonEnabled(false)
-        loadBuildingsAndEnablePicker(streetId: newStreet.id)
+        if let newStreet = newStreet {
+            loadBuildingsAndEnablePicker(streetId: newStreet.id)
+        }
     }
     
-    func handleBuildingValueChanged(_ newBuilding: Building) {
+    func handleBuildingValueChanged(_ newBuilding: Building?) {
         selectedBuilding = newBuilding
-        view.setIsNextButtonEnabled(true)
+        if newBuilding != nil {
+            view.setIsNextButtonEnabled(true)
+        }
     }
     
     func handleCloseTapped() {

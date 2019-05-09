@@ -25,7 +25,6 @@ class MenuService: MenuServiceProtocol {
             }
             completion(result.map({ $0.map(strongSelf.mapper.map) }))
         }
-
     }
     
 }

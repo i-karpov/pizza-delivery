@@ -10,13 +10,31 @@ import Foundation
 
 class OrderService: OrderServiceProtocol {
     
+    private let api: APIProtocol
+    private let mapper: DtoToModelMapper
+    
+    init(api: APIProtocol, mapper: DtoToModelMapper) {
+        self.api = api
+        self.mapper = mapper
+    }
+    
     func getStreets(_ completion: @escaping CommonBlock.ResultCompletionBlock<[Street]>) {
-        // TODO: Implement
+        api.getStreets { [weak self] (result) in
+            guard let strongSelf = self else {
+                return
+            }
+            completion(result.map({ $0.map(strongSelf.mapper.map) }))
+        }
     }
     
     func getBuildingsByStreetId(_ streetId: Int,
                                 _ completion: @escaping CommonBlock.ResultCompletionBlock<[Building]>) {
-        // TODO: Implement
+        api.getBuildingsByStreetId(streetId) { [weak self] (result) in
+            guard let strongSelf = self else {
+                return
+            }
+            completion(result.map({ $0.map(strongSelf.mapper.map) }))
+        }
     }
     
 }

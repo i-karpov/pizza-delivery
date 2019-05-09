@@ -5,7 +5,8 @@ extension SceneFactory {
     internal static func makeSelectAddress(
         navigator: SceneNavigatorProtocol,
         initData: SelectAddressInitData,
-        orderService: OrderServiceProtocol) -> UIViewController {
+        orderService: OrderServiceProtocol,
+        errorToTextMapper: ErrorToTextMapper) -> UIViewController {
             
         let viewController: SelectAddressViewController = SelectAddressViewController.storyboardInstance()
         let presenter = SelectAddressPresenter(
@@ -14,6 +15,7 @@ extension SceneFactory {
             initData: initData,
             orderService: orderService)
         viewController.presenter = presenter
+        viewController.errorToTextMapper = errorToTextMapper
         
         return viewController
     }

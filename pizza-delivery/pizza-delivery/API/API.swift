@@ -37,12 +37,39 @@ class API: APIProtocol {
     }
     
     func getStreets(_ completion: @escaping CommonBlock.ResultCompletionBlock<[StreetDto]>) {
-        fatalError("Not implemented")
+        let urlString = baseUrl + "/streets"
+        let parameters = [
+            "order": "title:asc"
+        ]
+        
+        AF.request(urlString,
+                   parameters: parameters)
+            .validate()
+            .responseDecodable { (response: DataResponse<ArrayResponseDto<StreetDto>>) in
+                let result = response.result
+                    .map({ $0.response.data })
+                    .mapError(self.mapErrorToCommonError)
+                completion(result)
+            }
     }
     
     func getBuildingsByStreetId(_ streetId: Int,
                                 _ completion: @escaping CommonBlock.ResultCompletionBlock<[BuildingDto]>) {
-        fatalError("Not implemented")
+        let urlString = baseUrl + "/streets/\(streetId)"
+        let parameters = [
+            "order": "title:asc",
+            "load": "region.pizzeria"
+        ]
+        
+        AF.request(urlString,
+                   parameters: parameters)
+            .validate()
+            .responseDecodable { (response: DataResponse<ArrayResponseDto<BuildingDto>>) in
+                let result = response.result
+                    .map({ $0.response.data })
+                    .mapError(self.mapErrorToCommonError)
+                completion(result)
+            }
     }
     
     private func mapErrorToCommonError(_ error: Error) -> CommonError {
