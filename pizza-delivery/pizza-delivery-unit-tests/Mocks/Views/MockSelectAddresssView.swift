@@ -19,6 +19,7 @@ class MockSelectAddresssView: SelectAddressViewProtocol {
         case setIsNextButtonEnabled(isEnabled: Bool)
         case setAvailableStreets(streets: [Street])
         case setAvailableBuildings(buildings: [Building])
+        case eraseBuildingInput
     }
     
     var recordedOperations = [Operation]()
@@ -111,6 +112,13 @@ class MockSelectAddresssView: SelectAddressViewProtocol {
         return false
     }
     
+    static func isOperationEraseBuilding(_ operation: MockSelectAddresssView.Operation) -> Bool {
+        if case .eraseBuildingInput = operation {
+            return true
+        }
+        return false
+    }
+    
     // MARK: - Protocol Implementation
     
     func setIsAcitityIndicatorVisible(_ isVisible: Bool) {
@@ -141,5 +149,7 @@ class MockSelectAddresssView: SelectAddressViewProtocol {
         recordedOperations.append(.setAvailableBuildings(buildings: buildings))
     }
     
-    
+    func eraseBuildingInput() {
+        recordedOperations.append(.eraseBuildingInput)
+    }
 }

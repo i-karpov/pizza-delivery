@@ -87,4 +87,7 @@ extension SelectAddressViewController: SelectAddressViewProtocol {
         // TODO: Implement
     }
     
+    func eraseBuildingInput() {
+        // TODO: Implement
+    }
 }

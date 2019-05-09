@@ -12,4 +12,5 @@ protocol SelectAddressViewProtocol: class {
     func setAvailableStreets(_ streets: [Street])
     func setAvailableBuildings(_ buildings: [Building])
     
+    func eraseBuildingInput()
 }

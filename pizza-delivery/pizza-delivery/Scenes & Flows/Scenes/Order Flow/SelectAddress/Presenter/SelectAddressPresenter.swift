@@ -9,6 +9,9 @@ class SelectAddressPresenter {
     
     private let initData: SelectAddressInitData
 
+    private var selectedStreet: Street?
+    private var selectedBuilding: Building?
+    
     init(view: SelectAddressViewProtocol,
          navigator: SceneNavigatorProtocol,
          initData: SelectAddressInitData,
@@ -17,19 +20,14 @@ class SelectAddressPresenter {
         self.navigator = navigator
         self.initData = initData
         self.orderService = orderService
+        
+        selectedStreet = .none
+        selectedBuilding = .none
     }
 
-}
-
-// MARK: - Presenter Protocol
-
-extension SelectAddressPresenter: SelectAddressPresenterProtocol {
-
-    func handleViewLoaded() {
-        view.setIsStreetInputEnabled(false)
-        view.setIsBuildingInputEnabled(false)
-        view.setIsNextButtonEnabled(false)
-        
+    // MARK: - Private Methods
+    
+    fileprivate func loadStreetsAndEnablePicker() {
         view.setIsAcitityIndicatorVisible(true)
         orderService.getStreets { [weak self] (result) in
             guard let strongSelf = self else {
@@ -47,25 +45,61 @@ extension SelectAddressPresenter: SelectAddressPresenterProtocol {
         }
     }
     
+    fileprivate func loadBuildingsAndEnablePicker(streetId: Int) {
+        view.setIsAcitityIndicatorVisible(true)
+        orderService.getBuildingsByStreetId(streetId) { [weak self] (result) in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.view.setIsAcitityIndicatorVisible(false)
+            
+            switch result {
+            case .success(let buildings):
+                strongSelf.view.setAvailableBuildings(buildings)
+                strongSelf.view.setIsBuildingInputEnabled(true)
+            case .failure(let error):
+                strongSelf.view.showTextForError(error)
+            }
+        }
+    }
+}
+
+// MARK: - Presenter Protocol
+
+extension SelectAddressPresenter: SelectAddressPresenterProtocol {
+
+    func handleViewLoaded() {
+        view.setIsStreetInputEnabled(false)
+        view.setIsBuildingInputEnabled(false)
+        view.setIsNextButtonEnabled(false)
+        loadStreetsAndEnablePicker()
+    }
+    
     func handleStreetValueChanged(_ newStreet: Street) {
-        // TODO: Implement
+        selectedStreet = newStreet
+        selectedBuilding = .none
+        view.eraseBuildingInput()
+        view.setIsNextButtonEnabled(false)
+        loadBuildingsAndEnablePicker(streetId: newStreet.id)
     }
     
     func handleBuildingValueChanged(_ newBuilding: Building) {
-        // TODO: Implement
+        selectedBuilding = newBuilding
+        view.setIsNextButtonEnabled(true)
     }
     
     func handleCloseTapped() {
-        // TODO: Implement
+        initData.handleCloseTapped()
     }
     
     func handleErrorDismissed() {
-        // TODO: Implement
+        initData.handleCloseTapped()
     }
     
     func handleNextTapped() {
-        let street = Street(id: 1, title: "1")
-        let building = Building(id: 1, title: "1")
+        guard let street = selectedStreet, let building = selectedBuilding else {
+            fatalError("Invalid state.")
+        }
         initData.handleEnteringFinished(SelectAddressInitData.SelectAddressSceneOutput(street: street,
                                                                                        buidling: building))
     }
