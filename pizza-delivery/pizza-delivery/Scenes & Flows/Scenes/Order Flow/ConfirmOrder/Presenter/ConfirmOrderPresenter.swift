@@ -22,7 +22,11 @@ class ConfirmOrderPresenter {
 extension ConfirmOrderPresenter: ConfirmOrderPresenterProtocol {
 
     func handleViewLoaded() {
-        // Method is called after view loading is finished.
+        view.showOrderDraft(initData.orderDraft)
+    }
+    
+    func handleOrderConfirmed() {
+        print("SEND ORDER")
     }
 
 }

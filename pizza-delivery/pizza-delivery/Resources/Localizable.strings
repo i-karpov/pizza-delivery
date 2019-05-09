@@ -41,5 +41,8 @@
 "orderFlow.selectAddresScene.title" = "Your Address";
 "orderFlow.enterDeliveryDetailsScene.title" = "Additional Info";
 "orderFlow.selectPaymentMethodScene.title" = "Payment Method";
-"orderFlow.confirmationScene.title" = "Check you info";
 
+"orderFlow.confirmationScene.title" = "Check you info";
+"orderFlow.confirmationScene.paymentMethod.cash" = "Cash";
+"orderFlow.confirmationScene.paymentMethod.card" = "Card";
+"orderFlow.confirmationScene.confirmOrderButtonTitle" = "Order";
