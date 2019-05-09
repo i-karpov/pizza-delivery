@@ -15,7 +15,7 @@ class select_address_presenter_tests: XCTestCase {
     
     private var mockNavigator: MockSceneNavigator!
     private var mockOrderService: MockOrderService!
-    private var mockSelectAddressView: MockSelectAddresssView!
+    private var mockView: MockSelectAddresssView!
     
     private var presenter: SelectAddressPresenterProtocol!
     
@@ -24,7 +24,7 @@ class select_address_presenter_tests: XCTestCase {
     override func setUp() {
         mockNavigator = MockSceneNavigator()
         mockOrderService = MockOrderService()
-        mockSelectAddressView = MockSelectAddresssView()
+        mockView = MockSelectAddresssView()
         
         let initData = SelectAddressInitData(
             handleCloseTapped: {},
@@ -32,7 +32,7 @@ class select_address_presenter_tests: XCTestCase {
                 
         })
         
-        presenter = SelectAddressPresenter(view: mockSelectAddressView,
+        presenter = SelectAddressPresenter(view: mockView,
                                            navigator: mockNavigator,
                                            initData: initData,
                                            orderService: mockOrderService)
@@ -43,54 +43,137 @@ class select_address_presenter_tests: XCTestCase {
     func test_when_view_loaded_then_inputs_and_next_button_are_disabled() {
         
         // Arrange
+        mockOrderService.responses.getStreetsAsync = .success([])
         
         // Act
         presenter.handleViewLoaded()
         
         // Assert
         
-        let isStreetEnabled = { (isEnabled: Bool, operation: MockSelectAddresssView.Operation) -> Bool in
-            if case .setIsStreetInputEnabled(isEnabled) = operation {
-                return true
-            }
-            return false
+        let streetAvailabilityOperations = mockView.recordedOperations.filter {
+            MockSelectAddresssView.isOperationIsStreetEnabled($0)
         }
-        let isBuildingEnabled = { (isEnabled: Bool, operation: MockSelectAddresssView.Operation) -> Bool in
-            if case .setIsBuildingInputEnabled(isEnabled) = operation {
-                return true
-            }
-            return false
+        let buildingAvailabilityOperations = mockView.recordedOperations.filter {
+            MockSelectAddresssView.isOperationIsBuildingEnabled($0)
         }
-        let isNextButtonEnabled = { (isEnabled: Bool, operation: MockSelectAddresssView.Operation) -> Bool in
-            if case .setIsNextButtonEnabled(isEnabled) = operation {
-                return true
-            }
-            return false
+        let buttonAvailabilityOperations = mockView.recordedOperations.filter {
+            MockSelectAddresssView.isOperationIsNextButtonEnabled($0)
         }
         
-        XCTAssert(mockSelectAddressView.recordedOperations.contains { isStreetEnabled(false, $0) },
-                  "Street input was not disabled.")
-        XCTAssertFalse(mockSelectAddressView.recordedOperations.contains { isStreetEnabled(true, $0) },
-                       "Street input was not disabled.")
-        
-        XCTAssert(mockSelectAddressView.recordedOperations.contains { isBuildingEnabled(false, $0) },
-                  "Building input was not disabled.")
-        XCTAssertFalse(mockSelectAddressView.recordedOperations.contains { isBuildingEnabled(true, $0) },
-                       "Building input was not disabled.")
-        
-        XCTAssert(mockSelectAddressView.recordedOperations.contains { isNextButtonEnabled(false, $0) },
-                  "Next button was not disabled.")
-        XCTAssertFalse(mockSelectAddressView.recordedOperations.contains { isNextButtonEnabled(true, $0) },
-                       "Next button was not disabled.")
+        XCTAssert(streetAvailabilityOperations.count > 0)
+        if streetAvailabilityOperations.count > 0 {
+            XCTAssert(MockSelectAddresssView.isOperationIsStreetEnabled(streetAvailabilityOperations.last!,
+                                                                        withParam: false),
+                      "Street input is not disabled.")
+        }
+        XCTAssert(buildingAvailabilityOperations.count > 0)
+        if buildingAvailabilityOperations.count > 0 {
+            XCTAssert(MockSelectAddresssView.isOperationIsBuildingEnabled(buildingAvailabilityOperations.last!,
+                                                                          withParam: false),
+                      "Building input is not disabled.")
+        }
+        XCTAssert(buttonAvailabilityOperations.count > 0)
+        if buttonAvailabilityOperations.count > 0 {
+            XCTAssert(MockSelectAddresssView.isOperationIsNextButtonEnabled(buttonAvailabilityOperations.last!,
+                                                                            withParam: false),
+                      "Next button is not disabled.")
+        }
         
     }
     
     func test_when_view_loaded_then_streets_get_loaded_and_then_only_street_input_becomes_enabled() {
-        XCTFail("Not implemented")
+        
+        // Arrange
+        let expectedStreets = [
+            Street(id: 1, title: "Street 1"),
+            Street(id: 2, title: "Street 2")
+        ]
+        mockOrderService.responses.getStreets = .success(expectedStreets)
+        
+        // Act
+        presenter.handleViewLoaded()
+        
+        // Assert
+        
+        // 1. loading indicator shown
+        // 2. loading indicator dismissed
+        let indicatorOperations = mockView.recordedOperations.filter {
+            MockSelectAddresssView.isOperationSetIsAcitityIndicatorVisible($0)
+        }
+        XCTAssertEqual(indicatorOperations.count, 2, "Wrong amount of operations with acivity indicator")
+        if indicatorOperations.count == 2 {
+            XCTAssert(MockSelectAddresssView.isOperationSetIsAcitityIndicatorVisible(indicatorOperations[0],
+                                                                                     withParam: true),
+                      "Wrong operations with acivity indicator")
+            XCTAssert(MockSelectAddresssView.isOperationSetIsAcitityIndicatorVisible(indicatorOperations[1],
+                                                                                     withParam: false),
+                      "Wrong operations with acivity indicator")
+        }
+        
+        // 3. available streets set
+        let streetsOperations = mockView.recordedOperations.filter {
+            MockSelectAddresssView.isOperationSetAvailableStreets($0)
+        }
+        XCTAssertEqual(streetsOperations.count, 1, "Wrong amount of operations with available streets.")
+        if streetsOperations.count == 1 {
+            XCTAssert(MockSelectAddresssView.isOperationSetAvailableStreets(streetsOperations[0],
+                                                                            withParam: expectedStreets),
+                      "Incorrect available streets set.")
+        }
+        
+        // 4. isEnabled
+        let streetAvailabilityOperations = mockView.recordedOperations.filter {
+            MockSelectAddresssView.isOperationIsStreetEnabled($0)
+        }
+        let buildingAvailabilityOperations = mockView.recordedOperations.filter {
+            MockSelectAddresssView.isOperationIsBuildingEnabled($0)
+        }
+        let buttonAvailabilityOperations = mockView.recordedOperations.filter {
+            MockSelectAddresssView.isOperationIsNextButtonEnabled($0)
+        }
+        
+        XCTAssert(streetAvailabilityOperations.count > 0)
+        if streetAvailabilityOperations.count > 0 {
+            XCTAssert(MockSelectAddresssView.isOperationIsStreetEnabled(streetAvailabilityOperations.last!,
+                                                                        withParam: true),
+                      "Street input is not enabled.")
+        }
+        XCTAssert(buildingAvailabilityOperations.count > 0)
+        if buildingAvailabilityOperations.count > 0 {
+            XCTAssert(MockSelectAddresssView.isOperationIsBuildingEnabled(buildingAvailabilityOperations.last!,
+                                                                          withParam: false),
+                      "Building input is not disabled.")
+        }
+        XCTAssert(buttonAvailabilityOperations.count > 0)
+        if buttonAvailabilityOperations.count > 0 {
+            XCTAssert(MockSelectAddresssView.isOperationIsNextButtonEnabled(buttonAvailabilityOperations.last!,
+                                                                            withParam: false),
+                      "Next button is not disabled.")
+        }
     }
     
     func test_when_streets_loading_failed_then_error_is_shown() {
-        XCTFail("Not implemented")
+        
+        // Arrange
+        let expectedError = CommonError.serverCommunicationError(.noConnection)
+        mockOrderService.responses.getStreets = .failure(expectedError)
+        
+        // Act
+        presenter.handleViewLoaded()
+        
+        // Assert
+        let errorOperations = mockView.recordedOperations.filter {
+            if case .showTextForError(_) = $0 { return true }
+            return false
+        }
+        XCTAssertEqual(errorOperations.count, 1, "Wrong amount of error alerts triggered.")
+        if errorOperations.count == 1 {
+            var isErrorAsExpected = false
+            if case .showTextForError(.serverCommunicationError(.noConnection)) = errorOperations[0] {
+                isErrorAsExpected = true
+            }
+            XCTAssert(isErrorAsExpected, "Wrong error was shown.")
+        }
     }
     
     func test_when_error_dismissed_then_scene_gets_closed() {

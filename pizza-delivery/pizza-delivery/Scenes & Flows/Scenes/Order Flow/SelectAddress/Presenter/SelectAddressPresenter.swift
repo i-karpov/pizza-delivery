@@ -29,6 +29,22 @@ extension SelectAddressPresenter: SelectAddressPresenterProtocol {
         view.setIsStreetInputEnabled(false)
         view.setIsBuildingInputEnabled(false)
         view.setIsNextButtonEnabled(false)
+        
+        view.setIsAcitityIndicatorVisible(true)
+        orderService.getStreets { [weak self] (result) in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.view.setIsAcitityIndicatorVisible(false)
+            
+            switch result {
+            case .success(let streets):
+                strongSelf.view.setAvailableStreets(streets)
+                strongSelf.view.setIsStreetInputEnabled(true)
+            case .failure(let error):
+                strongSelf.view.showTextForError(error)
+            }
+        }
     }
     
     func handleStreetValueChanged(_ newStreet: Street) {

@@ -13,6 +13,7 @@ class MockOrderService: OrderServiceProtocol {
     
     struct Responses {
         var getStreets: Result<[Street], CommonError>!
+        var getStreetsAsync: Result<[Street], CommonError>?
         var getBuildings: Result<[Building], CommonError>!
     }
     
@@ -26,7 +27,13 @@ class MockOrderService: OrderServiceProtocol {
     
     func getStreets(_ completion: @escaping CommonBlock.ResultCompletionBlock<[Street]>) {
         recordedOperations.append(.getStreets)
-        completion(responses.getStreets)
+        if let asyncResult = responses.getStreetsAsync {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                completion(asyncResult)
+            }
+        } else {
+            completion(responses.getStreets)
+        }
     }
     
     func getBuildingsByStreetId(_ streetId: Int,
