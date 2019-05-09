@@ -13,6 +13,7 @@ protocol EnterDeliveryDetailsPresenterProtocol: class {
     func handleFloorChanged(_ newValue: String?)
     func handleCommentChanged(_ newValue: String?)
     
+    func handleCloseTapped()
     func handleNextButtonTapped()
     
     // MARK: - Other Signals

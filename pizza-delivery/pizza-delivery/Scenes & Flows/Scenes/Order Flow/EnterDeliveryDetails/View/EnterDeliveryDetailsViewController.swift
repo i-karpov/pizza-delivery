@@ -1,6 +1,6 @@
 import UIKit
 
-class EnterDeliveryDetailsViewController: UIViewController {
+class EnterDeliveryDetailsViewController: BaseOrderFlowViewController {
 
     // MARK: - MVP Infractructure
 
@@ -34,9 +34,7 @@ class EnterDeliveryDetailsViewController: UIViewController {
     }
 
     private func setupSelf() {
-        
-        view.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
-        
+    
         setupNavbar()
         setupTexts()
         setupBindings()
@@ -46,18 +44,6 @@ class EnterDeliveryDetailsViewController: UIViewController {
         
         nextButton.isEnabled = false
 
-    }
-    
-    // TODO: refactor: get rid of duplicatin of this code
-    private func setupNavbar() {
-        self.navigationController?.navigationBar.backIndicatorImage
-            = UIImage(named: "navbar-back-button")?.withInsets(UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0))
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "navbar-back-button")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
-                                                                style: UIBarButtonItem.Style.plain,
-                                                                target: nil,
-                                                                action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
     }
     
     private func setupTexts() {
@@ -101,6 +87,10 @@ class EnterDeliveryDetailsViewController: UIViewController {
         presenter.handleNextButtonTapped()
     }
     
+    @objc
+    override func handleCloseTapped() {
+        presenter.handleCloseTapped()
+    }
 }
 
 // MARK: - View Protocol

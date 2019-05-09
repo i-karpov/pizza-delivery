@@ -58,6 +58,10 @@ extension EnterDeliveryDetailsPresenter: EnterDeliveryDetailsPresenterProtocol {
         comment = newValue
     }
 
+    func handleCloseTapped() {
+        initData.handleCloseTapped()
+    }
+    
     func handleNextButtonTapped() {
         guard let phoneNumber = phoneNumber else {
             fatalError("Invalid state.")

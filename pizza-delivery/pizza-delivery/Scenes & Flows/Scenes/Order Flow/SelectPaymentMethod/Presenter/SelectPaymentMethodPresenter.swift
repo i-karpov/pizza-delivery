@@ -25,6 +25,10 @@ extension SelectPaymentMethodPresenter: SelectPaymentMethodPresenterProtocol {
         view.setTotalSum(initData.totalPrice)
     }
 
+    func handleCloseTapped() {
+        initData.handleCloseTapped()
+    }
+    
     func handleNextButtonTapped() {
         initData.handleEnteringFinished(.byCard)
     }

@@ -25,6 +25,10 @@ extension ConfirmOrderPresenter: ConfirmOrderPresenterProtocol {
         view.showOrderDraft(initData.orderDraft)
     }
     
+    func handleCloseTapped() {
+        initData.handleCloseTapped()
+    }
+    
     func handleOrderConfirmed() {
         // TODO: calculate real delivery time
         initData.handleOrderSentSuccessully(DeliveryWaitingTime(minutes: 60))
