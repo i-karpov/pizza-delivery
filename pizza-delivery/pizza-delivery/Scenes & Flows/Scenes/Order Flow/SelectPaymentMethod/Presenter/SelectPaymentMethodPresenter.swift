@@ -22,7 +22,11 @@ class SelectPaymentMethodPresenter {
 extension SelectPaymentMethodPresenter: SelectPaymentMethodPresenterProtocol {
 
     func handleViewLoaded() {
-        // Method is called after view loading is finished.
+        view.setTotalSum(initData.totalPrice)
     }
 
+    func handleNextButtonTapped() {
+        initData.handleEnteringFinished(.byCard)
+    }
+    
 }
