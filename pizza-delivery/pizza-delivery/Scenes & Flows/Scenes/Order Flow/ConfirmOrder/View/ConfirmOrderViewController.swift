@@ -14,14 +14,14 @@ class ConfirmOrderViewController: UIViewController {
     
     // MARK: - Properties
 
-    @IBOutlet weak var totalSumValueLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var phoneNumberLabel: UILabel!
-    @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var paymentMethodLabel: UILabel!
-    @IBOutlet weak var pizzaLabel: UILabel!
-    @IBOutlet weak var commentLabel: UILabel!
-    @IBOutlet weak var confirmOrderButton: UIButton!
+    @IBOutlet weak private var totalSumValueLabel: UILabel!
+    @IBOutlet weak private var nameLabel: UILabel!
+    @IBOutlet weak private var phoneNumberLabel: UILabel!
+    @IBOutlet weak private var addressLabel: UILabel!
+    @IBOutlet weak private var paymentMethodLabel: UILabel!
+    @IBOutlet weak private var pizzaLabel: UILabel!
+    @IBOutlet weak private var commentLabel: UILabel!
+    @IBOutlet weak private var confirmOrderButton: UIButton!
     
     
     // MARK: - Init & Setup

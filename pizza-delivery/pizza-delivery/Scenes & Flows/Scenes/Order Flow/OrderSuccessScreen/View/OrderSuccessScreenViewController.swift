@@ -13,7 +13,11 @@ class OrderSuccessScreenViewController: UIViewController {
     }
     
     // MARK: - Properties
-
+    
+    @IBOutlet weak private var thankYouLabel: UILabel!
+    @IBOutlet weak private var expectedArrivalTimeLabel: UILabel!
+    @IBOutlet weak private var closeButton: UIButton!
+    
     // MARK: - Init & Setup
 
     override func viewDidLoad() {
@@ -24,14 +28,46 @@ class OrderSuccessScreenViewController: UIViewController {
     }
 
     private func setupSelf() {
-
+        view.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        thankYouLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
+        thankYouLabel.textColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
+        expectedArrivalTimeLabel.font = UIFont.systemFont(ofSize: 18.0)
+        expectedArrivalTimeLabel.textColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
+        
+        setupTexts()
+    }
+    
+    private func setupTexts() {
+        closeButton.setTitle(
+            R.string.localizable.orderFlowSuccessSceneCloseButtonTitle().uppercased(),
+            for: .normal)
     }
 
     // MARK: -
+    
+    @IBAction func handleCloseTapped() {
+        presenter.handleCloseTapped()
+    }
+    
 }
 
 // MARK: - View Protocol
 
 extension OrderSuccessScreenViewController: OrderSuccessScreenViewProtocol {
 
+    func setDeliveryWaitingTime(_ waitingTime: DeliveryWaitingTime) {
+        thankYouLabel.text = R.string.localizable
+            .orderFlowSuccessSceneThankYouMessageFormat("\(waitingTime.minutes)")
+        if let deliveryDate = Calendar.current.date(byAdding: .minute, value: waitingTime.minutes, to: Date()) {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HH:mm"
+            let time = dateFormatter.string(from: deliveryDate)
+            
+            expectedArrivalTimeLabel.text =
+                "\(R.string.localizable.orderFlowSuccessSceneExpectedTimeLabel()) \(time)"
+        }
+    }
+    
 }

@@ -1,28 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Order Success Screen View Controller-->
         <scene sceneID="PlN-iW-H7B">
             <objects>
-                <viewController storyboardIdentifier="OrderSuccessScreenViewController" id="h3k-bK-TNO" customClass="OrderSuccessScreenViewController" customModule="pizza-delivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderSuccessScreenViewController" id="h3k-bK-TNO" customClass="OrderSuccessScreenViewController" customModule="pizza_delivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cA6-JB-jfU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92l-F1-7oO" userLabel="Thank You Label">
+                                <rect key="frame" x="33" y="347.5" width="309" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u3-sq-NJ9" userLabel="Expected Time Label">
+                                <rect key="frame" x="166.5" y="413" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="order-success-screen-fox" translatesAutoresizingMaskIntoConstraints="NO" id="aug-VL-vU3" userLabel="Fox Image">
+                                <rect key="frame" x="131" y="153.5" width="113" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="ffR-f2-SDm"/>
+                                    <constraint firstAttribute="height" constant="150" id="gcf-eX-iLo"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAw-7R-wjU" userLabel="Close Button" customClass="Button" customModule="pizza_delivery" customModuleProvider="target">
+                                <rect key="frame" x="18" y="581" width="339" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="0fH-hn-Jjo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="handleCloseTapped" destination="h3k-bK-TNO" eventType="touchUpInside" id="beG-od-fL4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5u3-sq-NJ9" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="3ww-aV-lMP"/>
+                            <constraint firstItem="92l-F1-7oO" firstAttribute="top" secondItem="aug-VL-vU3" secondAttribute="bottom" constant="44" id="434-uc-rKt"/>
+                            <constraint firstItem="SAw-7R-wjU" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="96i-zR-1EE"/>
+                            <constraint firstItem="92l-F1-7oO" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="33" id="9bR-fm-9Nn"/>
+                            <constraint firstItem="aug-VL-vU3" firstAttribute="centerY" secondItem="cA6-JB-jfU" secondAttribute="centerY" constant="-105" id="BgN-Zg-ehF"/>
+                            <constraint firstItem="92l-F1-7oO" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-33" id="DfE-wn-qO0"/>
+                            <constraint firstItem="SAw-7R-wjU" firstAttribute="bottom" secondItem="YWU-9O-L7t" secondAttribute="bottom" constant="-30" id="Gg8-gm-Kgb"/>
+                            <constraint firstItem="5u3-sq-NJ9" firstAttribute="top" secondItem="92l-F1-7oO" secondAttribute="bottom" constant="45" id="Hyx-C1-iTu"/>
+                            <constraint firstItem="SAw-7R-wjU" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="b0E-5A-tjK"/>
+                            <constraint firstItem="aug-VL-vU3" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="htT-Wf-qvi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="SAw-7R-wjU" id="9O9-89-GOT"/>
+                        <outlet property="expectedArrivalTimeLabel" destination="5u3-sq-NJ9" id="TAY-IJ-cAX"/>
+                        <outlet property="thankYouLabel" destination="92l-F1-7oO" id="I8K-oX-cDV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="575" y="-231"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="order-success-screen-fox" width="112.5" height="150"/>
+    </resources>
 </document>

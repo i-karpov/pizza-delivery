@@ -46,3 +46,7 @@
 "orderFlow.confirmationScene.paymentMethod.cash" = "Cash";
 "orderFlow.confirmationScene.paymentMethod.card" = "Card";
 "orderFlow.confirmationScene.confirmOrderButtonTitle" = "Order";
+
+"orderFlow.successScene.closeButtonTitle" = "Thank you";
+"orderFlow.successScene.thankYouMessageFormat" = "Thank you! Your pizza will be delivered in %@ minutes!";
+"orderFlow.successScene.expectedTimeLabel" = "Expected delivery time:";

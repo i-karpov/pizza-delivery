@@ -22,7 +22,11 @@ class OrderSuccessScreenPresenter {
 extension OrderSuccessScreenPresenter: OrderSuccessScreenPresenterProtocol {
 
     func handleViewLoaded() {
-        // Method is called after view loading is finished.
+        view.setDeliveryWaitingTime(initData.deliveryWaitingTime)
+    }
+    
+    func handleCloseTapped() {
+        initData.handleCloseTapped()
     }
 
 }

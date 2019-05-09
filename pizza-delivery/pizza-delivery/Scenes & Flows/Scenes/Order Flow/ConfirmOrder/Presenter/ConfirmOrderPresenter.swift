@@ -26,7 +26,8 @@ extension ConfirmOrderPresenter: ConfirmOrderPresenterProtocol {
     }
     
     func handleOrderConfirmed() {
-        print("SEND ORDER")
+        // TODO: calculate real delivery time
+        initData.handleOrderSentSuccessully(DeliveryWaitingTime(minutes: 60))
     }
 
 }
