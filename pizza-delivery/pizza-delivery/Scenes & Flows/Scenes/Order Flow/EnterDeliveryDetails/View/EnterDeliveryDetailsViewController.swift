@@ -39,6 +39,17 @@ class EnterDeliveryDetailsViewController: UIViewController {
         navigationItem.title = R.string.localizable.orderFlowEnterDeliveryDetailsSceneTitle().uppercased()
         view.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
         
+        setupTexts()
+        setupBindings()
+        
+        streetInput.isEnabled = false
+        buildingInput.isEnabled = false
+        
+        nextButton.isEnabled = false
+
+    }
+    
+    private func setupTexts() {
         nameInput.setTitle(R.string.localizable.orderFlowFieldNameName())
         phoneNumberInput.setTitle(R.string.localizable.orderFlowFieldNamePhoneNumber())
         streetInput.setTitle(R.string.localizable.orderFlowFieldNameStreet())
@@ -49,17 +60,33 @@ class EnterDeliveryDetailsViewController: UIViewController {
         commentInput.setTitle(R.string.localizable.orderFlowFieldNameComment())
         nextButton.setTitle(R.string.localizable.orderFlowButtonTitleNext().uppercased(),
                             for: .normal)
+    }
+    
+    private func setupBindings() {
+        nameInput.handleValueChanged = { [weak self] newValue in
+            self?.presenter.handleNameChanged(newValue)
+        }
         
-        streetInput.isEnabled = false
-        buildingInput.isEnabled = false
-        
-        nextButton.isEnabled = false
-
+        entranceInput.handleValueChanged = { [weak self] newValue in
+            self?.presenter.handleEntranceChanged(newValue)
+        }
+        phoneNumberInput.handleValueChanged = { [weak self] newValue in
+            self?.presenter.handlePhoneNumberChanged(newValue)
+        }
+        apartmentInput.handleValueChanged = { [weak self] newValue in
+            self?.presenter.handleApartmentChanged(newValue)
+        }
+        floorInput.handleValueChanged = { [weak self] newValue in
+            self?.presenter.handleFloorChanged(newValue)
+        }
+        commentInput.handleValueChanged = { [weak self] newValue in
+            self?.presenter.handleCommentChanged(newValue)
+        }
     }
 
     // MARK: -
     @IBAction func handleNextButtonTap() {
-        print("Next tapped")
+        presenter.handleNextButtonTapped()
     }
     
 }
@@ -68,4 +95,15 @@ class EnterDeliveryDetailsViewController: UIViewController {
 
 extension EnterDeliveryDetailsViewController: EnterDeliveryDetailsViewProtocol {
 
+    func setStreet(_ street: Street) {
+        streetInput.setValue(street.title)
+    }
+    
+    func setBuilding(_ building: Building) {
+        buildingInput.setValue(building.title)
+    }
+    
+    func setIsNextButtonEnabled(_ isEnabled: Bool) {
+        nextButton.isEnabled = isEnabled
+    }
 }

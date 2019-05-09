@@ -22,6 +22,8 @@ class SingleLineTextInput: UIView, LoadableFromNib {
         }
     }
     
+    var handleValueChanged: CommonBlock.Action<String?>? = .none
+    
     // MARK: - Init
     
     override init(frame: CGRect) {
@@ -43,22 +45,39 @@ class SingleLineTextInput: UIView, LoadableFromNib {
         textField.layer.cornerRadius = 5.0
         textField.layer.masksToBounds = true
         
-        let leftView = UIView.init(frame: CGRect(x: 0.0, y: 0.0, width: 9.0, height: 40.0))
+        let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 9.0, height: 40.0))
         leftView.backgroundColor = .clear
         textField.leftView = leftView
         textField.leftViewMode = .always
         
-        let rightView = UIView.init(frame: CGRect(x: 0.0, y: 0.0, width: 9.0, height: 40.0))
+        let rightView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 9.0, height: 40.0))
         rightView.backgroundColor = .clear
         textField.rightView = rightView
         textField.rightViewMode = .always
         
         textField.backgroundColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
+        
+        textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
     
     // MARK: - Public Methods
     
     func setTitle(_ title: String?) {
         titleLabel.text = title
+    }
+    
+    func setValue(_ value: String?) {
+        let olfValue = textField.text
+        textField.text = value
+        if value != olfValue {
+            handleValueChanged?(textField.text)
+        }
+    }
+    
+    // MARK: - Private Methods
+    
+    @objc
+    private func textFieldDidChange() {
+        handleValueChanged?(textField.text)
     }
 }

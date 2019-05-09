@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,14 +11,14 @@
             <objects>
                 <viewController storyboardIdentifier="SelectAddressViewController" id="h3k-bK-TNO" customClass="SelectAddressViewController" customModule="pizza_delivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cA6-JB-jfU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-ko-f3a" userLabel="Street Dropdown" customClass="DropdownButton" customModule="pizza_delivery" customModuleProvider="target">
-                                <rect key="frame" x="18" y="70" width="339" height="89"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-ko-f3a" userLabel="Street Dropdown" customClass="Dropdown" customModule="pizza_delivery" customModuleProvider="target">
+                                <rect key="frame" x="18" y="70" width="564" height="89"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A9n-NH-LrQ" userLabel="Building Dropdown" customClass="DropdownButton" customModule="pizza_delivery" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A9n-NH-LrQ" userLabel="Building Dropdown" customClass="Dropdown" customModule="pizza_delivery" customModuleProvider="target">
                                 <rect key="frame" x="18" y="269" width="160" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -30,7 +26,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-d1-ZnP" userLabel="Next Button" customClass="Button" customModule="pizza_delivery" customModuleProvider="target">
-                                <rect key="frame" x="18" y="581" width="339" height="56"/>
+                                <rect key="frame" x="18" y="514" width="564" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="gQP-0c-vez"/>
                                 </constraints>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DropdownButton: UIView, LoadableFromNib {
+class Dropdown: UIView, LoadableFromNib {
 
     struct ItemDescriptor {
         let displayTitle: String
@@ -135,7 +135,7 @@ class DropdownButton: UIView, LoadableFromNib {
 
 // MARK: - Picker Data Source & Delegate
 
-extension DropdownButton: UIPickerViewDataSource, UIPickerViewDelegate {
+extension Dropdown: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

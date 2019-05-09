@@ -131,8 +131,8 @@
 		4867DA1C2280DFAF0051461E /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA1B2280DFAF0051461E /* OrderButton.swift */; };
 		4867DA232281730D0051461E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA222281730D0051461E /* Button.swift */; };
 		4867DA252281980D0051461E /* UIImage+Insets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA242281980D0051461E /* UIImage+Insets.swift */; };
-		4867DA2822819A090051461E /* DropdownButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4867DA2722819A090051461E /* DropdownButton.xib */; };
-		4867DA2A22819A1D0051461E /* DropdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA2922819A1D0051461E /* DropdownButton.swift */; };
+		4867DA2822819A090051461E /* Dropdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4867DA2722819A090051461E /* Dropdown.xib */; };
+		4867DA2A22819A1D0051461E /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA2922819A1D0051461E /* Dropdown.swift */; };
 		4867DA2D2281A11D0051461E /* LoadableFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA2C2281A11D0051461E /* LoadableFromNib.swift */; };
 		4867DA2F2281BA9D0051461E /* SingleLineTextInput.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4867DA2E2281BA9D0051461E /* SingleLineTextInput.xib */; };
 		4867DA332281BD720051461E /* SingleLineTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA322281BD720051461E /* SingleLineTextInput.swift */; };
@@ -305,8 +305,8 @@
 		4867DA1B2280DFAF0051461E /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		4867DA222281730D0051461E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		4867DA242281980D0051461E /* UIImage+Insets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Insets.swift"; sourceTree = "<group>"; };
-		4867DA2722819A090051461E /* DropdownButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropdownButton.xib; sourceTree = "<group>"; };
-		4867DA2922819A1D0051461E /* DropdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownButton.swift; sourceTree = "<group>"; };
+		4867DA2722819A090051461E /* Dropdown.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Dropdown.xib; sourceTree = "<group>"; };
+		4867DA2922819A1D0051461E /* Dropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
 		4867DA2C2281A11D0051461E /* LoadableFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableFromNib.swift; sourceTree = "<group>"; };
 		4867DA2E2281BA9D0051461E /* SingleLineTextInput.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleLineTextInput.xib; sourceTree = "<group>"; };
 		4867DA322281BD720051461E /* SingleLineTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineTextInput.swift; sourceTree = "<group>"; };
@@ -982,8 +982,8 @@
 		4867DA26228199E60051461E /* Input Controls */ = {
 			isa = PBXGroup;
 			children = (
-				4867DA2722819A090051461E /* DropdownButton.xib */,
-				4867DA2922819A1D0051461E /* DropdownButton.swift */,
+				4867DA2722819A090051461E /* Dropdown.xib */,
+				4867DA2922819A1D0051461E /* Dropdown.swift */,
 				4867DA2E2281BA9D0051461E /* SingleLineTextInput.xib */,
 				4867DA322281BD720051461E /* SingleLineTextInput.swift */,
 			);
@@ -1180,7 +1180,7 @@
 				4867D9092279E8DF0051461E /* TabsViewController.storyboard in Resources */,
 				4867D8E72279AF650051461E /* SplashViewController.storyboard in Resources */,
 				4867D98F228029EE0051461E /* Localizable.strings in Resources */,
-				4867DA2822819A090051461E /* DropdownButton.xib in Resources */,
+				4867DA2822819A090051461E /* Dropdown.xib in Resources */,
 				48FE4CA32278D83F00881D72 /* Assets.xcassets in Resources */,
 				4867D9CB22804C020051461E /* SelectAddressViewController.storyboard in Resources */,
 				4867D975227F3E8F0051461E /* MenuViewController.storyboard in Resources */,
@@ -1353,7 +1353,7 @@
 				4867D976227F3E8F0051461E /* MenuViewController.swift in Sources */,
 				4867D9CA22804C020051461E /* SelectAddressViewProtocol.swift in Sources */,
 				4867D972227F3E8F0051461E /* SceneFactory+Menu.swift in Sources */,
-				4867DA2A22819A1D0051461E /* DropdownButton.swift in Sources */,
+				4867DA2A22819A1D0051461E /* Dropdown.swift in Sources */,
 				4867D9F922806B900051461E /* OrderDraft.swift in Sources */,
 				4867D9CF22804C020051461E /* ConfirmOrderPresenterProtocol.swift in Sources */,
 				4867D99222802F280051461E /* R.generated.swift in Sources */,

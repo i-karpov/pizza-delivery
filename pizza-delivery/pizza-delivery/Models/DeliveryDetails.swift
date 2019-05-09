@@ -12,11 +12,11 @@ struct DeliveryDetails: Equatable {
     
     let street: Street
     let building: Building
-    let name: String
+    let name: String?
     let phoneNumber: String
-    let entrance: String
-    let apartment: String
-    let floor: String
-    let comment: String
+    let entrance: String?
+    let apartment: String?
+    let floor: String?
+    let comment: String?
     
 }

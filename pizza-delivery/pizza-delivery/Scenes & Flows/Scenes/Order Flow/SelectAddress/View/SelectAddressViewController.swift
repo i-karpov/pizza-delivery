@@ -17,8 +17,8 @@ class SelectAddressViewController: UIViewController {
 
     var errorToTextMapper: ErrorToTextMapper!
     
-    @IBOutlet weak private var streetDropdown: DropdownButton!
-    @IBOutlet weak private var buildingDropdown: DropdownButton!
+    @IBOutlet weak private var streetDropdown: Dropdown!
+    @IBOutlet weak private var buildingDropdown: Dropdown!
     @IBOutlet weak private var nextButton: Button!
     
     private var hud: MBProgressHUD?
@@ -122,13 +122,13 @@ extension SelectAddressViewController: SelectAddressViewProtocol {
     
     func setAvailableStreets(_ streets: [Street]) {
         streetDropdown.setAvailableItems(streets.map({ (street: Street) in
-            DropdownButton.ItemDescriptor(displayTitle: street.title, item: street)
+            Dropdown.ItemDescriptor(displayTitle: street.title, item: street)
         }))
     }
     
     func setAvailableBuildings(_ buildings: [Building]) {
         buildingDropdown.setAvailableItems(buildings.map({ (builidng: Building) in
-            DropdownButton.ItemDescriptor(displayTitle: builidng.title, item: builidng)
+            Dropdown.ItemDescriptor(displayTitle: builidng.title, item: builidng)
         }))
     }
     
