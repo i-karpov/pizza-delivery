@@ -6,13 +6,16 @@ class ConfirmOrderPresenter {
     private unowned let navigator: SceneNavigatorProtocol
     
     private let initData: ConfirmOrderInitData
+    private let orderService: OrderServiceProtocol
 
     init(view: ConfirmOrderViewProtocol,
          navigator: SceneNavigatorProtocol,
-         initData: ConfirmOrderInitData) {
+         initData: ConfirmOrderInitData,
+         orderService: OrderServiceProtocol) {
         self.view = view
         self.navigator = navigator
         self.initData = initData
+        self.orderService = orderService
     }
 
 }
@@ -29,9 +32,25 @@ extension ConfirmOrderPresenter: ConfirmOrderPresenterProtocol {
         initData.handleCloseTapped()
     }
     
+    func handleErrorDismissed() {
+        initData.handleCloseTapped()
+    }
+    
     func handleOrderConfirmed() {
-        // TODO: calculate real delivery time
-        initData.handleOrderSentSuccessully(DeliveryWaitingTime(minutes: 60))
+        view.setIsAcitityIndicatorVisible(true)
+        orderService.sendOrder(initData.orderDraft) { [weak self] (result) in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.view.setIsAcitityIndicatorVisible(false)
+            
+            switch result {
+            case .success(let deliveryTime):
+                strongSelf.initData.handleOrderSentSuccessully(deliveryTime)
+            case .failure(let error):
+                strongSelf.view.showTextForError(error)
+            }
+        }
     }
 
 }

@@ -16,6 +16,7 @@ class CompositionRoot {
     private let urlsConfig: UrlsConfigProtocol
     private let api: APIProtocol
     private let dtoToModelMapper: DtoToModelMapper
+    private let modelToDtoMapper: ModelToDtoMapper
     private let menuService: MenuServiceProtocol
     private let orderService: OrderServiceProtocol
     private let errorToTextMapper: ErrorToTextMapper
@@ -26,8 +27,11 @@ class CompositionRoot {
         urlsConfig = ProdUrlsConfig()
         api = API(urlsConfig: urlsConfig)
         dtoToModelMapper = DtoToModelMapper()
+        modelToDtoMapper = ModelToDtoMapper()
         menuService = MenuService(api: api, mapper: dtoToModelMapper)
-        orderService = OrderService(api: api, mapper: dtoToModelMapper)
+        orderService = OrderService(api: api,
+                                    dtoToModelMapper: dtoToModelMapper,
+                                    modelToDtoMapper: modelToDtoMapper)
         errorToTextMapper = ErrorToTextMapper()
     }
     
@@ -73,7 +77,10 @@ class CompositionRoot {
         case .selectPaymentMethod(let initData):
             return SceneFactory.makeSelectPaymentMethod(navigator: navigator, initData: initData)
         case .confirmOrder(let initData):
-            return SceneFactory.makeConfirmOrder(navigator: navigator, initData: initData)
+            return SceneFactory.makeConfirmOrder(navigator: navigator,
+                                                 initData: initData,
+                                                 orderService: orderService,
+                                                 errorToTextMapper: errorToTextMapper)
         case .success(let initData):
             return SceneFactory.makeOrderSuccessScreen(navigator: navigator, initData: initData)
         }

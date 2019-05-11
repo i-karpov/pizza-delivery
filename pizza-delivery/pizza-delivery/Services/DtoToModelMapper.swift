@@ -27,4 +27,8 @@ class DtoToModelMapper {
         return Building(id: dto.id,
                         title: dto.title)
     }
+    
+    func map(_ dto: SettingsDto) -> DeliveryWaitingTime {
+        return DeliveryWaitingTime(minutes: dto.isDeliveryTime45 ? 45 : 60)
+    }
 }

@@ -13,5 +13,6 @@ protocol OrderServiceProtocol {
     func getStreets(_ completion: @escaping CommonBlock.ResultCompletionBlock<[Street]>)
     func getBuildingsByStreetId(_ streetId: Int,
                                 _ completion: @escaping CommonBlock.ResultCompletionBlock<[Building]>)
-    
+    func sendOrder(_ orderDraft: OrderDraft,
+                   _ completion: @escaping CommonBlock.ResultCompletionBlock<DeliveryWaitingTime>)
 }

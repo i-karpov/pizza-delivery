@@ -10,5 +10,5 @@ import Foundation
 
 enum PaymentMethod: Equatable {
     case byCard
-    case byCash(cashAmountToCalculateChange: MoneyAmount)
+    case byCash(cashAmountToCalculateChange: String)
 }

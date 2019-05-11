@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PizzaDto: Codable {
+struct PizzaDto: Decodable {
     
     let id: Int
     let title: String

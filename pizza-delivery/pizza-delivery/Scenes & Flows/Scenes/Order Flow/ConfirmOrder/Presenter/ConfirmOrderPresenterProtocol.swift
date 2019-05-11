@@ -8,5 +8,7 @@ protocol ConfirmOrderPresenterProtocol: class {
     func handleCloseTapped()
     func handleOrderConfirmed()
     
+    func handleErrorDismissed()
+    
     // MARK: - Other Signals
 }

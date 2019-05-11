@@ -1,4 +1,5 @@
 import UIKit
+import MBProgressHUD
 
 class ConfirmOrderViewController: BaseOrderFlowViewController {
 
@@ -14,6 +15,8 @@ class ConfirmOrderViewController: BaseOrderFlowViewController {
     
     // MARK: - Properties
 
+    var errorToTextMapper: ErrorToTextMapper!
+    
     @IBOutlet weak private var totalSumValueLabel: UILabel!
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var phoneNumberLabel: UILabel!
@@ -22,6 +25,8 @@ class ConfirmOrderViewController: BaseOrderFlowViewController {
     @IBOutlet weak private var pizzaLabel: UILabel!
     @IBOutlet weak private var commentLabel: UILabel!
     @IBOutlet weak private var confirmOrderButton: UIButton!
+    
+    private var hud: MBProgressHUD?
     
     // MARK: - Init & Setup
 
@@ -60,6 +65,24 @@ class ConfirmOrderViewController: BaseOrderFlowViewController {
 
 extension ConfirmOrderViewController: ConfirmOrderViewProtocol {
 
+    func setIsAcitityIndicatorVisible(_ isVisible: Bool) {
+        if isVisible {
+            if hud == nil {
+                hud = MBProgressHUD.showAdded(to: view, animated: true)
+            }
+        } else {
+            hud?.hide(animated: true)
+            hud = nil
+        }
+    }
+    
+    func showTextForError(_ error: CommonError) {
+        let errorText = errorToTextMapper.makeErrorTextForError(error)
+        showOKAlert(title: "", message: errorText, onDismissed: { [weak self] in
+            self?.presenter.handleErrorDismissed()
+        })
+    }
+    
     func showOrderDraft(_ orderDraft: OrderDraft) {
         let mainPart = orderDraft.pizza.price.cents / 100
         let centsPart = orderDraft.pizza.price.cents % 100
