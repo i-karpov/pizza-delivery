@@ -5,6 +5,7 @@ PODS:
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
+  - Swifter (1.4.6)
   - SwiftLint (0.30.1)
 
 DEPENDENCIES:
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - Kingfisher (~> 5.4.0)
   - MBProgressHUD (~> 1.1.0)
   - R.swift (~> 5.0.3)
+  - Swifter (~> 1.4.6)
   - SwiftLint
 
 SPEC REPOS:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - MBProgressHUD
     - R.swift
     - R.swift.Library
+    - Swifter
     - SwiftLint
 
 SPEC CHECKSUMS:
@@ -29,8 +32,9 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  Swifter: 2ed278fbf7b16cbe97269eb56d8e8749b1ec4042
   SwiftLint: a54bf1fe12b55c68560eb2a7689dfc81458508f7
 
-PODFILE CHECKSUM: 0c3cd08ffd3a9a822dadee57aacd2b3bdb00da59
+PODFILE CHECKSUM: 901fe7a1abc0d6acc25cb79bdde9e52de7862a8c
 
 COCOAPODS: 1.6.0

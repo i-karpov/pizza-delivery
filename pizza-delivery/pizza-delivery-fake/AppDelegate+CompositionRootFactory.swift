@@ -1,8 +1,8 @@
 //
 //  AppDelegate+CompositionRootFactory.swift
-//  pizza-delivery
+//  pizza-delivery-fake
 //
-//  Created by Igor Karpov on 01.05.19.
+//  Created by Igor Karpov on 12.05.19.
 //  Copyright © 2019 Igor Karpov. All rights reserved.
 //
 
@@ -10,6 +10,6 @@ import UIKit
 
 extension AppDelegate {
     func makeCompositionRoot() -> CompositionRoot {
-        return CompositionRoot(urlsConfig: ProdUrlsConfig())
+        return CompositionRoot(urlsConfig: FakeServerUrlsConfig())
     }
 }
