@@ -14,7 +14,7 @@
 		4867D8CF2279A5250051461E /* SceneNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8CA2279A5250051461E /* SceneNavigator.swift */; };
 		4867D8D62279A61A0051461E /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8D22279A6190051461E /* CompositionRoot.swift */; };
 		4867D8D72279A61A0051461E /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8D32279A6190051461E /* SceneFactory.swift */; };
-		4867D8D92279A7140051461E /* AppDelegate+CompositionRootFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8D82279A7140051461E /* AppDelegate+CompositionRootFactory.swift */; };
+		4867D8D92279A7140051461E /* AppDelegate+TargetSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8D82279A7140051461E /* AppDelegate+TargetSpecific.swift */; };
 		4867D8E52279AF650051461E /* SplashPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8DD2279AF650051461E /* SplashPresenterProtocol.swift */; };
 		4867D8E62279AF650051461E /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8DE2279AF650051461E /* SplashPresenter.swift */; };
 		4867D8E72279AF650051461E /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D8E02279AF650051461E /* SplashViewController.storyboard */; };
@@ -130,8 +130,14 @@
 		48B20DD02288791F00B9954B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4867D98E228029EE0051461E /* Localizable.strings */; };
 		48B20DD12288791F00B9954B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA22278D83F00881D72 /* Assets.xcassets */; };
 		48B20DD22288791F00B9954B /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D966227F3E8F0051461E /* MenuViewController.storyboard */; };
-		48B20DDB22887A0800B9954B /* AppDelegate+CompositionRootFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DDA22887A0800B9954B /* AppDelegate+CompositionRootFactory.swift */; };
+		48B20DDB22887A0800B9954B /* AppDelegate+TargetSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DDA22887A0800B9954B /* AppDelegate+TargetSpecific.swift */; };
 		48B20DDE22887B8200B9954B /* FakeServerUrlsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DDD22887B8200B9954B /* FakeServerUrlsConfig.swift */; };
+		48B20DF022887FDF00B9954B /* PizzasSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48B20DE522887FDF00B9954B /* PizzasSuccessfulResponse.json */; };
+		48B20DF122887FDF00B9954B /* GETPizzasEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DE622887FDF00B9954B /* GETPizzasEndpoint.swift */; };
+		48B20DF422887FDF00B9954B /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DE922887FDF00B9954B /* EndpointProtocol.swift */; };
+		48B20DF622887FDF00B9954B /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DEB22887FDF00B9954B /* HttpMethod.swift */; };
+		48B20DF822887FDF00B9954B /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DEE22887FDF00B9954B /* JSONLoader.swift */; };
+		48B20DFA228881B300B9954B /* FakeWebServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DF9228881B200B9954B /* FakeWebServer.swift */; };
 		48FE4C9C2278D83E00881D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FE4C9B2278D83E00881D72 /* AppDelegate.swift */; };
 		48FE4CA32278D83F00881D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA22278D83F00881D72 /* Assets.xcassets */; };
 		48FE4CA62278D83F00881D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA42278D83F00881D72 /* LaunchScreen.storyboard */; };
@@ -186,7 +192,7 @@
 		4867D8CA2279A5250051461E /* SceneNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneNavigator.swift; sourceTree = "<group>"; };
 		4867D8D22279A6190051461E /* CompositionRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
 		4867D8D32279A6190051461E /* SceneFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
-		4867D8D82279A7140051461E /* AppDelegate+CompositionRootFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+CompositionRootFactory.swift"; sourceTree = "<group>"; };
+		4867D8D82279A7140051461E /* AppDelegate+TargetSpecific.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+TargetSpecific.swift"; sourceTree = "<group>"; };
 		4867D8DD2279AF650051461E /* SplashPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashPresenterProtocol.swift; sourceTree = "<group>"; };
 		4867D8DE2279AF650051461E /* SplashPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		4867D8E02279AF650051461E /* SplashViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
@@ -244,8 +250,15 @@
 		4867D98E228029EE0051461E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		4867D99122802F280051461E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		48B20DD72288791F00B9954B /* pizza-delivery-fake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pizza-delivery-fake.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		48B20DDA22887A0800B9954B /* AppDelegate+CompositionRootFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+CompositionRootFactory.swift"; sourceTree = "<group>"; };
+		48B20DDA22887A0800B9954B /* AppDelegate+TargetSpecific.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+TargetSpecific.swift"; sourceTree = "<group>"; };
 		48B20DDD22887B8200B9954B /* FakeServerUrlsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeServerUrlsConfig.swift; sourceTree = "<group>"; };
+		48B20DE522887FDF00B9954B /* PizzasSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PizzasSuccessfulResponse.json; sourceTree = "<group>"; };
+		48B20DE622887FDF00B9954B /* GETPizzasEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GETPizzasEndpoint.swift; sourceTree = "<group>"; };
+		48B20DE922887FDF00B9954B /* EndpointProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
+		48B20DEB22887FDF00B9954B /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		48B20DEE22887FDF00B9954B /* JSONLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		48B20DF9228881B200B9954B /* FakeWebServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeWebServer.swift; sourceTree = "<group>"; };
+		48B20DFB22888AB200B9954B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48FE4C982278D83D00881D72 /* pizza-delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pizza-delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FE4C9B2278D83E00881D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48FE4CA22278D83F00881D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -427,7 +440,7 @@
 			children = (
 				48FE4CA42278D83F00881D72 /* LaunchScreen.storyboard */,
 				48FE4C9B2278D83E00881D72 /* AppDelegate.swift */,
-				4867D8D82279A7140051461E /* AppDelegate+CompositionRootFactory.swift */,
+				4867D8D82279A7140051461E /* AppDelegate+TargetSpecific.swift */,
 				48FE4CA72278D83F00881D72 /* Info.plist */,
 				4867D8C22279A4B00051461E /* Navigation */,
 				4867D8C32279A4CD0051461E /* Composition Root */,
@@ -702,7 +715,9 @@
 		48B20DD92288796600B9954B /* pizza-delivery-fake */ = {
 			isa = PBXGroup;
 			children = (
-				48B20DDA22887A0800B9954B /* AppDelegate+CompositionRootFactory.swift */,
+				48B20DFB22888AB200B9954B /* Info.plist */,
+				48B20DE122887FDF00B9954B /* Fake Web Server */,
+				48B20DDA22887A0800B9954B /* AppDelegate+TargetSpecific.swift */,
 				48B20DDD22887B8200B9954B /* FakeServerUrlsConfig.swift */,
 			);
 			path = "pizza-delivery-fake";
@@ -715,6 +730,43 @@
 				4867D948227A53930051461E /* ProdUrlsConfig.swift */,
 			);
 			path = Configs;
+			sourceTree = "<group>";
+		};
+		48B20DE122887FDF00B9954B /* Fake Web Server */ = {
+			isa = PBXGroup;
+			children = (
+				48B20DED22887FDF00B9954B /* Helpers */,
+				48B20DE922887FDF00B9954B /* EndpointProtocol.swift */,
+				48B20DEB22887FDF00B9954B /* HttpMethod.swift */,
+				48B20DE222887FDF00B9954B /* Endpoints */,
+				48B20DF9228881B200B9954B /* FakeWebServer.swift */,
+			);
+			path = "Fake Web Server";
+			sourceTree = "<group>";
+		};
+		48B20DE222887FDF00B9954B /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				48B20DE422887FDF00B9954B /* GET_pizzas */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		48B20DE422887FDF00B9954B /* GET_pizzas */ = {
+			isa = PBXGroup;
+			children = (
+				48B20DE622887FDF00B9954B /* GETPizzasEndpoint.swift */,
+				48B20DE522887FDF00B9954B /* PizzasSuccessfulResponse.json */,
+			);
+			path = GET_pizzas;
+			sourceTree = "<group>";
+		};
+		48B20DED22887FDF00B9954B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				48B20DEE22887FDF00B9954B /* JSONLoader.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		48FE4C8F2278D83D00881D72 = {
@@ -913,6 +965,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48B20DF022887FDF00B9954B /* PizzasSuccessfulResponse.json in Resources */,
 				48B20DCB2288791F00B9954B /* LaunchScreen.storyboard in Resources */,
 				48B20DCC2288791F00B9954B /* OrdersHistoryViewController.storyboard in Resources */,
 				48B20DCD2288791F00B9954B /* PizzaCollectionViewCell.xib in Resources */,
@@ -1163,18 +1216,23 @@
 				48B20D9F2288791F00B9954B /* CompositionRoot.swift in Sources */,
 				48B20DA02288791F00B9954B /* UIViewController+Alerts.swift in Sources */,
 				48B20DA12288791F00B9954B /* Price.swift in Sources */,
+				48B20DF622887FDF00B9954B /* HttpMethod.swift in Sources */,
 				48B20DA22288791F00B9954B /* Pizza.swift in Sources */,
 				48B20DA32288791F00B9954B /* AppDelegate.swift in Sources */,
 				48B20DA42288791F00B9954B /* MenuViewController.swift in Sources */,
 				48B20DA52288791F00B9954B /* SceneFactory+Menu.swift in Sources */,
 				48B20DA62288791F00B9954B /* R.generated.swift in Sources */,
+				48B20DF822887FDF00B9954B /* JSONLoader.swift in Sources */,
 				48B20DA72288791F00B9954B /* PizzaDto.swift in Sources */,
+				48B20DF422887FDF00B9954B /* EndpointProtocol.swift in Sources */,
 				48B20DDE22887B8200B9954B /* FakeServerUrlsConfig.swift in Sources */,
 				48B20DA82288791F00B9954B /* OrderFlowInitData.swift in Sources */,
 				48B20DAA2288791F00B9954B /* OrdersHistoryViewController.swift in Sources */,
 				48B20DAB2288791F00B9954B /* CommonError.swift in Sources */,
 				48B20DAC2288791F00B9954B /* SceneNavigatorProtocol.swift in Sources */,
 				48B20DAD2288791F00B9954B /* PizzasResponseDto.swift in Sources */,
+				48B20DFA228881B300B9954B /* FakeWebServer.swift in Sources */,
+				48B20DF122887FDF00B9954B /* GETPizzasEndpoint.swift in Sources */,
 				48B20DAE2288791F00B9954B /* UrlsConfigProtocol.swift in Sources */,
 				48B20DAF2288791F00B9954B /* DtoToModelMapper.swift in Sources */,
 				48B20DB02288791F00B9954B /* OrdersHistoryViewProtocol.swift in Sources */,
@@ -1194,7 +1252,7 @@
 				48B20DBF2288791F00B9954B /* TabsPresenterProtocol.swift in Sources */,
 				48B20DC02288791F00B9954B /* TabsViewProtocol.swift in Sources */,
 				48B20DC12288791F00B9954B /* API.swift in Sources */,
-				48B20DDB22887A0800B9954B /* AppDelegate+CompositionRootFactory.swift in Sources */,
+				48B20DDB22887A0800B9954B /* AppDelegate+TargetSpecific.swift in Sources */,
 				48B20DC22288791F00B9954B /* ProdUrlsConfig.swift in Sources */,
 				48B20DC32288791F00B9954B /* MenuViewProtocol.swift in Sources */,
 				48B20DC42288791F00B9954B /* PizzaCollectionViewCell.swift in Sources */,
@@ -1228,7 +1286,7 @@
 				4867D99222802F280051461E /* R.generated.swift in Sources */,
 				4867D93D227A4A460051461E /* PizzaDto.swift in Sources */,
 				4867D955227EF4680051461E /* OrderFlowInitData.swift in Sources */,
-				4867D8D92279A7140051461E /* AppDelegate+CompositionRootFactory.swift in Sources */,
+				4867D8D92279A7140051461E /* AppDelegate+TargetSpecific.swift in Sources */,
 				4867D97B227F3E8F0051461E /* OrdersHistoryViewController.swift in Sources */,
 				4867D936227A47D80051461E /* CommonError.swift in Sources */,
 				4867D8CC2279A5250051461E /* SceneNavigatorProtocol.swift in Sources */,
@@ -1377,13 +1435,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EH9W39T8X;
-				INFOPLIST_FILE = "$(SRCROOT)/pizza-delivery/App Infrastructure/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/pizza-delivery-fake/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.igor.karpov.pizza-delivery";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.igor.karpov.pizza-delivery-fake";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1397,13 +1455,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EH9W39T8X;
-				INFOPLIST_FILE = "$(SRCROOT)/pizza-delivery/App Infrastructure/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/pizza-delivery-fake/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.igor.karpov.pizza-delivery";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.igor.karpov.pizza-delivery-fake";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

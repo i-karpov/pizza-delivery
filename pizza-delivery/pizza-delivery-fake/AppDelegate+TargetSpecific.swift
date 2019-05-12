@@ -9,6 +9,11 @@
 import UIKit
 
 extension AppDelegate {
+    
+    func handleAppLaunched() {
+        FakeWebServer.shared.start()
+    }
+    
     func makeCompositionRoot() -> CompositionRoot {
         return CompositionRoot(urlsConfig: FakeServerUrlsConfig())
     }
