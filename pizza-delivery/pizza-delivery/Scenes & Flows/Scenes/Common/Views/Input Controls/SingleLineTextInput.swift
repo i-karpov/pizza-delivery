@@ -58,6 +58,15 @@ class SingleLineTextInput: UIView, LoadableFromNib {
         textField.backgroundColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
         
         textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        
+        setupFonts()
+    }
+    
+    private func setupFonts() {
+        titleLabel.font = UIFont.systemFont(ofSize: 19)
+        titleLabel.textColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
+        textField.font = UIFont.systemFont(ofSize: 19)
+        textField.textColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
     }
     
     // MARK: - Public Methods

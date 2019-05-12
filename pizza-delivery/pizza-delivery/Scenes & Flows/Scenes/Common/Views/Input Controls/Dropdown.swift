@@ -102,6 +102,15 @@ class Dropdown: UIView, LoadableFromNib {
         supportingTextField.inputView = picker
         picker.dataSource = self
         picker.delegate = self
+        
+        setupFonts()
+    }
+    
+    private func setupFonts() {
+        titleLabel.font = UIFont.systemFont(ofSize: 19)
+        titleLabel.textColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
+        valueLabel.font = UIFont.systemFont(ofSize: 19)
+        valueLabel.textColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
     }
     
     // MARK: - Public Methods
