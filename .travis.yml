@@ -1,6 +1,6 @@
 language: swift
 xcode_workspace: pizza-delivery/pizza-delivery.xcworkspace
-xcode_scheme: pizza-delivery
+xcode_scheme: pizza-delivery-fake
 osx_image: xcode10.2
 xcode_destination: platform=iOS Simulator,OS=12.2,name=iPhone 8
 podfile: pizza-deliverу/Podfile

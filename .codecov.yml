@@ -2,3 +2,4 @@ ignore:
   - "pizza-delivery/Pods"
   - "pizza-delivery/pizza-delivery-integration-tests"
   - "pizza-delivery/pizza-delivery-unit-tests"
+  - "pizza-delivery/pizza-delivery-fake"

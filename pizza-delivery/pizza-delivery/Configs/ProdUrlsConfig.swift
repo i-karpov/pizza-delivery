@@ -8,8 +8,6 @@
 
 import Foundation
 
-class ProdUrlsConfig: UrlsConfigProtocol {
-    
+struct ProdUrlsConfig: UrlsConfigProtocol {
     let baseUrl: String = "https://pzz.by/api/v1"
-    
 }

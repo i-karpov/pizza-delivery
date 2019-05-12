@@ -34,7 +34,7 @@ class menu_tests: XCTestCase {
 
     func test_menu_gets_loaded_and_first_pizza_is_correct() {
         menuScene.waitUntilMenuIsLoaded()
-        menuScene.firstPizzaTitleIs("Гавайская")
+        menuScene.firstPizzaTitleIs("Ранч пицца")
         menuScene.firstPizzaPriceIs("12,90")
     }
 

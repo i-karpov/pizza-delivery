@@ -11,17 +11,15 @@ import UIKit
 class CompositionRoot {
     
     var navigator: SceneNavigatorProtocol!
-    private let serviceFactory: ServiceFactoryProtocol
     
     private let urlsConfig: UrlsConfigProtocol
     private let api: APIProtocol
     private let dtoToModelMapper: DtoToModelMapper
     private let menuService: MenuServiceProtocol
     
-    init(serviceFactory: ServiceFactoryProtocol) {
-        self.serviceFactory = serviceFactory
+    init(urlsConfig: UrlsConfigProtocol) {
+        self.urlsConfig = urlsConfig
         
-        urlsConfig = ProdUrlsConfig()
         api = API(urlsConfig: urlsConfig)
         dtoToModelMapper = DtoToModelMapper()
         menuService = MenuService(api: api,

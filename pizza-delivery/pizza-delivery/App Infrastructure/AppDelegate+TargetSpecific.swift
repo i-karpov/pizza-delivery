@@ -9,7 +9,11 @@
 import UIKit
 
 extension AppDelegate {
+    
+    func handleAppLaunched() {
+    }
+    
     func makeCompositionRoot() -> CompositionRoot {
-        return CompositionRoot(serviceFactory: ServiceFactory())
+        return CompositionRoot(urlsConfig: ProdUrlsConfig())
     }
 }
