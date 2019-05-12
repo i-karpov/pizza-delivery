@@ -10,6 +10,11 @@ import UIKit
 
 class SceneNavigator: SceneNavigatorProtocol {
     
+    private struct FlowDescriptor {
+        let exitFlow: CommonBlock.EmptyAction
+        unowned let rootViewController: UIViewController
+    }
+    
     private enum AssociatedObjectsKey {
         static var flow = "UIViewController_Associated_Flow"
     }
@@ -18,12 +23,12 @@ class SceneNavigator: SceneNavigatorProtocol {
     
     private let window: UIWindow
     private var currentViewController: UIViewController!
-    private var flowsExitors: [CommonBlock.EmptyAction]
+    private var flowsDescriptors: [FlowDescriptor]
     
     required init(window: UIWindow, rootScene: Scene, compositionRoot: CompositionRoot) {
         self.compositionRoot = compositionRoot
         self.window = window
-        flowsExitors = []
+        flowsDescriptors = []
         self.compositionRoot.navigator = self
         initViewControllerHierarchy(withRootScene: rootScene)
     }
@@ -137,9 +142,13 @@ class SceneNavigator: SceneNavigatorProtocol {
             fatalError("Starting flow not as modals is not supported yet.")
         }
         
-        flowsExitors.append({ [weak currentViewController] in
-            currentViewController?.dismiss(animated: true, completion: nil)
-        })
+        let flowDescriptor = FlowDescriptor(
+            exitFlow: { [weak currentViewController] in
+                currentViewController?.dismiss(animated: true, completion: nil)
+            },
+            rootViewController: currentViewController
+        )
+        flowsDescriptors.append(flowDescriptor)
         
         let flow = compositionRoot.composeFlow(flow)
         flow.start(rootTransitionType: transitionType)
@@ -152,12 +161,13 @@ class SceneNavigator: SceneNavigatorProtocol {
     }
     
     func exitCurrentFlow(animated: Bool) {
-        guard let exitFlow = flowsExitors.last else {
+        guard !flowsDescriptors.isEmpty else {
             fatalError("Cannot exit unexisting flow.")
         }
         
-        exitFlow()
-        _ = flowsExitors.removeLast()
+        let flowDescriptor = flowsDescriptors.removeLast()
+        flowDescriptor.exitFlow()
+        currentViewController = flowDescriptor.rootViewController
     }
     
     // MARK: - Private Helpers
