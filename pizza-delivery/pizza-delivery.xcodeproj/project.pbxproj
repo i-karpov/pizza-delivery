@@ -7,6 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48355C74228B069F00AA0250 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA192280DF350051461E /* UIView+Gradient.swift */; };
+		48355C75228B06C600AA0250 /* OrderFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9E922805D5E0051461E /* OrderFlow.swift */; };
+		48355C76228B06CF00AA0250 /* UIImage+Insets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA242281980D0051461E /* UIImage+Insets.swift */; };
+		48355C77228B06CF00AA0250 /* LoadableFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA2C2281A11D0051461E /* LoadableFromNib.swift */; };
+		48355C78228B06D800AA0250 /* Dropdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4867DA2722819A090051461E /* Dropdown.xib */; };
+		48355C79228B06D800AA0250 /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA2922819A1D0051461E /* Dropdown.swift */; };
+		48355C7A228B06D800AA0250 /* SingleLineTextInput.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4867DA2E2281BA9D0051461E /* SingleLineTextInput.xib */; };
+		48355C7B228B06D800AA0250 /* SingleLineTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA322281BD720051461E /* SingleLineTextInput.swift */; };
+		48355C7C228B06DA00AA0250 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA222281730D0051461E /* Button.swift */; };
+		48355C7D228B06DE00AA0250 /* ErrorToTextMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D822284881D00B9954B /* ErrorToTextMapper.swift */; };
+		48355C7E228B06F100AA0250 /* BaseOrderFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D842284D1B100B9954B /* BaseOrderFlowViewController.swift */; };
+		48355C7F228B06F300AA0250 /* SelectAddress+SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99422804C010051461E /* SelectAddress+SceneFactory.swift */; };
+		48355C80228B06F700AA0250 /* SelectAddressPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99822804C010051461E /* SelectAddressPresenterProtocol.swift */; };
+		48355C81228B06F700AA0250 /* SelectAddressInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9FA22806F5D0051461E /* SelectAddressInitData.swift */; };
+		48355C82228B06F700AA0250 /* SelectAddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99622804C010051461E /* SelectAddressPresenter.swift */; };
+		48355C83228B06FA00AA0250 /* SelectAddressViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99B22804C010051461E /* SelectAddressViewProtocol.swift */; };
+		48355C84228B06FA00AA0250 /* SelectAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99A22804C010051461E /* SelectAddressViewController.swift */; };
+		48355C85228B06FA00AA0250 /* SelectAddressViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D99C22804C010051461E /* SelectAddressViewController.storyboard */; };
+		48355C86228B06FE00AA0250 /* EnterDeliveryDetailsInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9BD22804C020051461E /* EnterDeliveryDetailsInitData.swift */; };
+		48355C87228B06FE00AA0250 /* EnterDeliveryDetailsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9BE22804C020051461E /* EnterDeliveryDetailsPresenterProtocol.swift */; };
+		48355C88228B06FE00AA0250 /* EnterDeliveryDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9BF22804C020051461E /* EnterDeliveryDetailsPresenter.swift */; };
+		48355C89228B070100AA0250 /* EnterDeliveryDetailsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9C222804C020051461E /* EnterDeliveryDetailsViewProtocol.swift */; };
+		48355C8A228B070100AA0250 /* EnterDeliveryDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D9C322804C020051461E /* EnterDeliveryDetailsViewController.storyboard */; };
+		48355C8B228B070100AA0250 /* EnterDeliveryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9C422804C020051461E /* EnterDeliveryDetailsViewController.swift */; };
+		48355C8C228B070400AA0250 /* SceneFactory+SelectPaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B622804C010051461E /* SceneFactory+SelectPaymentMethod.swift */; };
+		48355C8D228B070800AA0250 /* SelectPaymentMethodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B322804C010051461E /* SelectPaymentMethodPresenter.swift */; };
+		48355C8E228B070800AA0250 /* SelectPaymentMethodPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B422804C010051461E /* SelectPaymentMethodPresenterProtocol.swift */; };
+		48355C8F228B070800AA0250 /* SelectPaymentMethodInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B522804C010051461E /* SelectPaymentMethodInitData.swift */; };
+		48355C90228B070B00AA0250 /* SelectPaymentMethodViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D9B822804C010051461E /* SelectPaymentMethodViewController.storyboard */; };
+		48355C91228B070B00AA0250 /* SelectPaymentMethodViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B922804C010051461E /* SelectPaymentMethodViewProtocol.swift */; };
+		48355C92228B070B00AA0250 /* SelectPaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9BA22804C010051461E /* SelectPaymentMethodViewController.swift */; };
+		48355C93228B070F00AA0250 /* SceneFactory+ConfirmOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99E22804C010051461E /* SceneFactory+ConfirmOrder.swift */; };
+		48355C94228B071300AA0250 /* ConfirmOrderPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A222804C010051461E /* ConfirmOrderPresenterProtocol.swift */; };
+		48355C95228B071300AA0250 /* ConfirmOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A022804C010051461E /* ConfirmOrderPresenter.swift */; };
+		48355C96228B071300AA0250 /* ConfirmOrderInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A122804C010051461E /* ConfirmOrderInitData.swift */; };
+		48355C97228B071500AA0250 /* ConfirmOrderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D9A422804C010051461E /* ConfirmOrderViewController.storyboard */; };
+		48355C98228B071500AA0250 /* ConfirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A522804C010051461E /* ConfirmOrderViewController.swift */; };
+		48355C99228B071500AA0250 /* ConfirmOrderViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A622804C010051461E /* ConfirmOrderViewProtocol.swift */; };
+		48355C9A228B071900AA0250 /* SceneFactory+OrderSuccessScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9AC22804C010051461E /* SceneFactory+OrderSuccessScreen.swift */; };
+		48355C9B228B071C00AA0250 /* OrderSuccessScreenPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A922804C010051461E /* OrderSuccessScreenPresenterProtocol.swift */; };
+		48355C9C228B071C00AA0250 /* OrderSuccessScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9AA22804C010051461E /* OrderSuccessScreenPresenter.swift */; };
+		48355C9D228B071C00AA0250 /* OrderSuccessScreenInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9AB22804C010051461E /* OrderSuccessScreenInitData.swift */; };
+		48355C9E228B071F00AA0250 /* OrderSuccessScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9AE22804C010051461E /* OrderSuccessScreenViewController.swift */; };
+		48355C9F228B071F00AA0250 /* OrderSuccessScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D9AF22804C010051461E /* OrderSuccessScreenViewController.storyboard */; };
+		48355CA0228B071F00AA0250 /* OrderSuccessScreenViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B022804C010051461E /* OrderSuccessScreenViewProtocol.swift */; };
+		48355CA1228B073700AA0250 /* FlowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA0022807BBD0051461E /* FlowProtocol.swift */; };
+		48355CA2228B073D00AA0250 /* SceneFactory+EnterDeliveryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9C022804C020051461E /* SceneFactory+EnterDeliveryDetails.swift */; };
+		48355CA3228B07F900AA0250 /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA1B2280DFAF0051461E /* OrderButton.swift */; };
 		4867D8CB2279A5250051461E /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8C52279A5250051461E /* Scene.swift */; };
 		4867D8CC2279A5250051461E /* SceneNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8C72279A5250051461E /* SceneNavigatorProtocol.swift */; };
 		4867D8CD2279A5250051461E /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8C82279A5250051461E /* SceneTransitionType.swift */; };
@@ -1384,10 +1432,17 @@
 				48B20DCB2288791F00B9954B /* LaunchScreen.storyboard in Resources */,
 				48B20DCC2288791F00B9954B /* OrdersHistoryViewController.storyboard in Resources */,
 				48B20DCD2288791F00B9954B /* PizzaCollectionViewCell.xib in Resources */,
+				48355C8A228B070100AA0250 /* EnterDeliveryDetailsViewController.storyboard in Resources */,
+				48355C78228B06D800AA0250 /* Dropdown.xib in Resources */,
+				48355C9F228B071F00AA0250 /* OrderSuccessScreenViewController.storyboard in Resources */,
+				48355C97228B071500AA0250 /* ConfirmOrderViewController.storyboard in Resources */,
+				48355C7A228B06D800AA0250 /* SingleLineTextInput.xib in Resources */,
+				48355C90228B070B00AA0250 /* SelectPaymentMethodViewController.storyboard in Resources */,
 				48B20DCE2288791F00B9954B /* TabsViewController.storyboard in Resources */,
 				48B20DCF2288791F00B9954B /* SplashViewController.storyboard in Resources */,
 				48B20DD02288791F00B9954B /* Localizable.strings in Resources */,
 				48B20DD12288791F00B9954B /* Assets.xcassets in Resources */,
+				48355C85228B06FA00AA0250 /* SelectAddressViewController.storyboard in Resources */,
 				48B20DD22288791F00B9954B /* MenuViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1641,37 +1696,63 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48355C9D228B071C00AA0250 /* OrderSuccessScreenInitData.swift in Sources */,
+				48355C92228B070B00AA0250 /* SelectPaymentMethodViewController.swift in Sources */,
+				48355C95228B071300AA0250 /* ConfirmOrderPresenter.swift in Sources */,
 				48B20D932288791F00B9954B /* OrdersHistoryPresenter.swift in Sources */,
+				48355C87228B06FE00AA0250 /* EnterDeliveryDetailsPresenterProtocol.swift in Sources */,
 				48B20D952288791F00B9954B /* SceneFactory+Splash.swift in Sources */,
 				48B20D962288791F00B9954B /* SplashPresenter.swift in Sources */,
 				48B20D972288791F00B9954B /* MenuPresenter.swift in Sources */,
 				48B20D982288791F00B9954B /* SceneFactory.swift in Sources */,
+				48355CA0228B071F00AA0250 /* OrderSuccessScreenViewProtocol.swift in Sources */,
 				48B20D992288791F00B9954B /* UICollectionView+ReusableCells.swift in Sources */,
 				48B20D9A2288791F00B9954B /* SceneFactory+OrdersHistory.swift in Sources */,
+				48355C8D228B070800AA0250 /* SelectPaymentMethodPresenter.swift in Sources */,
 				48B20D9B2288791F00B9954B /* TabsPresenter.swift in Sources */,
 				48B20D9C2288791F00B9954B /* SceneNavigator.swift in Sources */,
 				48B20D9D2288791F00B9954B /* Flow.swift in Sources */,
 				48B20D9E2288791F00B9954B /* APIProtocol.swift in Sources */,
+				48355CA1228B073700AA0250 /* FlowProtocol.swift in Sources */,
+				48355C82228B06F700AA0250 /* SelectAddressPresenter.swift in Sources */,
 				48B20D9F2288791F00B9954B /* CompositionRoot.swift in Sources */,
+				48355C88228B06FE00AA0250 /* EnterDeliveryDetailsPresenter.swift in Sources */,
 				48B20E1B2288A4BF00B9954B /* OrderDraft.swift in Sources */,
 				48B20DA02288791F00B9954B /* UIViewController+Alerts.swift in Sources */,
+				48355C86228B06FE00AA0250 /* EnterDeliveryDetailsInitData.swift in Sources */,
 				48B20E152288A4BF00B9954B /* MoneyAmount.swift in Sources */,
 				48B20DF622887FDF00B9954B /* HttpMethod.swift in Sources */,
 				48B20DA32288791F00B9954B /* AppDelegate.swift in Sources */,
 				48B20E092288A4B800B9954B /* ResponseDto.swift in Sources */,
 				48B20DA42288791F00B9954B /* MenuViewController.swift in Sources */,
 				48B20DA52288791F00B9954B /* SceneFactory+Menu.swift in Sources */,
+				48355C7F228B06F300AA0250 /* SelectAddress+SceneFactory.swift in Sources */,
 				48B20E0D2288A4B800B9954B /* SettingsDto.swift in Sources */,
+				48355C7C228B06DA00AA0250 /* Button.swift in Sources */,
 				48B20E0B2288A4B800B9954B /* StreetDto.swift in Sources */,
+				48355C91228B070B00AA0250 /* SelectPaymentMethodViewProtocol.swift in Sources */,
+				48355C75228B06C600AA0250 /* OrderFlow.swift in Sources */,
 				48B20E1D2288A4C500B9954B /* OrderServiceProtocol.swift in Sources */,
+				48355C8F228B070800AA0250 /* SelectPaymentMethodInitData.swift in Sources */,
+				48355C80228B06F700AA0250 /* SelectAddressPresenterProtocol.swift in Sources */,
+				48355C84228B06FA00AA0250 /* SelectAddressViewController.swift in Sources */,
 				48B20DA62288791F00B9954B /* R.generated.swift in Sources */,
 				48B20DF822887FDF00B9954B /* JSONLoader.swift in Sources */,
+				48355C9A228B071900AA0250 /* SceneFactory+OrderSuccessScreen.swift in Sources */,
+				48355CA3228B07F900AA0250 /* OrderButton.swift in Sources */,
+				48355C8B228B070100AA0250 /* EnterDeliveryDetailsViewController.swift in Sources */,
 				48B20E182288A4BF00B9954B /* Building.swift in Sources */,
 				48B20E142288A4BF00B9954B /* DeliveryWaitingTime.swift in Sources */,
+				48355C9B228B071C00AA0250 /* OrderSuccessScreenPresenterProtocol.swift in Sources */,
+				48355CA2228B073D00AA0250 /* SceneFactory+EnterDeliveryDetails.swift in Sources */,
+				48355C7D228B06DE00AA0250 /* ErrorToTextMapper.swift in Sources */,
+				48355C81228B06F700AA0250 /* SelectAddressInitData.swift in Sources */,
+				48355C7E228B06F100AA0250 /* BaseOrderFlowViewController.swift in Sources */,
 				48B20E192288A4BF00B9954B /* DeliveryDetails.swift in Sources */,
 				48B20DF422887FDF00B9954B /* EndpointProtocol.swift in Sources */,
 				48B20DDE22887B8200B9954B /* FakeServerUrlsConfig.swift in Sources */,
 				48B20DA82288791F00B9954B /* OrderFlowInitData.swift in Sources */,
+				48355C94228B071300AA0250 /* ConfirmOrderPresenterProtocol.swift in Sources */,
 				48B20E172288A4BF00B9954B /* Street.swift in Sources */,
 				48B20DAA2288791F00B9954B /* OrdersHistoryViewController.swift in Sources */,
 				48B20DAB2288791F00B9954B /* CommonError.swift in Sources */,
@@ -1679,23 +1760,31 @@
 				48B20DFA228881B300B9954B /* FakeWebServer.swift in Sources */,
 				48B20E1E2288A4C500B9954B /* OrderService.swift in Sources */,
 				48B20DF122887FDF00B9954B /* GETPizzasEndpoint.swift in Sources */,
+				48355C7B228B06D800AA0250 /* SingleLineTextInput.swift in Sources */,
 				48B20DAE2288791F00B9954B /* UrlsConfigProtocol.swift in Sources */,
 				48B20DAF2288791F00B9954B /* DtoToModelMapper.swift in Sources */,
+				48355C83228B06FA00AA0250 /* SelectAddressViewProtocol.swift in Sources */,
 				48B20DB02288791F00B9954B /* OrdersHistoryViewProtocol.swift in Sources */,
 				48B20DB12288791F00B9954B /* CommonBlock.swift in Sources */,
 				48B20E0A2288A4B800B9954B /* PizzaDto.swift in Sources */,
 				48B20DB22288791F00B9954B /* OrdersHistoryPresenterProtocol.swift in Sources */,
+				48355C96228B071300AA0250 /* ConfirmOrderInitData.swift in Sources */,
 				48B20DB42288791F00B9954B /* SplashViewController.swift in Sources */,
 				48B20DFD2288A4B000B9954B /* AddressDto.swift in Sources */,
+				48355C77228B06CF00AA0250 /* LoadableFromNib.swift in Sources */,
 				48B20DB52288791F00B9954B /* SplashViewProtocol.swift in Sources */,
+				48355C99228B071500AA0250 /* ConfirmOrderViewProtocol.swift in Sources */,
 				48B20DB62288791F00B9954B /* SceneTransitionType.swift in Sources */,
 				48B20DB72288791F00B9954B /* MenuServiceProtocol.swift in Sources */,
+				48355C8E228B070800AA0250 /* SelectPaymentMethodPresenterProtocol.swift in Sources */,
 				48B20DB82288791F00B9954B /* UIViewController+StoryboardInstance.swift in Sources */,
+				48355C93228B070F00AA0250 /* SceneFactory+ConfirmOrder.swift in Sources */,
 				48B20E082288A4B800B9954B /* VoidResponseDto.swift in Sources */,
 				48B20DB92288791F00B9954B /* TabsViewController.swift in Sources */,
 				48B20DBA2288791F00B9954B /* UIWindow+RootReplacement.swift in Sources */,
 				48B20DBB2288791F00B9954B /* Scene.swift in Sources */,
 				48B20DBC2288791F00B9954B /* SceneFactory+Tabs.swift in Sources */,
+				48355C74228B069F00AA0250 /* UIView+Gradient.swift in Sources */,
 				48B20DBD2288791F00B9954B /* MenuPresenterProtocol.swift in Sources */,
 				48B20DBE2288791F00B9954B /* AccessibilityIdentitier.swift in Sources */,
 				48B20DBF2288791F00B9954B /* TabsPresenterProtocol.swift in Sources */,
@@ -1705,11 +1794,18 @@
 				48B20DDB22887A0800B9954B /* AppDelegate+TargetSpecific.swift in Sources */,
 				48B20DC22288791F00B9954B /* ProdUrlsConfig.swift in Sources */,
 				48B20E1C2288A4C500B9954B /* ModelToDtoMapper.swift in Sources */,
+				48355C9C228B071C00AA0250 /* OrderSuccessScreenPresenter.swift in Sources */,
+				48355C89228B070100AA0250 /* EnterDeliveryDetailsViewProtocol.swift in Sources */,
 				48B20E162288A4BF00B9954B /* Pizza.swift in Sources */,
 				48B20DC32288791F00B9954B /* MenuViewProtocol.swift in Sources */,
 				48B20DC42288791F00B9954B /* PizzaCollectionViewCell.swift in Sources */,
+				48355C98228B071500AA0250 /* ConfirmOrderViewController.swift in Sources */,
 				48B20E0C2288A4B800B9954B /* BuildingDto.swift in Sources */,
+				48355C9E228B071F00AA0250 /* OrderSuccessScreenViewController.swift in Sources */,
+				48355C8C228B070400AA0250 /* SceneFactory+SelectPaymentMethod.swift in Sources */,
+				48355C76228B06CF00AA0250 /* UIImage+Insets.swift in Sources */,
 				48B20DC52288791F00B9954B /* MenuService.swift in Sources */,
+				48355C79228B06D800AA0250 /* Dropdown.swift in Sources */,
 				48B20DC62288791F00B9954B /* SplashPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
