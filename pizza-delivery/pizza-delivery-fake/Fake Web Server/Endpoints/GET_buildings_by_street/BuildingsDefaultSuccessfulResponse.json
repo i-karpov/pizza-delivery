@@ -1,0 +1,18 @@
+{
+    "error": false,
+    "code": 200,
+    "response": {
+        "data": [
+            {
+                "id": 99999,
+                "title": "11_Fake",
+                "region_id": 331,
+                "geo": "27.605354 53.958706",
+                "to_entrance": 0,
+                "scenario": 0,
+                "pizzeria_active": 1
+            }
+        ],
+        "meta": null
+    }
+}

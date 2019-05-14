@@ -18,5 +18,7 @@ end
 
 target 'pizza-delivery-fake' do
   shared_pods
-  pod 'Swifter', '~> 1.4.6'
+  # There is a bug with routing in v.1.4.6 so specific commit (which is newer) is used directly.
+  #pod 'Swifter', '~> 1.4.6'
+  pod 'Swifter', :git => 'https://github.com/httpswift/swifter.git', :commit => '56c89eaac4473d64ebea9e13a8fbc186f75bbb53'
 end
