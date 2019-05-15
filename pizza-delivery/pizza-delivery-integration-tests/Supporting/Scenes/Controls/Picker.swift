@@ -10,35 +10,69 @@ import XCTest
 
 class Picker {
     
-    init(id: String) {
-        
+    private let app: XCUIApplication
+    private let id: String
+    
+    init(app: XCUIApplication, id: String) {
+        self.id = id
+        self.app = app
     }
     
     func isDisplayed() {
-        XCTFail("Not Implemented")
+        let picker = app.pickers[id]
+        XCTAssert(picker.exists && picker.isHittable, "Picker \(id) is not displayed.")
     }
     
     func isNotDisplayed() {
-        XCTFail("Not Implemented")
+        let picker = app.pickers[id]
+        XCTAssert(!picker.exists || !picker.isHittable, "Picker \(id) is displayed.")
     }
     
     func firstItemIs(_ expectedFirstItem: String) {
-        XCTFail("Not Implemented")
+        scrollToFirst()
+        let firstValue = app.pickers[id].pickerWheels.element.value as? String
+        XCTAssertEqual(firstValue, expectedFirstItem, "Picker: first item is incorrect.")
+    }
+    
+    func scrollToFirst() {
+        let pickerWheel = app.pickers[id].pickerWheels.element
+        let rowsCount = pickerWheel.children(matching: .any).count
+        
+        for _ in 0..<rowsCount {
+            pickerWheel
+                .coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: -0.6))
+                .tap()
+        }
     }
     
     func scrollToLast() {
-        XCTFail("Not Implemented")
+        let pickerWheel = app.pickers[id].pickerWheels.element
+        let rowsCount = pickerWheel.children(matching: .any).count
+        
+        for _ in 0..<rowsCount {
+            pickerWheel
+                .coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.6))
+                .tap()
+        }
     }
     
     func lastItemIs(_ expectedLastItem: String) {
-        XCTFail("Not Implemented")
+        scrollToLast()
+        let lastValue = app.pickers[id].pickerWheels.element.value as? String
+        XCTAssertEqual(lastValue, expectedLastItem, "Picker: last item is incorrect.")
     }
     
     func pickFirst() {
-        XCTFail("Not Implemented")
+        scrollToFirst()
+        app
+            .buttons[AccessibilityIdentitier.CommonInputControl.pickerDoneButton]
+            .tap()
     }
     
     func pickLast() {
-        XCTFail("Not Implemented")
+        scrollToLast()
+        app
+            .buttons[AccessibilityIdentitier.CommonInputControl.pickerDoneButton]
+            .tap()
     }
 }

@@ -33,8 +33,6 @@ enum AccessibilityIdentitier {
             static let rootView = "SelectAddress_RootView"
             static let streetInput = "SelectAddress_streetInput"
             static let buildingInput = "SelectAddress_buildingInput"
-            static let streetPicker = "SelectAddress_streetPicker"
-            static let buildingPicker = "SelectAddress_buildingPicker"
         }
         
         enum EnterDeliveryDetails {
@@ -61,15 +59,27 @@ enum AccessibilityIdentitier {
             static let rootView = "ConfirmOrder_RootView"
             static let totalSumLabel = "ConfirmOrder_totalSumLabel"
             static let nameValueLabel = "ConfirmOrder_nameInput"
+            static let pizzaTitleValueLabel = "ConfirmOrder_pizzaTitleValueLabel"
             static let phoneNumberValueLabel = "ConfirmOrder_phoneNUmberInput"
-            static let addressValueLabel = "EnterDeliveryDetails_addressValueLabel"
-            static let commentValueLabel = "EnterDeliveryDetails_commentValueLabel"
-            static let paymentMethodValueLabel = "EnterDeliveryDetails_paymentMethodValueLabel"
+            static let addressValueLabel = "ConfirmOrder_addressValueLabel"
+            static let commentValueLabel = "ConfirmOrder_commentValueLabel"
+            static let paymentMethodValueLabel = "ConfirmOrder_paymentMethodValueLabel"
+            static let confirmButton = "ConfirmOrder_ConfirmButton"
         }
         
         enum OrderSuccessScreen {
             static let rootView = "OrderSuccessScreen_RootView"
+            static let finishButton = "OrderSuccessScreen_Finish"
         }
     }
+    
+    enum CommonInputControl {
+        static let value = "CommonInputControl_Value"
+        static let picker = "CommonInputControl_picker"
+        static let pickerDoneButton = "CommonInputControl_pickerDoneButton"
+        static let pickerCancelButton = "CommonInputControl_pickerCancelButton"
+    }
+    
+    static let activityIndicator = "activity_indicator"
 
 }

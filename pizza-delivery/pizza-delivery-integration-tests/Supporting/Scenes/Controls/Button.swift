@@ -10,27 +10,36 @@ import XCTest
 
 class Button {
     
-    init(id: String) {
-        
+    private let app: XCUIApplication
+    private let id: String
+    
+    init(app: XCUIApplication, id: String) {
+        self.id = id
+        self.app = app
     }
     
     func isDisplayed() {
-        XCTFail("Not Implemented")
+        let button = app.buttons[id]
+        XCTAssert(button.exists && button.isHittable, "Button \(id) is not displayed.")
     }
     
     func isNotDisplayed() {
-        XCTFail("Not Implemented")
+        let button = app.buttons[id]
+        XCTAssert(!button.exists || !button.isHittable, "Button \(id) is displayed.")
     }
     
     func isEnabled() {
-        XCTFail("Not Implemented")
+        let button = app.buttons[id]
+        XCTAssert(button.isEnabled, "Button \(id) is disabled.")
     }
     
     func isDisabled() {
-        XCTFail("Not Implemented")
+        let button = app.buttons[id]
+        XCTAssertFalse(button.isEnabled, "Button \(id) is enabled.")
     }
     
     func tap() {
-        XCTFail("Not Implemented")
+        let button = app.buttons[id]
+        button.tap()
     }
 }

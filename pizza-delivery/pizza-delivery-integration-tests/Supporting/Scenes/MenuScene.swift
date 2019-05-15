@@ -12,7 +12,7 @@ class MenuScene: BaseScene {
     
     func isDisplayed() {
         let menuView = app.otherElements[AccessibilityIdentitier.Menu.rootView]
-        XCTAssert(menuView.exists, "Splash screen is not displayed.")
+        XCTAssert(menuView.waitForExistence(timeout: 2), "Menu screen is not displayed.")
     }
     
     func waitUntilMenuIsLoaded() {
@@ -33,6 +33,7 @@ class MenuScene: BaseScene {
     }
     
     func tapOrderFirstPizza() {
-        XCTFail("Not Implemented")
+        let firstCell = app.cells[String(format: AccessibilityIdentitier.Menu.pizzaCellFormat, "0")]
+        firstCell.buttons.element.tap()
     }
 }

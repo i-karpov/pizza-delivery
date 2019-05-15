@@ -38,8 +38,21 @@ class ConfirmOrderViewController: BaseOrderFlowViewController {
     }
 
     private func setupSelf() {
+        setAccessibilityIdentifiers()
         setupNavbar()
         setupTexts()
+    }
+    
+    private func setAccessibilityIdentifiers() {
+        view.accessibilityIdentifier = AccessibilityIdentitier.Order.ConfirmOrder.rootView
+        totalSumValueLabel.accessibilityIdentifier = AccessibilityIdentitier.Order.ConfirmOrder.totalSumLabel
+        nameLabel.accessibilityIdentifier = AccessibilityIdentitier.Order.ConfirmOrder.nameValueLabel
+        phoneNumberLabel.accessibilityIdentifier = AccessibilityIdentitier.Order.ConfirmOrder.phoneNumberValueLabel
+        addressLabel.accessibilityIdentifier = AccessibilityIdentitier.Order.ConfirmOrder.addressValueLabel
+        paymentMethodLabel.accessibilityIdentifier = AccessibilityIdentitier.Order.ConfirmOrder.paymentMethodValueLabel
+        pizzaLabel.accessibilityIdentifier = AccessibilityIdentitier.Order.ConfirmOrder.pizzaTitleValueLabel
+        commentLabel.accessibilityIdentifier = AccessibilityIdentitier.Order.ConfirmOrder.commentValueLabel
+        confirmOrderButton.accessibilityIdentifier = AccessibilityIdentitier.Order.ConfirmOrder.confirmButton
     }
     
     private func setupTexts() {

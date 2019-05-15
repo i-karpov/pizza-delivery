@@ -15,11 +15,13 @@ class MockOrderService: OrderServiceProtocol {
         var getStreets: Result<[Street], CommonError>!
         var getStreetsAsync: Result<[Street], CommonError>?
         var getBuildings: Result<[Building], CommonError>!
+        var sendOrder: Result<DeliveryWaitingTime, CommonError>!
     }
     
     enum Operation {
         case getStreets
         case getBuildings(streetId: Int)
+        case sendOrder(orderDraft: OrderDraft)
     }
     
     var responses = Responses()
@@ -40,5 +42,10 @@ class MockOrderService: OrderServiceProtocol {
                                 _ completion: @escaping CommonBlock.ResultCompletionBlock<[Building]>) {
         recordedOperations.append(.getBuildings(streetId: streetId))
         completion(responses.getBuildings)
+    }
+    
+    func sendOrder(_ orderDraft: OrderDraft, _ completion: @escaping CommonBlock.ResultCompletionBlock<DeliveryWaitingTime>) {
+        recordedOperations.append(.sendOrder(orderDraft: orderDraft))
+        completion(responses.sendOrder)
     }
 }

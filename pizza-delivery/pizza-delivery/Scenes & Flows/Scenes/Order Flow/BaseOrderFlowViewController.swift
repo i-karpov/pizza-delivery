@@ -24,6 +24,7 @@ class BaseOrderFlowViewController: UIViewController {
                                                            target: nil,
                                                            action: nil)
         navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
+        navigationItem.backBarButtonItem?.accessibilityLabel = AccessibilityIdentitier.Order.CommonButton.backButton
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(named: "navbar-close-button"),
@@ -32,6 +33,7 @@ class BaseOrderFlowViewController: UIViewController {
             action: #selector(handleCloseTapped)
         )
         navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
+        navigationItem.rightBarButtonItem?.accessibilityLabel = AccessibilityIdentitier.Order.CommonButton.closeButton
     }
     
     @objc

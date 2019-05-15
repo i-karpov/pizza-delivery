@@ -38,6 +38,7 @@ class order_flow_tests: XCTestCase {
         successScene = scenesRegistry.getOrderSuccessScene()
         
         goFromSplashToMenuScene()
+        menuScene.waitUntilMenuIsLoaded()
     }
     
     // MARK: - Tests
@@ -46,8 +47,11 @@ class order_flow_tests: XCTestCase {
         menuScene.tapOrderFirstPizza()
         
         fillAddress()
+        selectAddressScene.nextButton.tap()
         checkAndFillDeliveryDetails()
-        checkAndFillPaymentMethod()
+        deliveryDetailsScene.nextButton.tap()
+        checkPaymentMethod()
+        paymentMethodScene.nextButton.tap()
         checkConfirmation()
         confirmationScene.orderButton.tap()
         
@@ -62,8 +66,11 @@ class order_flow_tests: XCTestCase {
     func test_when_on_confirmation_step_then_flow_can_be_exited() {
         menuScene.tapOrderFirstPizza()
         fillAddress()
+        selectAddressScene.nextButton.tap()
         checkAndFillDeliveryDetails()
-        checkAndFillPaymentMethod()
+        deliveryDetailsScene.nextButton.tap()
+        checkPaymentMethod()
+        paymentMethodScene.nextButton.tap()
         checkConfirmation()
         
         confirmationScene.closeButton.tap()
@@ -73,8 +80,11 @@ class order_flow_tests: XCTestCase {
     func test_when_on_confirmation_step_then_can_return_to_first_step() {
         menuScene.tapOrderFirstPizza()
         fillAddress()
+        selectAddressScene.nextButton.tap()
         checkAndFillDeliveryDetails()
-        checkAndFillPaymentMethod()
+        deliveryDetailsScene.nextButton.tap()
+        checkPaymentMethod()
+        paymentMethodScene.nextButton.tap()
         checkConfirmation()
         
         confirmationScene.backButton.tap()
@@ -105,22 +115,25 @@ class order_flow_tests: XCTestCase {
         selectAddressScene.buildingInput.isEmpty()
         
         selectAddressScene.streetInput.tap()
-        selectAddressScene.streetPicker.isDisplayed()
-        selectAddressScene.streetPicker.firstItemIs("1-й Вишневый пер. (Пос.Ждановичи)")
-        selectAddressScene.streetPicker.scrollToLast()
-        selectAddressScene.streetPicker.lastItemIs("Ясный пер.")
-        selectAddressScene.streetPicker.pickLast()
-        selectAddressScene.streetPicker.isNotDisplayed()
-        selectAddressScene.streetInput.valueIs("Ясный пер.")
+        selectAddressScene.picker.isDisplayed()
+        selectAddressScene.picker.firstItemIs("Нарочанская")
+        selectAddressScene.picker.scrollToLast()
+        selectAddressScene.picker.lastItemIs("Независимости просп.")
+        selectAddressScene.picker.pickLast()
+        selectAddressScene.picker.isNotDisplayed()
+        selectAddressScene.streetInput.valueIs("Независимости просп.")
+        
+        selectAddressScene.loadingIndicatorIsDisplayed()
+        selectAddressScene.buildingInput.isDisabled()
+        selectAddressScene.waitUntilLoadingIndicatorDisappears()
+        selectAddressScene.buildingInput.isEnabled()
         
         selectAddressScene.buildingInput.tap()
-        selectAddressScene.buildingPicker.isDisplayed()
-        selectAddressScene.buildingPicker.firstItemIs("3")
-        selectAddressScene.buildingPicker.pickFirst()
-        selectAddressScene.buildingPicker.isNotDisplayed()
-        selectAddressScene.buildingInput.valueIs("3")
-        
-        selectAddressScene.nextButton.tap()
+        selectAddressScene.picker.isDisplayed()
+        selectAddressScene.picker.firstItemIs("1")
+        selectAddressScene.picker.pickFirst()
+        selectAddressScene.picker.isNotDisplayed()
+        selectAddressScene.buildingInput.valueIs("1")
     }
     
     private func checkAndFillDeliveryDetails() {
@@ -130,44 +143,38 @@ class order_flow_tests: XCTestCase {
         
         deliveryDetailsScene.nextButton.isDisabled()
         deliveryDetailsScene.nameInput.isEmpty()
-        deliveryDetailsScene.streetInput.valueIs("Ясный пер.")
-        deliveryDetailsScene.buildingInput.valueIs("3")
+        deliveryDetailsScene.streetInput.valueIs("Независимости просп.")
+        deliveryDetailsScene.buildingInput.valueIs("1")
         
+        deliveryDetailsScene.nameInput.tap()
         deliveryDetailsScene.nameInput.enter("Name")
         deliveryDetailsScene.nextButton.isDisabled()
+        deliveryDetailsScene.entranceInput.tap()
         deliveryDetailsScene.entranceInput.enter("1")
         deliveryDetailsScene.nextButton.isDisabled()
+        deliveryDetailsScene.apartmentInput.tap()
         deliveryDetailsScene.apartmentInput.enter("2")
         deliveryDetailsScene.nextButton.isDisabled()
+        deliveryDetailsScene.floorInput.tap()
         deliveryDetailsScene.floorInput.enter("3")
         deliveryDetailsScene.nextButton.isDisabled()
+        deliveryDetailsScene.scrollToBottom()
+        deliveryDetailsScene.commentInput.tap()
         deliveryDetailsScene.commentInput.enter("some multiline\ncomment")
         deliveryDetailsScene.nextButton.isDisabled()
         
-        
+        deliveryDetailsScene.phoneNumberInput.tap()
         deliveryDetailsScene.phoneNumberInput.enter("+375111111111")
         deliveryDetailsScene.nextButton.isEnabled()
-        
-        deliveryDetailsScene.nextButton.tap()
     }
     
-    private func checkAndFillPaymentMethod() {
+    private func checkPaymentMethod() {
         paymentMethodScene.isDisplayed()
         paymentMethodScene.backButton.isDisplayed()
         paymentMethodScene.closeButton.isDisplayed()
         
         paymentMethodScene.nextButton.isEnabled()
-        paymentMethodScene.totalAmountIs("12,90")
-        
-        paymentMethodScene.picker.cashIsSelected()
-        paymentMethodScene.cashAmountInput.isDisplayed()
-        paymentMethodScene.cashAmountInput.isEmpty()
-        paymentMethodScene.picker.tapCard()
-        paymentMethodScene.picker.cardIsSelected()
-        paymentMethodScene.cashAmountInput.isNotDisplayed()
-        paymentMethodScene.picker.tapCash()
-        paymentMethodScene.cashAmountInput.isDisplayed()
-        paymentMethodScene.cashAmountInput.enter("20")
+        paymentMethodScene.totalAmountIs("12.90")
     }
     
     private func checkConfirmation() {
@@ -176,12 +183,12 @@ class order_flow_tests: XCTestCase {
         confirmationScene.closeButton.isDisplayed()
         
         confirmationScene.orderButton.isEnabled()
-        confirmationScene.totalAmountIs("12,90")
+        confirmationScene.totalAmountIs("12.90")
         
         confirmationScene.nameIs("Name")
         confirmationScene.phoneNumberIs("+375111111111")
-        confirmationScene.addressIs("Ясный пер. 3, Ent. 1, Apt. 2, Floor 3")
+        confirmationScene.addressIs("Независимости просп., 1, 1, 2, 3")
         confirmationScene.paymentMethodIs("Card")
-        confirmationScene.pizzaTitleIs("Гавайская")
+        confirmationScene.pizzaTitleIs("Ранч пицца")
     }
 }

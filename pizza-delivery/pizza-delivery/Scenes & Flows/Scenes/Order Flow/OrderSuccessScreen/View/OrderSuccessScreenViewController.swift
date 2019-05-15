@@ -28,6 +28,8 @@ class OrderSuccessScreenViewController: UIViewController {
     }
 
     private func setupSelf() {
+        setAccessibilityIdentifiers()
+        
         view.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.9450980392, blue: 0.9450980392, alpha: 1)
         navigationController?.setNavigationBarHidden(true, animated: false)
         
@@ -37,6 +39,11 @@ class OrderSuccessScreenViewController: UIViewController {
         expectedArrivalTimeLabel.textColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
         
         setupTexts()
+    }
+    
+    private func setAccessibilityIdentifiers() {
+        view.accessibilityIdentifier = AccessibilityIdentitier.Order.OrderSuccessScreen.rootView
+        closeButton.accessibilityIdentifier = AccessibilityIdentitier.Order.OrderSuccessScreen.finishButton
     }
     
     private func setupTexts() {

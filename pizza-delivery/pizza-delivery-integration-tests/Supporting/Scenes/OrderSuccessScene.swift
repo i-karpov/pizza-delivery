@@ -10,12 +10,16 @@ import XCTest
 
 class OrderSuccessScene: BaseScene {
     
-    var backButton: Button { return Button(id: "backButton") }
-    var closeButton: Button { return Button(id: "closeButton") }
-    var finishButton: Button { return Button(id: "finishButton") }
+    var backButton: Button { return Button(app: app,
+                                           id: AccessibilityIdentitier.Order.CommonButton.backButton) }
+    var closeButton: Button { return Button(app: app,
+                                            id: AccessibilityIdentitier.Order.CommonButton.closeButton) }
+    var finishButton: Button { return Button(app: app,
+                                             id: AccessibilityIdentitier.Order.OrderSuccessScreen.finishButton) }
     
     func isDisplayed() {
-        XCTFail("Not Implemented")
+        let view = app.otherElements[AccessibilityIdentitier.Order.OrderSuccessScreen.rootView]
+        XCTAssert(view.waitForExistence(timeout: 15), "Order Success Scene is not displayed.")
     }
 
 }

@@ -76,25 +76,15 @@ class Dropdown: UIView, LoadableFromNib {
     private func commonInit() {
         loadFromNib()
         
+        valueLabel.accessibilityIdentifier = AccessibilityIdentitier.CommonInputControl.value
+        
         tappableArea.layer.cornerRadius = 5.0
         tappableArea.layer.masksToBounds = true
         tappableArea.backgroundColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9882352941, alpha: 1)
         
         valueLabel.text = .none
         
-        pickerToolbar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: R.string.localizable.commonPickerButtonsDone(),
-                                         style: UIBarButtonItem.Style.plain,
-                                         target: self,
-                                         action: #selector(handleItemPicked))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace,
-                                          target: nil,
-                                          action: nil)
-        let cancelButton = UIBarButtonItem(title: R.string.localizable.commonPickerButtonsCancel(),
-                                           style: UIBarButtonItem.Style.plain,
-                                           target: self,
-                                           action: #selector(handlePickingCanceled))
-        pickerToolbar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        setupPickerToolbar()
         
         supportingTextField.isHidden = true
         addSubview(supportingTextField)
@@ -102,8 +92,27 @@ class Dropdown: UIView, LoadableFromNib {
         supportingTextField.inputView = picker
         picker.dataSource = self
         picker.delegate = self
+        picker.accessibilityIdentifier = AccessibilityIdentitier.CommonInputControl.picker
         
         setupFonts()
+    }
+    
+    private func setupPickerToolbar() {
+        pickerToolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: R.string.localizable.commonPickerButtonsDone(),
+                                         style: UIBarButtonItem.Style.plain,
+                                         target: self,
+                                         action: #selector(handleItemPicked))
+        doneButton.accessibilityLabel = AccessibilityIdentitier.CommonInputControl.pickerDoneButton
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace,
+                                          target: nil,
+                                          action: nil)
+        let cancelButton = UIBarButtonItem(title: R.string.localizable.commonPickerButtonsCancel(),
+                                           style: UIBarButtonItem.Style.plain,
+                                           target: self,
+                                           action: #selector(handlePickingCanceled))
+        cancelButton.accessibilityLabel = AccessibilityIdentitier.CommonInputControl.pickerCancelButton
+        pickerToolbar.setItems([cancelButton, spaceButton, doneButton], animated: false)
     }
     
     private func setupFonts() {

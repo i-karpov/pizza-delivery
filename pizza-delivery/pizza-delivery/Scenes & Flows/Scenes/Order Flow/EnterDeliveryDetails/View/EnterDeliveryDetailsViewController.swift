@@ -34,7 +34,9 @@ class EnterDeliveryDetailsViewController: BaseOrderFlowViewController {
     }
 
     private func setupSelf() {
-    
+        setAccessibilityIdentifiers()
+        
+        
         setupNavbar()
         setupTexts()
         setupBindings()
@@ -44,6 +46,19 @@ class EnterDeliveryDetailsViewController: BaseOrderFlowViewController {
         
         nextButton.isEnabled = false
 
+    }
+    
+    private func setAccessibilityIdentifiers() {
+        view.accessibilityIdentifier = AccessibilityIdentitier.Order.EnterDeliveryDetails.rootView
+        nameInput.accessibilityIdentifier = AccessibilityIdentitier.Order.EnterDeliveryDetails.nameInput
+        phoneNumberInput.accessibilityIdentifier = AccessibilityIdentitier.Order.EnterDeliveryDetails.phoneNumberInput
+        streetInput.accessibilityIdentifier = AccessibilityIdentitier.Order.EnterDeliveryDetails.streetInput
+        buildingInput.accessibilityIdentifier = AccessibilityIdentitier.Order.EnterDeliveryDetails.buildingInput
+        entranceInput.accessibilityIdentifier = AccessibilityIdentitier.Order.EnterDeliveryDetails.entranceInput
+        apartmentInput.accessibilityIdentifier = AccessibilityIdentitier.Order.EnterDeliveryDetails.ataprtmentInput
+        floorInput.accessibilityIdentifier = AccessibilityIdentitier.Order.EnterDeliveryDetails.floorInput
+        commentInput.accessibilityIdentifier = AccessibilityIdentitier.Order.EnterDeliveryDetails.commentInput
+        nextButton.accessibilityIdentifier = AccessibilityIdentitier.Order.CommonButton.nextButton
     }
     
     private func setupTexts() {

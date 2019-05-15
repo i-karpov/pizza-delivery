@@ -61,6 +61,16 @@
 		48355CB3228B0A0900AA0250 /* StreetsSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CB2228B0A0900AA0250 /* StreetsSuccessfulResponse.json */; };
 		48355CB5228B0A1800AA0250 /* BuildingsAtStreet223SuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CB4228B0A1800AA0250 /* BuildingsAtStreet223SuccessfulResponse.json */; };
 		48355CB7228B0A3200AA0250 /* BuildingsDefaultSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CB6228B0A3200AA0250 /* BuildingsDefaultSuccessfulResponse.json */; };
+		48355CB9228B677B00AA0250 /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CB8228B677B00AA0250 /* Dropdown.swift */; };
+		48355CBB228B678400AA0250 /* SingleLineTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CBA228B678400AA0250 /* SingleLineTextInput.swift */; };
+		48355CC1228B87C400AA0250 /* GETSettingsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CC0228B87C400AA0250 /* GETSettingsEndpoint.swift */; };
+		48355CC3228B87D500AA0250 /* POSTAddPizzaEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CC2228B87D500AA0250 /* POSTAddPizzaEndpoint.swift */; };
+		48355CC5228B87E600AA0250 /* POSTUpdateAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CC4228B87E600AA0250 /* POSTUpdateAddress.swift */; };
+		48355CC7228B880300AA0250 /* POSTSaveCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CC6228B880300AA0250 /* POSTSaveCart.swift */; };
+		48355CCA228B894800AA0250 /* SettingsSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CC9228B894800AA0250 /* SettingsSuccessfulResponse.json */; };
+		48355CCC228B894E00AA0250 /* AddPizzaSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CCB228B894E00AA0250 /* AddPizzaSuccessfulResponse.json */; };
+		48355CCE228B895400AA0250 /* UpdateAddressSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CCD228B895400AA0250 /* UpdateAddressSuccessfulResponse.json */; };
+		48355CD0228B895A00AA0250 /* SaveCartSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CCF228B895900AA0250 /* SaveCartSuccessfulResponse.json */; };
 		4867D8CB2279A5250051461E /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8C52279A5250051461E /* Scene.swift */; };
 		4867D8CC2279A5250051461E /* SceneNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8C72279A5250051461E /* SceneNavigatorProtocol.swift */; };
 		4867D8CD2279A5250051461E /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8C82279A5250051461E /* SceneTransitionType.swift */; };
@@ -177,7 +187,6 @@
 		4867DA0E2280998C0051461E /* OrderConfirmationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA0D2280998C0051461E /* OrderConfirmationScene.swift */; };
 		4867DA10228099990051461E /* OrderSuccessScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA0F228099990051461E /* OrderSuccessScene.swift */; };
 		4867DA132280A1170051461E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA122280A1170051461E /* Button.swift */; };
-		4867DA152280A1250051461E /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA142280A1250051461E /* Input.swift */; };
 		4867DA172280A1320051461E /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA162280A1320051461E /* Picker.swift */; };
 		4867DA1A2280DF350051461E /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA192280DF350051461E /* UIView+Gradient.swift */; };
 		4867DA1C2280DFAF0051461E /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA1B2280DFAF0051461E /* OrderButton.swift */; };
@@ -324,6 +333,16 @@
 		48355CB2228B0A0900AA0250 /* StreetsSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StreetsSuccessfulResponse.json; sourceTree = "<group>"; };
 		48355CB4228B0A1800AA0250 /* BuildingsAtStreet223SuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BuildingsAtStreet223SuccessfulResponse.json; sourceTree = "<group>"; };
 		48355CB6228B0A3200AA0250 /* BuildingsDefaultSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BuildingsDefaultSuccessfulResponse.json; sourceTree = "<group>"; };
+		48355CB8228B677B00AA0250 /* Dropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
+		48355CBA228B678400AA0250 /* SingleLineTextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleLineTextInput.swift; sourceTree = "<group>"; };
+		48355CC0228B87C400AA0250 /* GETSettingsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETSettingsEndpoint.swift; sourceTree = "<group>"; };
+		48355CC2228B87D500AA0250 /* POSTAddPizzaEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSTAddPizzaEndpoint.swift; sourceTree = "<group>"; };
+		48355CC4228B87E600AA0250 /* POSTUpdateAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSTUpdateAddress.swift; sourceTree = "<group>"; };
+		48355CC6228B880300AA0250 /* POSTSaveCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSTSaveCart.swift; sourceTree = "<group>"; };
+		48355CC9228B894800AA0250 /* SettingsSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SettingsSuccessfulResponse.json; sourceTree = "<group>"; };
+		48355CCB228B894E00AA0250 /* AddPizzaSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AddPizzaSuccessfulResponse.json; sourceTree = "<group>"; };
+		48355CCD228B895400AA0250 /* UpdateAddressSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UpdateAddressSuccessfulResponse.json; sourceTree = "<group>"; };
+		48355CCF228B895900AA0250 /* SaveCartSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SaveCartSuccessfulResponse.json; sourceTree = "<group>"; };
 		4867D8A722799AEC0051461E /* Rambafile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rambafile; sourceTree = "<group>"; };
 		4867D8AA22799AEC0051461E /* mvp_module.rambaspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mvp_module.rambaspec; sourceTree = "<group>"; };
 		4867D8AD22799AEC0051461E /* InitData.swift.liquid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InitData.swift.liquid; sourceTree = "<group>"; };
@@ -448,7 +467,6 @@
 		4867DA0D2280998C0051461E /* OrderConfirmationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationScene.swift; sourceTree = "<group>"; };
 		4867DA0F228099990051461E /* OrderSuccessScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSuccessScene.swift; sourceTree = "<group>"; };
 		4867DA122280A1170051461E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		4867DA142280A1250051461E /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		4867DA162280A1320051461E /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		4867DA192280DF350051461E /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		4867DA1B2280DFAF0051461E /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
@@ -577,6 +595,42 @@
 				48355CB4228B0A1800AA0250 /* BuildingsAtStreet223SuccessfulResponse.json */,
 			);
 			path = GET_buildings_by_street;
+			sourceTree = "<group>";
+		};
+		48355CBC228B876300AA0250 /* POST_add_pizza */ = {
+			isa = PBXGroup;
+			children = (
+				48355CC2228B87D500AA0250 /* POSTAddPizzaEndpoint.swift */,
+				48355CCB228B894E00AA0250 /* AddPizzaSuccessfulResponse.json */,
+			);
+			path = POST_add_pizza;
+			sourceTree = "<group>";
+		};
+		48355CBD228B876D00AA0250 /* POST_update_address */ = {
+			isa = PBXGroup;
+			children = (
+				48355CC4228B87E600AA0250 /* POSTUpdateAddress.swift */,
+				48355CCD228B895400AA0250 /* UpdateAddressSuccessfulResponse.json */,
+			);
+			path = POST_update_address;
+			sourceTree = "<group>";
+		};
+		48355CBE228B877900AA0250 /* POST_save_cart */ = {
+			isa = PBXGroup;
+			children = (
+				48355CC6228B880300AA0250 /* POSTSaveCart.swift */,
+				48355CCF228B895900AA0250 /* SaveCartSuccessfulResponse.json */,
+			);
+			path = POST_save_cart;
+			sourceTree = "<group>";
+		};
+		48355CBF228B878F00AA0250 /* GET_settings */ = {
+			isa = PBXGroup;
+			children = (
+				48355CC0228B87C400AA0250 /* GETSettingsEndpoint.swift */,
+				48355CC9228B894800AA0250 /* SettingsSuccessfulResponse.json */,
+			);
+			path = GET_settings;
 			sourceTree = "<group>";
 		};
 		4867D8A5227998930051461E /* Scenes */ = {
@@ -1159,9 +1213,10 @@
 		4867DA112280A1040051461E /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				48355CBA228B678400AA0250 /* SingleLineTextInput.swift */,
 				4867DA122280A1170051461E /* Button.swift */,
-				4867DA142280A1250051461E /* Input.swift */,
 				4867DA162280A1320051461E /* Picker.swift */,
+				48355CB8228B677B00AA0250 /* Dropdown.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -1242,6 +1297,10 @@
 				48355CA5228B08DD00AA0250 /* GET_buildings_by_street */,
 				48355CA4228B08D000AA0250 /* GET_streets */,
 				48B20DE422887FDF00B9954B /* GET_pizzas */,
+				48355CBF228B878F00AA0250 /* GET_settings */,
+				48355CBC228B876300AA0250 /* POST_add_pizza */,
+				48355CBD228B876D00AA0250 /* POST_update_address */,
+				48355CBE228B877900AA0250 /* POST_save_cart */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -1459,8 +1518,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48355CCC228B894E00AA0250 /* AddPizzaSuccessfulResponse.json in Resources */,
 				48B20DCB2288791F00B9954B /* LaunchScreen.storyboard in Resources */,
 				48B20DCC2288791F00B9954B /* OrdersHistoryViewController.storyboard in Resources */,
+				48355CD0228B895A00AA0250 /* SaveCartSuccessfulResponse.json in Resources */,
 				48B20DCD2288791F00B9954B /* PizzaCollectionViewCell.xib in Resources */,
 				48355C8A228B070100AA0250 /* EnterDeliveryDetailsViewController.storyboard in Resources */,
 				48355C78228B06D800AA0250 /* Dropdown.xib in Resources */,
@@ -1472,12 +1533,14 @@
 				48355CB5228B0A1800AA0250 /* BuildingsAtStreet223SuccessfulResponse.json in Resources */,
 				48355C90228B070B00AA0250 /* SelectPaymentMethodViewController.storyboard in Resources */,
 				48B20DCE2288791F00B9954B /* TabsViewController.storyboard in Resources */,
+				48355CCE228B895400AA0250 /* UpdateAddressSuccessfulResponse.json in Resources */,
 				48B20DCF2288791F00B9954B /* SplashViewController.storyboard in Resources */,
 				48B20DD02288791F00B9954B /* Localizable.strings in Resources */,
 				48B20DD12288791F00B9954B /* Assets.xcassets in Resources */,
 				48355CB7228B0A3200AA0250 /* BuildingsDefaultSuccessfulResponse.json in Resources */,
 				48355C85228B06FA00AA0250 /* SelectAddressViewController.storyboard in Resources */,
 				48B20DD22288791F00B9954B /* MenuViewController.storyboard in Resources */,
+				48355CCA228B894800AA0250 /* SettingsSuccessfulResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1693,12 +1756,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4867DA152280A1250051461E /* Input.swift in Sources */,
 				4867D8F02279CA0E0051461E /* SplashScene.swift in Sources */,
 				4867DA10228099990051461E /* OrderSuccessScene.swift in Sources */,
 				4867DA06228084690051461E /* order_flow_tests.swift in Sources */,
 				4867DA0C228099820051461E /* PaymentMethodScene.swift in Sources */,
 				4867D98B227F84540051461E /* AccessibilityIdentitier.swift in Sources */,
+				48355CB9228B677B00AA0250 /* Dropdown.swift in Sources */,
+				48355CBB228B678400AA0250 /* SingleLineTextInput.swift in Sources */,
 				4867D8F92279D60E0051461E /* ScenesRegistry.swift in Sources */,
 				4867D8F52279CDBB0051461E /* menu_tests.swift in Sources */,
 				4867DA0A2280996F0051461E /* DeliveryDetailsScene.swift in Sources */,
@@ -1744,6 +1808,7 @@
 				48B20D9A2288791F00B9954B /* SceneFactory+OrdersHistory.swift in Sources */,
 				48355C8D228B070800AA0250 /* SelectPaymentMethodPresenter.swift in Sources */,
 				48B20D9B2288791F00B9954B /* TabsPresenter.swift in Sources */,
+				48355CC3228B87D500AA0250 /* POSTAddPizzaEndpoint.swift in Sources */,
 				48B20D9C2288791F00B9954B /* SceneNavigator.swift in Sources */,
 				48B20D9D2288791F00B9954B /* Flow.swift in Sources */,
 				48B20D9E2288791F00B9954B /* APIProtocol.swift in Sources */,
@@ -1792,6 +1857,7 @@
 				48B20DAB2288791F00B9954B /* CommonError.swift in Sources */,
 				48B20DAC2288791F00B9954B /* SceneNavigatorProtocol.swift in Sources */,
 				48B20DFA228881B300B9954B /* FakeWebServer.swift in Sources */,
+				48355CC7228B880300AA0250 /* POSTSaveCart.swift in Sources */,
 				48355CA7228B090600AA0250 /* GETStreetsEndpoint.swift in Sources */,
 				48B20E1E2288A4C500B9954B /* OrderService.swift in Sources */,
 				48B20DF122887FDF00B9954B /* GETPizzasEndpoint.swift in Sources */,
@@ -1824,6 +1890,7 @@
 				48B20DBD2288791F00B9954B /* MenuPresenterProtocol.swift in Sources */,
 				48B20DBE2288791F00B9954B /* AccessibilityIdentitier.swift in Sources */,
 				48B20DBF2288791F00B9954B /* TabsPresenterProtocol.swift in Sources */,
+				48355CC1228B87C400AA0250 /* GETSettingsEndpoint.swift in Sources */,
 				48B20DC02288791F00B9954B /* TabsViewProtocol.swift in Sources */,
 				48B20DC12288791F00B9954B /* API.swift in Sources */,
 				48B20E1A2288A4BF00B9954B /* PaymentMethod.swift in Sources */,
@@ -1837,6 +1904,7 @@
 				48B20DC42288791F00B9954B /* PizzaCollectionViewCell.swift in Sources */,
 				48355C98228B071500AA0250 /* ConfirmOrderViewController.swift in Sources */,
 				48B20E0C2288A4B800B9954B /* BuildingDto.swift in Sources */,
+				48355CC5228B87E600AA0250 /* POSTUpdateAddress.swift in Sources */,
 				48355C9E228B071F00AA0250 /* OrderSuccessScreenViewController.swift in Sources */,
 				48355C8C228B070400AA0250 /* SceneFactory+SelectPaymentMethod.swift in Sources */,
 				48355C76228B06CF00AA0250 /* UIImage+Insets.swift in Sources */,

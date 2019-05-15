@@ -10,20 +10,39 @@ import XCTest
 
 class DeliveryDetailsScene: BaseScene {
     
-    var backButton: Button { return Button(id: "backButton") }
-    var closeButton: Button { return Button(id: "closeButton") }
-    var nextButton: Button { return Button(id: "next") }
-    var nameInput: Input { return Input(id: "nameInput") }
-    var streetInput: Input { return Input(id: "streetInput") }
-    var buildingInput: Input { return Input(id: "buildingInput") }
-    var entranceInput: Input { return Input(id: "entranceInput") }
-    var floorInput: Input { return Input(id: "floorInput") }
-    var apartmentInput: Input { return Input(id: "apartmentInput") }
-    var commentInput: Input { return Input(id: "commentInput") }
-    var phoneNumberInput: Input { return Input(id: "phoneNumberInput") }
+    var backButton: Button { return Button(app: app,
+                                           id: AccessibilityIdentitier.Order.CommonButton.backButton) }
+    var closeButton: Button { return Button(app: app,
+                                            id: AccessibilityIdentitier.Order.CommonButton.closeButton) }
+    var nextButton: Button { return Button(app: app,
+                                           id: AccessibilityIdentitier.Order.CommonButton.nextButton) }
+    var nameInput: SingleLineTextInput { return SingleLineTextInput(app: app,
+                                        id: AccessibilityIdentitier.Order.EnterDeliveryDetails.nameInput) }
+    var streetInput: SingleLineTextInput { return SingleLineTextInput(app: app,
+                                          id:  AccessibilityIdentitier.Order.EnterDeliveryDetails.streetInput) }
+    var buildingInput: SingleLineTextInput { return SingleLineTextInput(app: app,
+                                            id:  AccessibilityIdentitier.Order.EnterDeliveryDetails.buildingInput) }
+    var entranceInput: SingleLineTextInput { return SingleLineTextInput(app: app,
+                                            id:  AccessibilityIdentitier.Order.EnterDeliveryDetails.entranceInput) }
+    var floorInput: SingleLineTextInput { return SingleLineTextInput(app: app,
+                                         id: AccessibilityIdentitier.Order.EnterDeliveryDetails.floorInput) }
+    var apartmentInput: SingleLineTextInput { return SingleLineTextInput(app: app,
+                                             id: AccessibilityIdentitier.Order.EnterDeliveryDetails.ataprtmentInput) }
+    var commentInput: SingleLineTextInput { return SingleLineTextInput(app: app,
+                                           id: AccessibilityIdentitier.Order.EnterDeliveryDetails.commentInput) }
+    var phoneNumberInput: SingleLineTextInput { return SingleLineTextInput(app: app,
+                                               id:  AccessibilityIdentitier.Order.EnterDeliveryDetails.phoneNumberInput) }
     
     func isDisplayed() {
-        XCTFail("Not Implemented")
+        let view = app.otherElements[AccessibilityIdentitier.Order.EnterDeliveryDetails.rootView]
+        XCTAssert(view.waitForExistence(timeout: 2), "Enter Delivery Details Scene is not displayed.")
+    }
+    
+    func scrollToBottom() {
+        app.otherElements[AccessibilityIdentitier.Order.EnterDeliveryDetails.rootView]
+            .scrollViews
+            .element
+            .swipeUp()
     }
 
 }

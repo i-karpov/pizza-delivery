@@ -47,7 +47,7 @@ class order_flow_test: XCTestCase {
                                                      apartment: "2",
                                                      floor: "3",
                                                      comment: "Some Comment")
-        selectPaymentMethodOutput = PaymentMethod.byCash(cashAmountToCalculateChange: MoneyAmount(cents: 2000))
+        selectPaymentMethodOutput = PaymentMethod.byCash(cashAmountToCalculateChange: "2000")
         confirmOrderOutput = DeliveryWaitingTime(minutes: 45)
         expectedOrderDraft = OrderDraft(pizza: pizza,
                                         deliveryDetails: enterDeliveryDetailsOutput,

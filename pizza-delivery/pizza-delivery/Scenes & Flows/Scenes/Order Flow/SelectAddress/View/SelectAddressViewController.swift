@@ -33,6 +33,7 @@ class SelectAddressViewController: BaseOrderFlowViewController {
     }
 
     private func setupSelf() {
+        setAccessibilityIdentifiers()
         
         navigationItem.title = R.string.localizable.orderFlowSelectAddresSceneTitle().uppercased()
         streetDropdown.setTitle(R.string.localizable.orderFlowFieldNameStreet())
@@ -45,6 +46,13 @@ class SelectAddressViewController: BaseOrderFlowViewController {
 
         setupNavbar()
         setupDropdownsHandlers()
+    }
+    
+    private func setAccessibilityIdentifiers() {
+        view.accessibilityIdentifier = AccessibilityIdentitier.Order.SelectAddress.rootView
+        streetDropdown.accessibilityIdentifier = AccessibilityIdentitier.Order.SelectAddress.streetInput
+        buildingDropdown.accessibilityIdentifier = AccessibilityIdentitier.Order.SelectAddress.buildingInput
+        nextButton.accessibilityIdentifier = AccessibilityIdentitier.Order.CommonButton.nextButton
     }
     
     private func setupDropdownsHandlers() {
@@ -90,6 +98,7 @@ extension SelectAddressViewController: SelectAddressViewProtocol {
         if isVisible {
             if hud == nil {
                 hud = MBProgressHUD.showAdded(to: view, animated: true)
+                hud?.accessibilityIdentifier = AccessibilityIdentitier.activityIndicator
             }
         } else {
             hud?.hide(animated: true)

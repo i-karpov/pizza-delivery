@@ -27,8 +27,15 @@ class SelectPaymentMethodViewController: BaseOrderFlowViewController {
     }
 
     private func setupSelf() {
+        setAccessibilityIdentifiers()
         setupNavbar()
         setupTexts()
+    }
+    
+    private func setAccessibilityIdentifiers() {
+        view.accessibilityIdentifier = AccessibilityIdentitier.Order.SelectPaymentMethod.rootView
+        totalSumValueLabel.accessibilityIdentifier = AccessibilityIdentitier.Order.SelectPaymentMethod.totalSumLabel
+        nextButton.accessibilityIdentifier = AccessibilityIdentitier.Order.CommonButton.nextButton
     }
     
     private func setupTexts() {

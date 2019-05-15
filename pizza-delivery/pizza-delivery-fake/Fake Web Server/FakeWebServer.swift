@@ -25,12 +25,20 @@ class FakeWebServer {
         let endpoints: [EndpointProtocol] = [
             GETPizzasEndpoint(),
             GETStreetsEndpoint(),
-            GETBuildingsByStreetEndpoint()
+            GETBuildingsByStreetEndpoint(),
+            GETSettingsEndpoint(),
+            POSTAddPizzaEndpoint(),
+            POSTUpdateAddressEndpoint(),
+            POSTSaveCartEndpoint()
         ]
             
-        endpoints.forEach {
-            var serverRoute = getRoute(in: server, for: $0.httpMethod)
-            serverRoute[$0.path] = $0.handleRequest
+        endpoints.forEach { endpoint in
+            var serverRoute = getRoute(in: server, for: endpoint.httpMethod)
+            serverRoute[endpoint.path] = { request in
+                Thread.sleep(forTimeInterval: 2.0)
+                return endpoint.handleRequest(request)
+            }
+            
         }
     }
 

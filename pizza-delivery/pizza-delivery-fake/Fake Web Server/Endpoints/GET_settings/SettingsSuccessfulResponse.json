@@ -1,0 +1,23 @@
+{
+    "error": false,
+    "code": 200,
+    "response": {
+        "data": {
+            "is_working_time": true,
+            "work_time_from": "00:00",
+            "work_time_to": "23:59",
+            "is_free_warmer_time": true,
+            "is_thin_pizza_available": true,
+            "online_preorder_disabled": 0,
+            "halva_preorder_disabled": 0,
+            "online_disabled": 0,
+            "halva_disabled": 0,
+            "basked_disabled": 0,
+            "is_delivery_45": true,
+            "stop_informer": false,
+            "minimal_price": "129000",
+            "free_warmer_price": "79000"
+        },
+        "meta": null
+    }
+}

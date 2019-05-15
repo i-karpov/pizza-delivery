@@ -26,19 +26,24 @@ class PaymentMethodScene: BaseScene {
     }
     
     var picker: PaymentMethodPicker { return PaymentMethodPicker() }
-    var cashAmountInput: Input { return Input(id: "cashInput") }
-    var backButton: Button { return Button(id: "backButton") }
-    var closeButton: Button { return Button(id: "closeButton") }
-    var nextButton: Button { return Button(id: "next") }
+    var cashAmountInput: SingleLineTextInput { return SingleLineTextInput(app: app,
+                                              id: AccessibilityIdentitier.Order.SelectPaymentMethod.cashAmountInput) }
+    var backButton: Button { return Button(app: app,
+                                           id: AccessibilityIdentitier.Order.CommonButton.backButton) }
+    var closeButton: Button { return Button(app: app,
+                                            id: AccessibilityIdentitier.Order.CommonButton.closeButton) }
+    var nextButton: Button { return Button(app: app,
+                                           id: AccessibilityIdentitier.Order.CommonButton.nextButton) }
     
     func isDisplayed() {
-        XCTFail("Not Implemented")
+        let view = app.otherElements[AccessibilityIdentitier.Order.SelectPaymentMethod.rootView]
+        XCTAssert(view.waitForExistence(timeout: 2), "Select Payment Method Scene is not displayed.")
     }
-    
     
     func totalAmountIs(_ expectedTotalAount: String) {
-        XCTFail("Not Implemented")
+        let sumElement = app.staticTexts[AccessibilityIdentitier.Order.SelectPaymentMethod.totalSumLabel]
+        let actualSum = sumElement.label
+        XCTAssertEqual(actualSum, expectedTotalAount, "Total amount is not correct.")
     }
-    
-    
+
 }

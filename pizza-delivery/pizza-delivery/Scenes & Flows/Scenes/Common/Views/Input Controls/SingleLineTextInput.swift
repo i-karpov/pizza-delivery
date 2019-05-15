@@ -42,6 +42,9 @@ class SingleLineTextInput: UIView, LoadableFromNib {
     
     private func commonInit() {
         loadFromNib()
+        
+        textField.accessibilityIdentifier = AccessibilityIdentitier.CommonInputControl.value
+        
         textField.layer.cornerRadius = 5.0
         textField.layer.masksToBounds = true
         
