@@ -158,7 +158,6 @@ class order_flow_tests: XCTestCase {
         deliveryDetailsScene.floorInput.tap()
         deliveryDetailsScene.floorInput.enter("3")
         deliveryDetailsScene.nextButton.isDisabled()
-        deliveryDetailsScene.scrollToBottom()
         deliveryDetailsScene.commentInput.tap()
         deliveryDetailsScene.commentInput.enter("some multiline\ncomment")
         deliveryDetailsScene.nextButton.isDisabled()

@@ -12,6 +12,7 @@ extension AppDelegate {
     
     func handleAppLaunched() {
         FakeWebServer.shared.start()
+        UIView.setAnimationsEnabled(false)
     }
     
     func makeCompositionRoot() -> CompositionRoot {
