@@ -12,8 +12,41 @@
 "common.errorMessage.noConnection" = "Oops, smth. went wrong :(";
 "common.retryButtonTitle" = "Retry";
 
+"common.pickerButtons.done" = "Select";
+"common.pickerButtons.cancel" = "Cancel";
+
+"splash.title" = "Pizza Fox";
+
 "tabs.menuTitle" = "Menu";
 "tabs.historyTitle" = "History";
 
-"menu.screenTitle" = "Today's Menu";
+"menu.screenTitle" = "Today's menu";
 "menu.orderButtonTitle" = "Order";
+
+"orderFlow.buttonTitle.next" = "Next";
+"orderFlow.buttonTitle.confirmAndPlaceOrder" = "Order";
+"orderFlow.buttonTitle.finish" = "Thank you";
+
+"orderFlow.fieldName.street" = "Street";
+"orderFlow.fieldName.building" = "Building";
+"orderFlow.fieldName.entrance" = "Entrance";
+"orderFlow.fieldName.floor" = "Floor";
+"orderFlow.fieldName.apartment" = "Apt.";
+"orderFlow.fieldName.name" = "Name";
+"orderFlow.fieldName.phoneNumber" = "Phone number";
+"orderFlow.fieldName.comment" = "Comment to the order";
+"orderFlow.fieldName.paymentMethod" = "Payment method";
+"orderFlow.fieldName.cashAmountToCalculateChange" = "For what amount of cash to prepare change";
+
+"orderFlow.selectAddresScene.title" = "Your Address";
+"orderFlow.enterDeliveryDetailsScene.title" = "Additional Info";
+"orderFlow.selectPaymentMethodScene.title" = "Payment Method";
+
+"orderFlow.confirmationScene.title" = "Check you info";
+"orderFlow.confirmationScene.paymentMethod.cash" = "Cash";
+"orderFlow.confirmationScene.paymentMethod.card" = "Card";
+"orderFlow.confirmationScene.confirmOrderButtonTitle" = "Order";
+
+"orderFlow.successScene.closeButtonTitle" = "Thank you";
+"orderFlow.successScene.thankYouMessageFormat" = "Thank you! Your pizza will be delivered in %@ minutes!";
+"orderFlow.successScene.expectedTimeLabel" = "Expected delivery time:";

@@ -15,6 +15,8 @@ class MenuViewController: UIViewController {
     
     // MARK: - Properties
 
+    var errorToTextMapper: ErrorToTextMapper!
+    
     private var hud: MBProgressHUD?
     
     @IBOutlet weak private var errorWithRetryView: UIView!
@@ -50,7 +52,7 @@ class MenuViewController: UIViewController {
     }
     
     private func setupLocalizedStrings() {
-        navigationItem.title = R.string.localizable.menuScreenTitle()
+        navigationItem.title = R.string.localizable.menuScreenTitle().uppercased()
         retryButton.titleLabel?.text = R.string.localizable.commonRetryButtonTitle()
     }
 
@@ -96,16 +98,17 @@ extension MenuViewController: MenuViewProtocol {
             }
         } else {
             hud?.hide(animated: true)
+            hud = nil
         }
     }
     
     func showTextForError(_ error: CommonError) {
-        let errorText = makeErrorTextForError(error)
+        let errorText = errorToTextMapper.makeErrorTextForError(error)
         showOKAlert(title: "", message: errorText)
     }
     
     func showTextWithRetryForError(_ error: CommonError) {
-        errorLabel.text = makeErrorTextForError(error)
+        errorLabel.text = errorToTextMapper.makeErrorTextForError(error)
         errorWithRetryView.isHidden = false
         contentWrapperView.isHidden = true
     }
@@ -116,15 +119,5 @@ extension MenuViewController: MenuViewProtocol {
         contentWrapperView.isHidden = false
         errorWithRetryView.isHidden = true
     }
-    
-    private func makeErrorTextForError(_ error: CommonError) -> String {
-        switch error {
-        case .serverBusinessError(let errorText):
-            return errorText
-        case .serverCommunicationError(.noConnection):
-            return R.string.localizable.commonErrorMessageNoConnection()
-        default:
-            return R.string.localizable.commonErrorMessageGeneric()
-        }
-    }
+
 }

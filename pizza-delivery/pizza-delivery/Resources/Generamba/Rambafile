@@ -9,8 +9,8 @@ xcodeproj_path: ../../../pizza-delivery.xcodeproj
 # The main project target name
 project_target: pizza-delivery
 
-project_file_path: ../../Scenes
-project_group_path: pizza-delivery/Scenes
+project_file_path: "../../Scenes & Flows/Scenes"
+project_group_path: "pizza-delivery/Scenes & Flows/Scenes"
 
 ### Dependencies settings section
 

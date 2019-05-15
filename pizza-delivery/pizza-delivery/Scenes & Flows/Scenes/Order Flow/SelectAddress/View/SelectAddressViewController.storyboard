@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Address View Controller-->
+        <scene sceneID="PlN-iW-H7B">
+            <objects>
+                <viewController storyboardIdentifier="SelectAddressViewController" id="h3k-bK-TNO" customClass="SelectAddressViewController" customModule="pizza_delivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cA6-JB-jfU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-ko-f3a" userLabel="Street Dropdown" customClass="Dropdown" customModule="pizza_delivery" customModuleProvider="target">
+                                <rect key="frame" x="18" y="70" width="564" height="89"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A9n-NH-LrQ" userLabel="Building Dropdown" customClass="Dropdown" customModule="pizza_delivery" customModuleProvider="target">
+                                <rect key="frame" x="18" y="269" width="160" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="AFb-Le-3gT"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-d1-ZnP" userLabel="Next Button" customClass="Button" customModule="pizza_delivery" customModuleProvider="target">
+                                <rect key="frame" x="18" y="514" width="564" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="gQP-0c-vez"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="handleNextButtonTapped" destination="h3k-bK-TNO" eventType="touchUpInside" id="MLt-8h-9ip"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fYA-ko-f3a" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="2df-ks-g6b"/>
+                            <constraint firstItem="tZM-d1-ZnP" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="6YA-ap-WWY"/>
+                            <constraint firstItem="tZM-d1-ZnP" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="UTa-iJ-HqI"/>
+                            <constraint firstItem="tZM-d1-ZnP" firstAttribute="bottom" secondItem="YWU-9O-L7t" secondAttribute="bottom" constant="-30" id="e6h-PP-WQZ"/>
+                            <constraint firstItem="A9n-NH-LrQ" firstAttribute="top" secondItem="fYA-ko-f3a" secondAttribute="bottom" constant="25" id="gTF-V5-6md"/>
+                            <constraint firstItem="A9n-NH-LrQ" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="mjH-SE-iJ0"/>
+                            <constraint firstItem="fYA-ko-f3a" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="25" id="ti3-Cb-Nmb"/>
+                            <constraint firstItem="fYA-ko-f3a" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="uwC-tJ-aFa"/>
+                            <constraint firstItem="tZM-d1-ZnP" firstAttribute="centerX" secondItem="YWU-9O-L7t" secondAttribute="centerX" id="xkh-3T-Sfi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pEw-zc-bWJ"/>
+                    <connections>
+                        <outlet property="buildingDropdown" destination="A9n-NH-LrQ" id="OzB-MM-Nmo"/>
+                        <outlet property="nextButton" destination="tZM-d1-ZnP" id="wMv-Js-aDB"/>
+                        <outlet property="streetDropdown" destination="fYA-ko-f3a" id="FuC-ov-DDp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="606" y="-161"/>
+        </scene>
+    </scenes>
+</document>

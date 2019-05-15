@@ -9,8 +9,19 @@
 import Foundation
 
 enum Scene {
+    
+    enum Order {
+        case selectAddress(SelectAddressInitData)
+        case enterDeliveryDetails(EnterDeliveryDetailsInitData)
+        case selectPaymentMethod(SelectPaymentMethodInitData)
+        case confirmOrder(ConfirmOrderInitData)
+        case success(OrderSuccessScreenInitData)
+    }
+    
     case splash
     case tabs
     case menu
     case ordersHistory
+    case order(Order)
 }
+

@@ -22,9 +22,19 @@ class FakeWebServer {
 
     private func addEndpointsToServer(_ server: HttpServer) {
 
-        ([GETPizzasEndpoint()]).forEach { (endpoint: EndpointProtocol) in
-            var serverRoute = getRoute(in: server, for: endpoint.httpMethod)
-            serverRoute[endpoint.path] = endpoint.handleRequest
+        let endpoints: [EndpointProtocol] = [
+            GETPizzasEndpoint(),
+            GETStreetsEndpoint(),
+            GETBuildingsByStreetEndpoint(),
+            GETSettingsEndpoint(),
+            POSTAddPizzaEndpoint(),
+            POSTUpdateAddressEndpoint(),
+            POSTSaveCartEndpoint()
+        ]
+            
+        endpoints.forEach {
+            var serverRoute = getRoute(in: server, for: $0.httpMethod)
+            serverRoute[$0.path] = $0.handleRequest
         }
     }
 

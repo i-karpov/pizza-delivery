@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Confirm Order View Controller-->
+        <scene sceneID="PlN-iW-H7B">
+            <objects>
+                <viewController storyboardIdentifier="ConfirmOrderViewController" id="h3k-bK-TNO" customClass="ConfirmOrderViewController" customModule="pizza_delivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cA6-JB-jfU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total sum:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lel-mJ-KBU" userLabel="Total Sum Title">
+                                <rect key="frame" x="18" y="60" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8j-7Z-d5Q" userLabel="Total Sum Value">
+                                <rect key="frame" x="159" y="56" width="57" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BYN" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8So-Og-bCv" userLabel="Total Sum Currency">
+                                <rect key="frame" x="323.5" y="60" width="33.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyF-ix-Zvp" userLabel="Name Title">
+                                <rect key="frame" x="18" y="100" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FD-SP-Wgc" userLabel="Name Value">
+                                <rect key="frame" x="315" y="100" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZk-dZ-Zzj" userLabel="Phone Number Title">
+                                <rect key="frame" x="18" y="140" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMm-qd-Wsi" userLabel="Phone Number Value">
+                                <rect key="frame" x="315" y="140" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVq-aj-g0Q" userLabel="Address Title">
+                                <rect key="frame" x="18" y="180" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhp-yF-eRB" userLabel="Address Value">
+                                <rect key="frame" x="315" y="180" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Method" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGC-ol-Igx" userLabel="Payment Method Title">
+                                <rect key="frame" x="18" y="220" width="130.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nH-SK-ifJ" userLabel="Payment Method Value">
+                                <rect key="frame" x="315" y="220" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osI-N9-mWf" userLabel="Pizza Title">
+                                <rect key="frame" x="18" y="260" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wf0-OU-LNE" userLabel="Pizza Value">
+                                <rect key="frame" x="315" y="260" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwP-Re-af7" userLabel="Comment Title">
+                                <rect key="frame" x="18" y="300" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnI-XZ-yNS" userLabel="Comment Value">
+                                <rect key="frame" x="315" y="300" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Li-bV-jG0" userLabel="Order Button" customClass="Button" customModule="pizza_delivery" customModuleProvider="target">
+                                <rect key="frame" x="18" y="581" width="339" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Sqc-gS-tpt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="handleOrderConfirmed" destination="h3k-bK-TNO" eventType="touchUpInside" id="QlC-GF-FMz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="osI-N9-mWf" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="256-7j-Kig"/>
+                            <constraint firstItem="4FD-SP-Wgc" firstAttribute="centerY" secondItem="cyF-ix-Zvp" secondAttribute="centerY" id="7eh-Av-L25"/>
+                            <constraint firstItem="lVq-aj-g0Q" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="160" id="AcY-DB-ut9"/>
+                            <constraint firstItem="8nH-SK-ifJ" firstAttribute="centerY" secondItem="kGC-ol-Igx" secondAttribute="centerY" id="BSF-GX-nfm"/>
+                            <constraint firstItem="CwP-Re-af7" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="BuZ-Y1-1cT"/>
+                            <constraint firstItem="Lel-mJ-KBU" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="CJX-Rd-hbT"/>
+                            <constraint firstItem="6Li-bV-jG0" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="Eb4-Vw-iIN"/>
+                            <constraint firstItem="8nH-SK-ifJ" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="EbB-7B-jfE"/>
+                            <constraint firstItem="8So-Og-bCv" firstAttribute="centerY" secondItem="Lel-mJ-KBU" secondAttribute="centerY" id="FOb-bJ-b6p"/>
+                            <constraint firstItem="cyF-ix-Zvp" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="Fzr-7s-XsZ"/>
+                            <constraint firstItem="4FD-SP-Wgc" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="G0s-dT-l67"/>
+                            <constraint firstItem="wMm-qd-Wsi" firstAttribute="centerY" secondItem="YZk-dZ-Zzj" secondAttribute="centerY" id="Gmj-H0-qyX"/>
+                            <constraint firstItem="r8j-7Z-d5Q" firstAttribute="centerY" secondItem="Lel-mJ-KBU" secondAttribute="centerY" id="HFj-BW-Gmt"/>
+                            <constraint firstItem="YZk-dZ-Zzj" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="KcG-i8-LF8"/>
+                            <constraint firstItem="cyF-ix-Zvp" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="80" id="KtK-7r-W0q"/>
+                            <constraint firstItem="Wf0-OU-LNE" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="NYW-Ic-9uj"/>
+                            <constraint firstItem="mhp-yF-eRB" firstAttribute="centerY" secondItem="lVq-aj-g0Q" secondAttribute="centerY" id="Nzx-xC-XEA"/>
+                            <constraint firstItem="kGC-ol-Igx" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="O1K-ZI-oqb"/>
+                            <constraint firstItem="osI-N9-mWf" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="240" id="VpF-Gr-9qi"/>
+                            <constraint firstItem="CwP-Re-af7" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="280" id="Vxc-98-UTk"/>
+                            <constraint firstItem="r8j-7Z-d5Q" firstAttribute="centerX" secondItem="cA6-JB-jfU" secondAttribute="centerX" id="Wp4-hz-iTC"/>
+                            <constraint firstItem="8So-Og-bCv" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="YRg-HG-Ryi"/>
+                            <constraint firstItem="wMm-qd-Wsi" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="dc6-ay-hzU"/>
+                            <constraint firstItem="kGC-ol-Igx" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="200" id="i4F-FZ-ByR"/>
+                            <constraint firstItem="BnI-XZ-yNS" firstAttribute="centerY" secondItem="CwP-Re-af7" secondAttribute="centerY" id="iIK-tW-Oc5"/>
+                            <constraint firstItem="BnI-XZ-yNS" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="ivM-90-DOr"/>
+                            <constraint firstItem="Lel-mJ-KBU" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="40" id="lqc-gm-jT7"/>
+                            <constraint firstItem="lVq-aj-g0Q" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="nIV-er-xHK"/>
+                            <constraint firstItem="6Li-bV-jG0" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="nik-gi-2Zd"/>
+                            <constraint firstItem="YZk-dZ-Zzj" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="120" id="q4g-cF-IlL"/>
+                            <constraint firstItem="6Li-bV-jG0" firstAttribute="bottom" secondItem="YWU-9O-L7t" secondAttribute="bottom" constant="-30" id="uGs-Me-B0v"/>
+                            <constraint firstItem="Wf0-OU-LNE" firstAttribute="centerY" secondItem="osI-N9-mWf" secondAttribute="centerY" id="vBr-H9-kma"/>
+                            <constraint firstItem="mhp-yF-eRB" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="xjk-37-Eo8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="mhp-yF-eRB" id="sba-Np-qkv"/>
+                        <outlet property="commentLabel" destination="BnI-XZ-yNS" id="Zfk-Hc-enH"/>
+                        <outlet property="confirmOrderButton" destination="6Li-bV-jG0" id="GXk-oK-jd0"/>
+                        <outlet property="nameLabel" destination="4FD-SP-Wgc" id="gd9-Eo-0if"/>
+                        <outlet property="paymentMethodLabel" destination="8nH-SK-ifJ" id="SLd-cU-g3h"/>
+                        <outlet property="phoneNumberLabel" destination="wMm-qd-Wsi" id="vLz-bQ-ewB"/>
+                        <outlet property="pizzaLabel" destination="Wf0-OU-LNE" id="xeu-YJ-x01"/>
+                        <outlet property="totalSumValueLabel" destination="r8j-7Z-d5Q" id="VHl-8q-ohN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="-231"/>
+        </scene>
+    </scenes>
+</document>

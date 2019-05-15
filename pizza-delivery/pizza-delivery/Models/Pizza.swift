@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Pizza {
+struct Pizza: Equatable {
     let id: Int
     let title: String
-    let price: Price
+    let price: MoneyAmount
     let description: String
     let smallImageUrl: String
 }

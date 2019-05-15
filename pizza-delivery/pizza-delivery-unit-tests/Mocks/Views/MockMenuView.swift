@@ -20,6 +20,8 @@ class MockMenuView: MenuViewProtocol {
     
     var recordedOperations = [Operation]()
     
+    // MARK: - Protocol Implementation
+    
     func setIsAcitityIndicatorVisible(_ isVisible: Bool) {
         recordedOperations.append(.setIsAcitityIndicatorVisible(isVisible: isVisible))
     }
@@ -35,5 +37,5 @@ class MockMenuView: MenuViewProtocol {
     func setPizzas(_ pizzas: [Pizza]) {
         recordedOperations.append(.setPizzas(pizzas: pizzas))
     }
-    
+
 }

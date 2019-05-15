@@ -10,9 +10,9 @@ import XCTest
 
 class MenuScene: BaseScene {
     
-    override func isDisplayed() {
+    func isDisplayed() {
         let menuView = app.otherElements[AccessibilityIdentitier.Menu.rootView]
-        XCTAssert(menuView.exists, "Splash screen is not displayed.")
+        XCTAssert(menuView.waitForExistence(timeout: 2), "Menu screen is not displayed.")
     }
     
     func waitUntilMenuIsLoaded() {
@@ -30,5 +30,10 @@ class MenuScene: BaseScene {
         let firstCell = app.cells[String(format: AccessibilityIdentitier.Menu.pizzaCellFormat, "0")]
         let actualPrice = firstCell.staticTexts[AccessibilityIdentitier.Menu.pizzaCellPrice].label
         XCTAssertEqual(actualPrice, expectedPrice, "First pizza price is not correct.")
+    }
+    
+    func tapOrderFirstPizza() {
+        let firstCell = app.cells[String(format: AccessibilityIdentitier.Menu.pizzaCellFormat, "0")]
+        firstCell.buttons.element.tap()
     }
 }

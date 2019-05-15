@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Enter Delivery Details View Controller-->
+        <scene sceneID="PlN-iW-H7B">
+            <objects>
+                <viewController storyboardIdentifier="EnterDeliveryDetailsViewController" id="h3k-bK-TNO" customClass="EnterDeliveryDetailsViewController" customModule="pizza_delivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cA6-JB-jfU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qTh-G8-KAm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="6ST-Xd-U2s">
+                                        <rect key="frame" x="18" y="25" width="339" height="561"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVy-wl-g0N" userLabel="Name Input" customClass="SingleLineTextInput" customModule="pizza_delivery" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="339" height="108"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9j-wq-Wk2" userLabel="Phone Number Input" customClass="SingleLineTextInput" customModule="pizza_delivery" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="133" width="339" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dql-DO-DSV" userLabel="Street Input" customClass="SingleLineTextInput" customModule="pizza_delivery" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="208" width="339" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRL-CQ-79W">
+                                                <rect key="frame" x="0.0" y="283" width="339" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxD-ya-8rA" userLabel="Building Input" customClass="SingleLineTextInput" customModule="pizza_delivery" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="160.5" height="50"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBs-Ou-pk4" userLabel="Entrance Input" customClass="SingleLineTextInput" customModule="pizza_delivery" customModuleProvider="target">
+                                                        <rect key="frame" x="178.5" y="0.0" width="160.5" height="50"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="QxD-ya-8rA" firstAttribute="leading" secondItem="GRL-CQ-79W" secondAttribute="leading" id="8PB-Y8-m4K"/>
+                                                    <constraint firstItem="xBs-Ou-pk4" firstAttribute="leading" secondItem="GRL-CQ-79W" secondAttribute="centerX" constant="9" id="DaW-wh-9Tl"/>
+                                                    <constraint firstAttribute="bottom" secondItem="xBs-Ou-pk4" secondAttribute="bottom" id="Ltk-Sg-MZE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xBs-Ou-pk4" secondAttribute="trailing" id="NDj-8S-LTW"/>
+                                                    <constraint firstItem="QxD-ya-8rA" firstAttribute="trailing" secondItem="GRL-CQ-79W" secondAttribute="centerX" constant="-9" id="Qrg-KI-3rl"/>
+                                                    <constraint firstItem="QxD-ya-8rA" firstAttribute="top" secondItem="GRL-CQ-79W" secondAttribute="top" id="emW-sz-ROZ"/>
+                                                    <constraint firstItem="xBs-Ou-pk4" firstAttribute="top" secondItem="GRL-CQ-79W" secondAttribute="top" id="qge-Ns-3u3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="QxD-ya-8rA" secondAttribute="bottom" id="vfm-Aa-EZY"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5V-O1-c8F">
+                                                <rect key="frame" x="0.0" y="358" width="339" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Jo-5x-nhg" userLabel="Apartment Input" customClass="SingleLineTextInput" customModule="pizza_delivery" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="160.5" height="50"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OyU-zE-inT" userLabel="Floor Input" customClass="SingleLineTextInput" customModule="pizza_delivery" customModuleProvider="target">
+                                                        <rect key="frame" x="178.5" y="0.0" width="160.5" height="50"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="3Jo-5x-nhg" firstAttribute="leading" secondItem="V5V-O1-c8F" secondAttribute="leading" id="1vn-hk-Xtu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="OyU-zE-inT" secondAttribute="trailing" id="3FG-vG-vCe"/>
+                                                    <constraint firstItem="OyU-zE-inT" firstAttribute="leading" secondItem="V5V-O1-c8F" secondAttribute="centerX" constant="9" id="4Il-PY-ytH"/>
+                                                    <constraint firstAttribute="bottom" secondItem="3Jo-5x-nhg" secondAttribute="bottom" id="LaE-9S-NnL"/>
+                                                    <constraint firstAttribute="bottom" secondItem="OyU-zE-inT" secondAttribute="bottom" id="R8P-jN-S4n"/>
+                                                    <constraint firstItem="OyU-zE-inT" firstAttribute="top" secondItem="V5V-O1-c8F" secondAttribute="top" id="hsA-df-RP5"/>
+                                                    <constraint firstItem="3Jo-5x-nhg" firstAttribute="top" secondItem="V5V-O1-c8F" secondAttribute="top" id="pBx-rz-a4X"/>
+                                                    <constraint firstItem="3Jo-5x-nhg" firstAttribute="trailing" secondItem="V5V-O1-c8F" secondAttribute="centerX" constant="-9" id="w0a-A3-CgN"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf6-cm-XCV" userLabel="Comment Input" customClass="SingleLineTextInput" customModule="pizza_delivery" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="433" width="339" height="128"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQ0-VA-MVF" userLabel="Next Button" customClass="Button" customModule="pizza_delivery" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="616" width="339" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="TJz-WN-oxT"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="handleNextButtonTap" destination="h3k-bK-TNO" eventType="touchUpInside" id="XNi-o9-jJv"/>
+                                            <action selector="handleNextButtonTapped" destination="psv-Wb-mBc" eventType="touchUpInside" id="8Gz-bA-b8T"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="UQ0-VA-MVF" firstAttribute="top" secondItem="6ST-Xd-U2s" secondAttribute="bottom" constant="30" id="JTH-mP-7VP"/>
+                                    <constraint firstAttribute="bottom" secondItem="UQ0-VA-MVF" secondAttribute="bottom" constant="30" id="RLO-Wn-fp0"/>
+                                    <constraint firstItem="6ST-Xd-U2s" firstAttribute="top" secondItem="qTh-G8-KAm" secondAttribute="top" constant="25" id="fgu-Be-0bM"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qTh-G8-KAm" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" id="Ed3-5P-zzl"/>
+                            <constraint firstItem="qTh-G8-KAm" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" id="JuF-4D-TVs"/>
+                            <constraint firstItem="6ST-Xd-U2s" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="OwU-ei-erW"/>
+                            <constraint firstItem="UQ0-VA-MVF" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" constant="-18" id="Tnh-RM-Nf7"/>
+                            <constraint firstItem="UQ0-VA-MVF" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="auA-co-i9g"/>
+                            <constraint firstItem="qTh-G8-KAm" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" id="uVL-MN-oUD"/>
+                            <constraint firstItem="qTh-G8-KAm" firstAttribute="bottom" secondItem="YWU-9O-L7t" secondAttribute="bottom" id="uet-vw-aJI"/>
+                            <constraint firstItem="6ST-Xd-U2s" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="18" id="xYU-U4-F0c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
+                    </view>
+                    <connections>
+                        <outlet property="apartmentInput" destination="3Jo-5x-nhg" id="m6a-Vm-JuY"/>
+                        <outlet property="buildingInput" destination="QxD-ya-8rA" id="n2o-zd-Dke"/>
+                        <outlet property="commentInput" destination="Hf6-cm-XCV" id="I5u-Fj-pxe"/>
+                        <outlet property="entranceInput" destination="xBs-Ou-pk4" id="tFy-zH-Z1c"/>
+                        <outlet property="floorInput" destination="OyU-zE-inT" id="g6r-Rf-FgF"/>
+                        <outlet property="nameInput" destination="AVy-wl-g0N" id="cHu-0S-8mB"/>
+                        <outlet property="nextButton" destination="UQ0-VA-MVF" id="3l4-Bq-ZPb"/>
+                        <outlet property="phoneNumberInput" destination="y9j-wq-Wk2" id="fbZ-FZ-sbb"/>
+                        <outlet property="streetInput" destination="dql-DO-DSV" id="hoe-N2-tFV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="-231"/>
+        </scene>
+    </scenes>
+</document>

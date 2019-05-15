@@ -1,0 +1,81 @@
+{
+    "error": false,
+    "code": 200,
+    "response": {
+        "data": [
+            {
+                "id": 35087,
+                "title": "1",
+                "region_id": 226,
+                "geo": "27.544368 53.893710",
+                "to_entrance": 1,
+                "scenario": 0,
+                "pizzeria_active": 1
+            },
+            {
+                "id": 7815,
+                "title": "10",
+                "region_id": 228,
+                "geo": "27.551375 53.896347",
+                "to_entrance": 1,
+                "scenario": 0,
+                "pizzeria_active": 1
+            },
+            {
+                "id": 31647,
+                "title": "10/А",
+                "region_id": 228,
+                "geo": "27.551833 53.896586",
+                "to_entrance": 0,
+                "scenario": 0,
+                "pizzeria_active": 1
+            },
+            {
+                "id": 7967,
+                "title": "102/А",
+                "region_id": 332,
+                "geo": "27.631397 53.92819",
+                "to_entrance": 1,
+                "scenario": 0,
+                "pizzeria_active": 1
+            },
+            {
+                "id": 35063,
+                "title": "102/Б",
+                "region_id": 332,
+                "geo": "27.631037 53.927936",
+                "to_entrance": 0,
+                "scenario": 0,
+                "pizzeria_active": 1
+            },
+            {
+                "id": 7816,
+                "title": "11",
+                "region_id": 226,
+                "geo": "27.550809 53.896883",
+                "to_entrance": 1,
+                "scenario": 0,
+                "pizzeria_active": 1
+            },
+            {
+                "id": 7818,
+                "title": "12",
+                "region_id": 228,
+                "geo": "27.552911 53.897201",
+                "to_entrance": 0,
+                "scenario": 0,
+                "pizzeria_active": 1
+            },
+            {
+                "id": 7819,
+                "title": "13",
+                "region_id": 226,
+                "geo": "27.552489 53.897711",
+                "to_entrance": 0,
+                "scenario": 0,
+                "pizzeria_active": 1
+            }
+        ],
+        "meta": null
+    }
+}

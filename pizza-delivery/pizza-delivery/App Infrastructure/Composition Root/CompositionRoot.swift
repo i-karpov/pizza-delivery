@@ -15,49 +15,73 @@ class CompositionRoot {
     private let urlsConfig: UrlsConfigProtocol
     private let api: APIProtocol
     private let dtoToModelMapper: DtoToModelMapper
+    private let modelToDtoMapper: ModelToDtoMapper
     private let menuService: MenuServiceProtocol
+    private let orderService: OrderServiceProtocol
+    private let errorToTextMapper: ErrorToTextMapper
     
     init(urlsConfig: UrlsConfigProtocol) {
         self.urlsConfig = urlsConfig
         
         api = API(urlsConfig: urlsConfig)
         dtoToModelMapper = DtoToModelMapper()
-        menuService = MenuService(api: api,
-                                  mapper: dtoToModelMapper)
+        modelToDtoMapper = ModelToDtoMapper()
+        menuService = MenuService(api: api, mapper: dtoToModelMapper)
+        orderService = OrderService(api: api,
+                                    dtoToModelMapper: dtoToModelMapper,
+                                    modelToDtoMapper: modelToDtoMapper)
+        errorToTextMapper = ErrorToTextMapper()
+    }
+    
+    func composeFlow(_ flow: Flow) -> FlowProtocol {
+        switch flow {
+        case .order(let initData):
+            return OrderFlow(navigator: navigator, initData: initData)
+        }
     }
     
     func composeScene(_ scene: Scene) -> UIViewController {
-        let factoryMethodsMap = getScenesFactoryMethodsMap()
-        guard let makeScene = factoryMethodsMap[scene] else {
-            fatalError("Cannot compose unrecognized scene.")
+        switch scene {
+        case .splash:
+            return SceneFactory.makeSplash(navigator: navigator)
+        case .menu:
+            return SceneFactory.makeMenu(navigator: navigator,
+                                         menuService: menuService,
+                                         errorToTextMapper: errorToTextMapper)
+        case .ordersHistory:
+            return SceneFactory.makeOrdersHistory(navigator: navigator)
+        case .tabs:
+            return SceneFactory.makeTabs(
+                navigator: navigator,
+                menuScene: composeScene(.menu),
+                ordersHistoryScene: composeScene(.ordersHistory))
+        case .order(let orderScene):
+            return composeOrderScene(orderScene)
         }
-        
-        let scene = makeScene()
-        return scene
     }
     
     // MARK: - Private
     
-    private func getScenesFactoryMethodsMap() -> [Scene: () -> UIViewController] {
-        let factoryMethodsMap: [Scene: () -> UIViewController] = [
-            .splash: { [unowned self] in
-                SceneFactory.makeSplash(navigator: self.navigator)
-            },
-            .menu: { [unowned self] in
-                SceneFactory.makeMenu(navigator: self.navigator,
-                                      menuService: self.menuService)
-            },
-            .ordersHistory: { [unowned self] in
-                SceneFactory.makeOrdersHistory(navigator: self.navigator)
-            },
-            .tabs: { [unowned self] in
-                SceneFactory.makeTabs(
-                    navigator: self.navigator,
-                    menuScene: self.composeScene(.menu),
-                    ordersHistoryScene: self.composeScene(.ordersHistory))
-            }
-        ]
-        return factoryMethodsMap
+    private func composeOrderScene(_ orderScene: Scene.Order) -> UIViewController {
+        switch orderScene {
+        case .selectAddress(let initData):
+            let viewController = SceneFactory.makeSelectAddress(navigator: navigator,
+                                                                initData: initData,
+                                                                orderService: orderService,
+                                                                errorToTextMapper: errorToTextMapper)
+            return UINavigationController(rootViewController: viewController)
+        case .enterDeliveryDetails(let initData):
+            return SceneFactory.makeEnterDeliveryDetails(navigator: navigator, initData: initData)
+        case .selectPaymentMethod(let initData):
+            return SceneFactory.makeSelectPaymentMethod(navigator: navigator, initData: initData)
+        case .confirmOrder(let initData):
+            return SceneFactory.makeConfirmOrder(navigator: navigator,
+                                                 initData: initData,
+                                                 orderService: orderService,
+                                                 errorToTextMapper: errorToTextMapper)
+        case .success(let initData):
+            return SceneFactory.makeOrderSuccessScreen(navigator: navigator, initData: initData)
+        }
     }
     
     private func composeScene<T: UIViewController>(_ scene: Scene) -> T {

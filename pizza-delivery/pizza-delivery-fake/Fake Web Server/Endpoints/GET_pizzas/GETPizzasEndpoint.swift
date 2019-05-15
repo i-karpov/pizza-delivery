@@ -12,6 +12,7 @@ class GETPizzasEndpoint: EndpointProtocol {
 
     func handleRequest(_ request: HttpRequest) -> HttpResponse {
         let responseJSON = JSONLoader.loadFromResource(JSONResource.successfulResponse)
+        Thread.sleep(forTimeInterval: 2.0)
         return HttpResponse.ok(.json(responseJSON))
     }
 }

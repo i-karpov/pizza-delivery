@@ -7,6 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48355C74228B069F00AA0250 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA192280DF350051461E /* UIView+Gradient.swift */; };
+		48355C75228B06C600AA0250 /* OrderFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9E922805D5E0051461E /* OrderFlow.swift */; };
+		48355C76228B06CF00AA0250 /* UIImage+Insets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA242281980D0051461E /* UIImage+Insets.swift */; };
+		48355C77228B06CF00AA0250 /* LoadableFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA2C2281A11D0051461E /* LoadableFromNib.swift */; };
+		48355C78228B06D800AA0250 /* Dropdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4867DA2722819A090051461E /* Dropdown.xib */; };
+		48355C79228B06D800AA0250 /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA2922819A1D0051461E /* Dropdown.swift */; };
+		48355C7A228B06D800AA0250 /* SingleLineTextInput.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4867DA2E2281BA9D0051461E /* SingleLineTextInput.xib */; };
+		48355C7B228B06D800AA0250 /* SingleLineTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA322281BD720051461E /* SingleLineTextInput.swift */; };
+		48355C7C228B06DA00AA0250 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA222281730D0051461E /* Button.swift */; };
+		48355C7D228B06DE00AA0250 /* ErrorToTextMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D822284881D00B9954B /* ErrorToTextMapper.swift */; };
+		48355C7E228B06F100AA0250 /* BaseOrderFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D842284D1B100B9954B /* BaseOrderFlowViewController.swift */; };
+		48355C7F228B06F300AA0250 /* SelectAddress+SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99422804C010051461E /* SelectAddress+SceneFactory.swift */; };
+		48355C80228B06F700AA0250 /* SelectAddressPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99822804C010051461E /* SelectAddressPresenterProtocol.swift */; };
+		48355C81228B06F700AA0250 /* SelectAddressInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9FA22806F5D0051461E /* SelectAddressInitData.swift */; };
+		48355C82228B06F700AA0250 /* SelectAddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99622804C010051461E /* SelectAddressPresenter.swift */; };
+		48355C83228B06FA00AA0250 /* SelectAddressViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99B22804C010051461E /* SelectAddressViewProtocol.swift */; };
+		48355C84228B06FA00AA0250 /* SelectAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99A22804C010051461E /* SelectAddressViewController.swift */; };
+		48355C85228B06FA00AA0250 /* SelectAddressViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D99C22804C010051461E /* SelectAddressViewController.storyboard */; };
+		48355C86228B06FE00AA0250 /* EnterDeliveryDetailsInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9BD22804C020051461E /* EnterDeliveryDetailsInitData.swift */; };
+		48355C87228B06FE00AA0250 /* EnterDeliveryDetailsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9BE22804C020051461E /* EnterDeliveryDetailsPresenterProtocol.swift */; };
+		48355C88228B06FE00AA0250 /* EnterDeliveryDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9BF22804C020051461E /* EnterDeliveryDetailsPresenter.swift */; };
+		48355C89228B070100AA0250 /* EnterDeliveryDetailsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9C222804C020051461E /* EnterDeliveryDetailsViewProtocol.swift */; };
+		48355C8A228B070100AA0250 /* EnterDeliveryDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D9C322804C020051461E /* EnterDeliveryDetailsViewController.storyboard */; };
+		48355C8B228B070100AA0250 /* EnterDeliveryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9C422804C020051461E /* EnterDeliveryDetailsViewController.swift */; };
+		48355C8C228B070400AA0250 /* SceneFactory+SelectPaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B622804C010051461E /* SceneFactory+SelectPaymentMethod.swift */; };
+		48355C8D228B070800AA0250 /* SelectPaymentMethodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B322804C010051461E /* SelectPaymentMethodPresenter.swift */; };
+		48355C8E228B070800AA0250 /* SelectPaymentMethodPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B422804C010051461E /* SelectPaymentMethodPresenterProtocol.swift */; };
+		48355C8F228B070800AA0250 /* SelectPaymentMethodInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B522804C010051461E /* SelectPaymentMethodInitData.swift */; };
+		48355C90228B070B00AA0250 /* SelectPaymentMethodViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D9B822804C010051461E /* SelectPaymentMethodViewController.storyboard */; };
+		48355C91228B070B00AA0250 /* SelectPaymentMethodViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B922804C010051461E /* SelectPaymentMethodViewProtocol.swift */; };
+		48355C92228B070B00AA0250 /* SelectPaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9BA22804C010051461E /* SelectPaymentMethodViewController.swift */; };
+		48355C93228B070F00AA0250 /* SceneFactory+ConfirmOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99E22804C010051461E /* SceneFactory+ConfirmOrder.swift */; };
+		48355C94228B071300AA0250 /* ConfirmOrderPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A222804C010051461E /* ConfirmOrderPresenterProtocol.swift */; };
+		48355C95228B071300AA0250 /* ConfirmOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A022804C010051461E /* ConfirmOrderPresenter.swift */; };
+		48355C96228B071300AA0250 /* ConfirmOrderInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A122804C010051461E /* ConfirmOrderInitData.swift */; };
+		48355C97228B071500AA0250 /* ConfirmOrderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D9A422804C010051461E /* ConfirmOrderViewController.storyboard */; };
+		48355C98228B071500AA0250 /* ConfirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A522804C010051461E /* ConfirmOrderViewController.swift */; };
+		48355C99228B071500AA0250 /* ConfirmOrderViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A622804C010051461E /* ConfirmOrderViewProtocol.swift */; };
+		48355C9A228B071900AA0250 /* SceneFactory+OrderSuccessScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9AC22804C010051461E /* SceneFactory+OrderSuccessScreen.swift */; };
+		48355C9B228B071C00AA0250 /* OrderSuccessScreenPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A922804C010051461E /* OrderSuccessScreenPresenterProtocol.swift */; };
+		48355C9C228B071C00AA0250 /* OrderSuccessScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9AA22804C010051461E /* OrderSuccessScreenPresenter.swift */; };
+		48355C9D228B071C00AA0250 /* OrderSuccessScreenInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9AB22804C010051461E /* OrderSuccessScreenInitData.swift */; };
+		48355C9E228B071F00AA0250 /* OrderSuccessScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9AE22804C010051461E /* OrderSuccessScreenViewController.swift */; };
+		48355C9F228B071F00AA0250 /* OrderSuccessScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D9AF22804C010051461E /* OrderSuccessScreenViewController.storyboard */; };
+		48355CA0228B071F00AA0250 /* OrderSuccessScreenViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B022804C010051461E /* OrderSuccessScreenViewProtocol.swift */; };
+		48355CA1228B073700AA0250 /* FlowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA0022807BBD0051461E /* FlowProtocol.swift */; };
+		48355CA2228B073D00AA0250 /* SceneFactory+EnterDeliveryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9C022804C020051461E /* SceneFactory+EnterDeliveryDetails.swift */; };
+		48355CA3228B07F900AA0250 /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA1B2280DFAF0051461E /* OrderButton.swift */; };
+		48355CA7228B090600AA0250 /* GETStreetsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CA6228B090600AA0250 /* GETStreetsEndpoint.swift */; };
+		48355CA9228B091800AA0250 /* GETBuildingsByStreetEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CA8228B091800AA0250 /* GETBuildingsByStreetEndpoint.swift */; };
+		48355CB1228B09F900AA0250 /* PizzasSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CB0228B09F900AA0250 /* PizzasSuccessfulResponse.json */; };
+		48355CB3228B0A0900AA0250 /* StreetsSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CB2228B0A0900AA0250 /* StreetsSuccessfulResponse.json */; };
+		48355CB5228B0A1800AA0250 /* BuildingsAtStreet223SuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CB4228B0A1800AA0250 /* BuildingsAtStreet223SuccessfulResponse.json */; };
+		48355CB7228B0A3200AA0250 /* BuildingsDefaultSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CB6228B0A3200AA0250 /* BuildingsDefaultSuccessfulResponse.json */; };
+		48355CB9228B677B00AA0250 /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CB8228B677B00AA0250 /* Dropdown.swift */; };
+		48355CBB228B678400AA0250 /* SingleLineTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CBA228B678400AA0250 /* SingleLineTextInput.swift */; };
+		48355CC1228B87C400AA0250 /* GETSettingsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CC0228B87C400AA0250 /* GETSettingsEndpoint.swift */; };
+		48355CC3228B87D500AA0250 /* POSTAddPizzaEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CC2228B87D500AA0250 /* POSTAddPizzaEndpoint.swift */; };
+		48355CC5228B87E600AA0250 /* POSTUpdateAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CC4228B87E600AA0250 /* POSTUpdateAddress.swift */; };
+		48355CC7228B880300AA0250 /* POSTSaveCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48355CC6228B880300AA0250 /* POSTSaveCart.swift */; };
+		48355CCA228B894800AA0250 /* SettingsSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CC9228B894800AA0250 /* SettingsSuccessfulResponse.json */; };
+		48355CCC228B894E00AA0250 /* AddPizzaSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CCB228B894E00AA0250 /* AddPizzaSuccessfulResponse.json */; };
+		48355CCE228B895400AA0250 /* UpdateAddressSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CCD228B895400AA0250 /* UpdateAddressSuccessfulResponse.json */; };
+		48355CD0228B895A00AA0250 /* SaveCartSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48355CCF228B895900AA0250 /* SaveCartSuccessfulResponse.json */; };
 		4867D8CB2279A5250051461E /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8C52279A5250051461E /* Scene.swift */; };
 		4867D8CC2279A5250051461E /* SceneNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8C72279A5250051461E /* SceneNavigatorProtocol.swift */; };
 		4867D8CD2279A5250051461E /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8C82279A5250051461E /* SceneTransitionType.swift */; };
@@ -35,7 +99,7 @@
 		4867D90B2279E8DF0051461E /* TabsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9042279E8DF0051461E /* TabsViewProtocol.swift */; };
 		4867D92D2279FB5F0051461E /* MenuServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D92C2279FB5F0051461E /* MenuServiceProtocol.swift */; };
 		4867D92F2279FB940051461E /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D92E2279FB940051461E /* Pizza.swift */; };
-		4867D9312279FBBF0051461E /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9302279FBBF0051461E /* Price.swift */; };
+		4867D9312279FBBF0051461E /* MoneyAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9302279FBBF0051461E /* MoneyAmount.swift */; };
 		4867D9342279FD250051461E /* CommonBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9332279FD250051461E /* CommonBlock.swift */; };
 		4867D936227A47D80051461E /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D935227A47D80051461E /* CommonError.swift */; };
 		4867D938227A48B00051461E /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D937227A48B00051461E /* MenuService.swift */; };
@@ -45,7 +109,7 @@
 		4867D945227A4E2E0051461E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D944227A4E2E0051461E /* API.swift */; };
 		4867D947227A52170051461E /* UrlsConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D946227A52170051461E /* UrlsConfigProtocol.swift */; };
 		4867D949227A53930051461E /* ProdUrlsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D948227A53930051461E /* ProdUrlsConfig.swift */; };
-		4867D94B227AE5730051461E /* PizzasResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D94A227AE5730051461E /* PizzasResponseDto.swift */; };
+		4867D94B227AE5730051461E /* ResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D94A227AE5730051461E /* ResponseDto.swift */; };
 		4867D94E227EEFBB0051461E /* menu_presenter_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D94D227EEFBB0051461E /* menu_presenter_tests.swift */; };
 		4867D951227EF3F40051461E /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D950227EF3F40051461E /* Flow.swift */; };
 		4867D955227EF4680051461E /* OrderFlowInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D954227EF4680051461E /* OrderFlowInitData.swift */; };
@@ -72,6 +136,80 @@
 		4867D98D228027B70051461E /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D98C228027B70051461E /* UIViewController+Alerts.swift */; };
 		4867D98F228029EE0051461E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4867D98E228029EE0051461E /* Localizable.strings */; };
 		4867D99222802F280051461E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99122802F280051461E /* R.generated.swift */; };
+		4867D9C522804C020051461E /* SelectAddress+SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99422804C010051461E /* SelectAddress+SceneFactory.swift */; };
+		4867D9C622804C020051461E /* SelectAddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99622804C010051461E /* SelectAddressPresenter.swift */; };
+		4867D9C822804C020051461E /* SelectAddressPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99822804C010051461E /* SelectAddressPresenterProtocol.swift */; };
+		4867D9C922804C020051461E /* SelectAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99A22804C010051461E /* SelectAddressViewController.swift */; };
+		4867D9CA22804C020051461E /* SelectAddressViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99B22804C010051461E /* SelectAddressViewProtocol.swift */; };
+		4867D9CB22804C020051461E /* SelectAddressViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D99C22804C010051461E /* SelectAddressViewController.storyboard */; };
+		4867D9CC22804C020051461E /* SceneFactory+ConfirmOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99E22804C010051461E /* SceneFactory+ConfirmOrder.swift */; };
+		4867D9CD22804C020051461E /* ConfirmOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A022804C010051461E /* ConfirmOrderPresenter.swift */; };
+		4867D9CE22804C020051461E /* ConfirmOrderInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A122804C010051461E /* ConfirmOrderInitData.swift */; };
+		4867D9CF22804C020051461E /* ConfirmOrderPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A222804C010051461E /* ConfirmOrderPresenterProtocol.swift */; };
+		4867D9D022804C020051461E /* ConfirmOrderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D9A422804C010051461E /* ConfirmOrderViewController.storyboard */; };
+		4867D9D122804C020051461E /* ConfirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A522804C010051461E /* ConfirmOrderViewController.swift */; };
+		4867D9D222804C020051461E /* ConfirmOrderViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A622804C010051461E /* ConfirmOrderViewProtocol.swift */; };
+		4867D9D322804C020051461E /* OrderSuccessScreenPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9A922804C010051461E /* OrderSuccessScreenPresenterProtocol.swift */; };
+		4867D9D422804C020051461E /* OrderSuccessScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9AA22804C010051461E /* OrderSuccessScreenPresenter.swift */; };
+		4867D9D522804C020051461E /* OrderSuccessScreenInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9AB22804C010051461E /* OrderSuccessScreenInitData.swift */; };
+		4867D9D622804C020051461E /* SceneFactory+OrderSuccessScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9AC22804C010051461E /* SceneFactory+OrderSuccessScreen.swift */; };
+		4867D9D722804C020051461E /* OrderSuccessScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9AE22804C010051461E /* OrderSuccessScreenViewController.swift */; };
+		4867D9D822804C020051461E /* OrderSuccessScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D9AF22804C010051461E /* OrderSuccessScreenViewController.storyboard */; };
+		4867D9D922804C020051461E /* OrderSuccessScreenViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B022804C010051461E /* OrderSuccessScreenViewProtocol.swift */; };
+		4867D9DA22804C020051461E /* SelectPaymentMethodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B322804C010051461E /* SelectPaymentMethodPresenter.swift */; };
+		4867D9DB22804C020051461E /* SelectPaymentMethodPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B422804C010051461E /* SelectPaymentMethodPresenterProtocol.swift */; };
+		4867D9DC22804C020051461E /* SelectPaymentMethodInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B522804C010051461E /* SelectPaymentMethodInitData.swift */; };
+		4867D9DD22804C020051461E /* SceneFactory+SelectPaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B622804C010051461E /* SceneFactory+SelectPaymentMethod.swift */; };
+		4867D9DE22804C020051461E /* SelectPaymentMethodViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D9B822804C010051461E /* SelectPaymentMethodViewController.storyboard */; };
+		4867D9DF22804C020051461E /* SelectPaymentMethodViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9B922804C010051461E /* SelectPaymentMethodViewProtocol.swift */; };
+		4867D9E022804C020051461E /* SelectPaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9BA22804C010051461E /* SelectPaymentMethodViewController.swift */; };
+		4867D9E122804C020051461E /* EnterDeliveryDetailsInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9BD22804C020051461E /* EnterDeliveryDetailsInitData.swift */; };
+		4867D9E222804C020051461E /* EnterDeliveryDetailsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9BE22804C020051461E /* EnterDeliveryDetailsPresenterProtocol.swift */; };
+		4867D9E322804C020051461E /* EnterDeliveryDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9BF22804C020051461E /* EnterDeliveryDetailsPresenter.swift */; };
+		4867D9E422804C020051461E /* SceneFactory+EnterDeliveryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9C022804C020051461E /* SceneFactory+EnterDeliveryDetails.swift */; };
+		4867D9E522804C020051461E /* EnterDeliveryDetailsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9C222804C020051461E /* EnterDeliveryDetailsViewProtocol.swift */; };
+		4867D9E622804C020051461E /* EnterDeliveryDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D9C322804C020051461E /* EnterDeliveryDetailsViewController.storyboard */; };
+		4867D9E722804C020051461E /* EnterDeliveryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9C422804C020051461E /* EnterDeliveryDetailsViewController.swift */; };
+		4867D9EA22805D5E0051461E /* OrderFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9E922805D5E0051461E /* OrderFlow.swift */; };
+		4867D9F1228068840051461E /* Street.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9F0228068840051461E /* Street.swift */; };
+		4867D9F3228068AE0051461E /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9F2228068AE0051461E /* Building.swift */; };
+		4867D9F52280697B0051461E /* DeliveryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9F42280697B0051461E /* DeliveryDetails.swift */; };
+		4867D9F722806A700051461E /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9F622806A700051461E /* PaymentMethod.swift */; };
+		4867D9F922806B900051461E /* OrderDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9F822806B900051461E /* OrderDraft.swift */; };
+		4867D9FB22806F5D0051461E /* SelectAddressInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9FA22806F5D0051461E /* SelectAddressInitData.swift */; };
+		4867D9FF228077C30051461E /* DeliveryWaitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9FE228077C30051461E /* DeliveryWaitingTime.swift */; };
+		4867DA0122807BBD0051461E /* FlowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA0022807BBD0051461E /* FlowProtocol.swift */; };
+		4867DA0422807E9B0051461E /* order_flow_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA0322807E9B0051461E /* order_flow_test.swift */; };
+		4867DA06228084690051461E /* order_flow_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA05228084680051461E /* order_flow_tests.swift */; };
+		4867DA08228099640051461E /* SelectAddressScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA07228099640051461E /* SelectAddressScene.swift */; };
+		4867DA0A2280996F0051461E /* DeliveryDetailsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA092280996F0051461E /* DeliveryDetailsScene.swift */; };
+		4867DA0C228099820051461E /* PaymentMethodScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA0B228099820051461E /* PaymentMethodScene.swift */; };
+		4867DA0E2280998C0051461E /* OrderConfirmationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA0D2280998C0051461E /* OrderConfirmationScene.swift */; };
+		4867DA10228099990051461E /* OrderSuccessScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA0F228099990051461E /* OrderSuccessScene.swift */; };
+		4867DA132280A1170051461E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA122280A1170051461E /* Button.swift */; };
+		4867DA172280A1320051461E /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA162280A1320051461E /* Picker.swift */; };
+		4867DA1A2280DF350051461E /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA192280DF350051461E /* UIView+Gradient.swift */; };
+		4867DA1C2280DFAF0051461E /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA1B2280DFAF0051461E /* OrderButton.swift */; };
+		4867DA232281730D0051461E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA222281730D0051461E /* Button.swift */; };
+		4867DA252281980D0051461E /* UIImage+Insets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA242281980D0051461E /* UIImage+Insets.swift */; };
+		4867DA2822819A090051461E /* Dropdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4867DA2722819A090051461E /* Dropdown.xib */; };
+		4867DA2A22819A1D0051461E /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA2922819A1D0051461E /* Dropdown.swift */; };
+		4867DA2D2281A11D0051461E /* LoadableFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA2C2281A11D0051461E /* LoadableFromNib.swift */; };
+		4867DA2F2281BA9D0051461E /* SingleLineTextInput.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4867DA2E2281BA9D0051461E /* SingleLineTextInput.xib */; };
+		4867DA332281BD720051461E /* SingleLineTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA322281BD720051461E /* SingleLineTextInput.swift */; };
+		4867DA352282BB690051461E /* StreetDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA342282BB690051461E /* StreetDto.swift */; };
+		4867DA372282BB7C0051461E /* BuildingDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA362282BB7C0051461E /* BuildingDto.swift */; };
+		4867DA392282BE610051461E /* OrderServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA382282BE610051461E /* OrderServiceProtocol.swift */; };
+		4867DA3B2282BE730051461E /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA3A2282BE730051461E /* OrderService.swift */; };
+		4867DA3D2282BF3E0051461E /* MockOrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA3C2282BF3E0051461E /* MockOrderService.swift */; };
+		4867DA3F2282C0720051461E /* select_address_presenter_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA3E2282C0720051461E /* select_address_presenter_tests.swift */; };
+		4867DA412282C0F40051461E /* MockSelectAddresssView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA402282C0F40051461E /* MockSelectAddresssView.swift */; };
+		48B20D832284881D00B9954B /* ErrorToTextMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D822284881D00B9954B /* ErrorToTextMapper.swift */; };
+		48B20D852284D1B100B9954B /* BaseOrderFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D842284D1B100B9954B /* BaseOrderFlowViewController.swift */; };
+		48B20D8722874F1100B9954B /* VoidResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D8622874F1100B9954B /* VoidResponseDto.swift */; };
+		48B20D89228754C100B9954B /* SettingsDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D88228754C100B9954B /* SettingsDto.swift */; };
+		48B20D8C2287574A00B9954B /* AddressDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D8B2287574A00B9954B /* AddressDto.swift */; };
+		48B20D8E228767AD00B9954B /* ModelToDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D8D228767AD00B9954B /* ModelToDtoMapper.swift */; };
 		48B20D932288791F00B9954B /* OrdersHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D96C227F3E8F0051461E /* OrdersHistoryPresenter.swift */; };
 		48B20D952288791F00B9954B /* SceneFactory+Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8E32279AF650051461E /* SceneFactory+Splash.swift */; };
 		48B20D962288791F00B9954B /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8DE2279AF650051461E /* SplashPresenter.swift */; };
@@ -85,18 +223,14 @@
 		48B20D9E2288791F00B9954B /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D941227A4D840051461E /* APIProtocol.swift */; };
 		48B20D9F2288791F00B9954B /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8D22279A6190051461E /* CompositionRoot.swift */; };
 		48B20DA02288791F00B9954B /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D98C228027B70051461E /* UIViewController+Alerts.swift */; };
-		48B20DA12288791F00B9954B /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9302279FBBF0051461E /* Price.swift */; };
-		48B20DA22288791F00B9954B /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D92E2279FB940051461E /* Pizza.swift */; };
 		48B20DA32288791F00B9954B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FE4C9B2278D83E00881D72 /* AppDelegate.swift */; };
 		48B20DA42288791F00B9954B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D967227F3E8F0051461E /* MenuViewController.swift */; };
 		48B20DA52288791F00B9954B /* SceneFactory+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D961227F3E8F0051461E /* SceneFactory+Menu.swift */; };
 		48B20DA62288791F00B9954B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D99122802F280051461E /* R.generated.swift */; };
-		48B20DA72288791F00B9954B /* PizzaDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D93C227A4A460051461E /* PizzaDto.swift */; };
 		48B20DA82288791F00B9954B /* OrderFlowInitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D954227EF4680051461E /* OrderFlowInitData.swift */; };
 		48B20DAA2288791F00B9954B /* OrdersHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D96F227F3E8F0051461E /* OrdersHistoryViewController.swift */; };
 		48B20DAB2288791F00B9954B /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D935227A47D80051461E /* CommonError.swift */; };
 		48B20DAC2288791F00B9954B /* SceneNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D8C72279A5250051461E /* SceneNavigatorProtocol.swift */; };
-		48B20DAD2288791F00B9954B /* PizzasResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D94A227AE5730051461E /* PizzasResponseDto.swift */; };
 		48B20DAE2288791F00B9954B /* UrlsConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D946227A52170051461E /* UrlsConfigProtocol.swift */; };
 		48B20DAF2288791F00B9954B /* DtoToModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D93F227A4CA50051461E /* DtoToModelMapper.swift */; };
 		48B20DB02288791F00B9954B /* OrdersHistoryViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D970227F3E8F0051461E /* OrdersHistoryViewProtocol.swift */; };
@@ -132,12 +266,29 @@
 		48B20DD22288791F00B9954B /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4867D966227F3E8F0051461E /* MenuViewController.storyboard */; };
 		48B20DDB22887A0800B9954B /* AppDelegate+TargetSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DDA22887A0800B9954B /* AppDelegate+TargetSpecific.swift */; };
 		48B20DDE22887B8200B9954B /* FakeServerUrlsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DDD22887B8200B9954B /* FakeServerUrlsConfig.swift */; };
-		48B20DF022887FDF00B9954B /* PizzasSuccessfulResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 48B20DE522887FDF00B9954B /* PizzasSuccessfulResponse.json */; };
 		48B20DF122887FDF00B9954B /* GETPizzasEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DE622887FDF00B9954B /* GETPizzasEndpoint.swift */; };
 		48B20DF422887FDF00B9954B /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DE922887FDF00B9954B /* EndpointProtocol.swift */; };
 		48B20DF622887FDF00B9954B /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DEB22887FDF00B9954B /* HttpMethod.swift */; };
 		48B20DF822887FDF00B9954B /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DEE22887FDF00B9954B /* JSONLoader.swift */; };
 		48B20DFA228881B300B9954B /* FakeWebServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20DF9228881B200B9954B /* FakeWebServer.swift */; };
+		48B20DFD2288A4B000B9954B /* AddressDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D8B2287574A00B9954B /* AddressDto.swift */; };
+		48B20E082288A4B800B9954B /* VoidResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D8622874F1100B9954B /* VoidResponseDto.swift */; };
+		48B20E092288A4B800B9954B /* ResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D94A227AE5730051461E /* ResponseDto.swift */; };
+		48B20E0A2288A4B800B9954B /* PizzaDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D93C227A4A460051461E /* PizzaDto.swift */; };
+		48B20E0B2288A4B800B9954B /* StreetDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA342282BB690051461E /* StreetDto.swift */; };
+		48B20E0C2288A4B800B9954B /* BuildingDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA362282BB7C0051461E /* BuildingDto.swift */; };
+		48B20E0D2288A4B800B9954B /* SettingsDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D88228754C100B9954B /* SettingsDto.swift */; };
+		48B20E142288A4BF00B9954B /* DeliveryWaitingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9FE228077C30051461E /* DeliveryWaitingTime.swift */; };
+		48B20E152288A4BF00B9954B /* MoneyAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9302279FBBF0051461E /* MoneyAmount.swift */; };
+		48B20E162288A4BF00B9954B /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D92E2279FB940051461E /* Pizza.swift */; };
+		48B20E172288A4BF00B9954B /* Street.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9F0228068840051461E /* Street.swift */; };
+		48B20E182288A4BF00B9954B /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9F2228068AE0051461E /* Building.swift */; };
+		48B20E192288A4BF00B9954B /* DeliveryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9F42280697B0051461E /* DeliveryDetails.swift */; };
+		48B20E1A2288A4BF00B9954B /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9F622806A700051461E /* PaymentMethod.swift */; };
+		48B20E1B2288A4BF00B9954B /* OrderDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867D9F822806B900051461E /* OrderDraft.swift */; };
+		48B20E1C2288A4C500B9954B /* ModelToDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B20D8D228767AD00B9954B /* ModelToDtoMapper.swift */; };
+		48B20E1D2288A4C500B9954B /* OrderServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA382282BE610051461E /* OrderServiceProtocol.swift */; };
+		48B20E1E2288A4C500B9954B /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4867DA3A2282BE730051461E /* OrderService.swift */; };
 		48FE4C9C2278D83E00881D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FE4C9B2278D83E00881D72 /* AppDelegate.swift */; };
 		48FE4CA32278D83F00881D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA22278D83F00881D72 /* Assets.xcassets */; };
 		48FE4CA62278D83F00881D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48FE4CA42278D83F00881D72 /* LaunchScreen.storyboard */; };
@@ -176,6 +327,22 @@
 		480637322278DBC800E006E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4806373C2278DC1300E006E5 /* pizza-delivery-unit-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pizza-delivery-unit-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		480637402278DC1300E006E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48355CA6228B090600AA0250 /* GETStreetsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETStreetsEndpoint.swift; sourceTree = "<group>"; };
+		48355CA8228B091800AA0250 /* GETBuildingsByStreetEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETBuildingsByStreetEndpoint.swift; sourceTree = "<group>"; };
+		48355CB0228B09F900AA0250 /* PizzasSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PizzasSuccessfulResponse.json; sourceTree = "<group>"; };
+		48355CB2228B0A0900AA0250 /* StreetsSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StreetsSuccessfulResponse.json; sourceTree = "<group>"; };
+		48355CB4228B0A1800AA0250 /* BuildingsAtStreet223SuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BuildingsAtStreet223SuccessfulResponse.json; sourceTree = "<group>"; };
+		48355CB6228B0A3200AA0250 /* BuildingsDefaultSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BuildingsDefaultSuccessfulResponse.json; sourceTree = "<group>"; };
+		48355CB8228B677B00AA0250 /* Dropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
+		48355CBA228B678400AA0250 /* SingleLineTextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleLineTextInput.swift; sourceTree = "<group>"; };
+		48355CC0228B87C400AA0250 /* GETSettingsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETSettingsEndpoint.swift; sourceTree = "<group>"; };
+		48355CC2228B87D500AA0250 /* POSTAddPizzaEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSTAddPizzaEndpoint.swift; sourceTree = "<group>"; };
+		48355CC4228B87E600AA0250 /* POSTUpdateAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSTUpdateAddress.swift; sourceTree = "<group>"; };
+		48355CC6228B880300AA0250 /* POSTSaveCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSTSaveCart.swift; sourceTree = "<group>"; };
+		48355CC9228B894800AA0250 /* SettingsSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SettingsSuccessfulResponse.json; sourceTree = "<group>"; };
+		48355CCB228B894E00AA0250 /* AddPizzaSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AddPizzaSuccessfulResponse.json; sourceTree = "<group>"; };
+		48355CCD228B895400AA0250 /* UpdateAddressSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UpdateAddressSuccessfulResponse.json; sourceTree = "<group>"; };
+		48355CCF228B895900AA0250 /* SaveCartSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SaveCartSuccessfulResponse.json; sourceTree = "<group>"; };
 		4867D8A722799AEC0051461E /* Rambafile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rambafile; sourceTree = "<group>"; };
 		4867D8AA22799AEC0051461E /* mvp_module.rambaspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mvp_module.rambaspec; sourceTree = "<group>"; };
 		4867D8AD22799AEC0051461E /* InitData.swift.liquid */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InitData.swift.liquid; sourceTree = "<group>"; };
@@ -213,7 +380,7 @@
 		4867D9042279E8DF0051461E /* TabsViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsViewProtocol.swift; sourceTree = "<group>"; };
 		4867D92C2279FB5F0051461E /* MenuServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuServiceProtocol.swift; sourceTree = "<group>"; };
 		4867D92E2279FB940051461E /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
-		4867D9302279FBBF0051461E /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		4867D9302279FBBF0051461E /* MoneyAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyAmount.swift; sourceTree = "<group>"; };
 		4867D9332279FD250051461E /* CommonBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBlock.swift; sourceTree = "<group>"; };
 		4867D935227A47D80051461E /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
 		4867D937227A48B00051461E /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
@@ -223,7 +390,7 @@
 		4867D944227A4E2E0051461E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4867D946227A52170051461E /* UrlsConfigProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlsConfigProtocol.swift; sourceTree = "<group>"; };
 		4867D948227A53930051461E /* ProdUrlsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdUrlsConfig.swift; sourceTree = "<group>"; };
-		4867D94A227AE5730051461E /* PizzasResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasResponseDto.swift; sourceTree = "<group>"; };
+		4867D94A227AE5730051461E /* ResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDto.swift; sourceTree = "<group>"; };
 		4867D94D227EEFBB0051461E /* menu_presenter_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_presenter_tests.swift; sourceTree = "<group>"; };
 		4867D950227EF3F40051461E /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		4867D954227EF4680051461E /* OrderFlowInitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFlowInitData.swift; sourceTree = "<group>"; };
@@ -249,10 +416,83 @@
 		4867D98C228027B70051461E /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		4867D98E228029EE0051461E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		4867D99122802F280051461E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		4867D99422804C010051461E /* SelectAddress+SceneFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SelectAddress+SceneFactory.swift"; sourceTree = "<group>"; };
+		4867D99622804C010051461E /* SelectAddressPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAddressPresenter.swift; sourceTree = "<group>"; };
+		4867D99822804C010051461E /* SelectAddressPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAddressPresenterProtocol.swift; sourceTree = "<group>"; };
+		4867D99A22804C010051461E /* SelectAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAddressViewController.swift; sourceTree = "<group>"; };
+		4867D99B22804C010051461E /* SelectAddressViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAddressViewProtocol.swift; sourceTree = "<group>"; };
+		4867D99C22804C010051461E /* SelectAddressViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectAddressViewController.storyboard; sourceTree = "<group>"; };
+		4867D99E22804C010051461E /* SceneFactory+ConfirmOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneFactory+ConfirmOrder.swift"; sourceTree = "<group>"; };
+		4867D9A022804C010051461E /* ConfirmOrderPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOrderPresenter.swift; sourceTree = "<group>"; };
+		4867D9A122804C010051461E /* ConfirmOrderInitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOrderInitData.swift; sourceTree = "<group>"; };
+		4867D9A222804C010051461E /* ConfirmOrderPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOrderPresenterProtocol.swift; sourceTree = "<group>"; };
+		4867D9A422804C010051461E /* ConfirmOrderViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConfirmOrderViewController.storyboard; sourceTree = "<group>"; };
+		4867D9A522804C010051461E /* ConfirmOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOrderViewController.swift; sourceTree = "<group>"; };
+		4867D9A622804C010051461E /* ConfirmOrderViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOrderViewProtocol.swift; sourceTree = "<group>"; };
+		4867D9A922804C010051461E /* OrderSuccessScreenPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderSuccessScreenPresenterProtocol.swift; sourceTree = "<group>"; };
+		4867D9AA22804C010051461E /* OrderSuccessScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderSuccessScreenPresenter.swift; sourceTree = "<group>"; };
+		4867D9AB22804C010051461E /* OrderSuccessScreenInitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderSuccessScreenInitData.swift; sourceTree = "<group>"; };
+		4867D9AC22804C010051461E /* SceneFactory+OrderSuccessScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneFactory+OrderSuccessScreen.swift"; sourceTree = "<group>"; };
+		4867D9AE22804C010051461E /* OrderSuccessScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderSuccessScreenViewController.swift; sourceTree = "<group>"; };
+		4867D9AF22804C010051461E /* OrderSuccessScreenViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OrderSuccessScreenViewController.storyboard; sourceTree = "<group>"; };
+		4867D9B022804C010051461E /* OrderSuccessScreenViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderSuccessScreenViewProtocol.swift; sourceTree = "<group>"; };
+		4867D9B322804C010051461E /* SelectPaymentMethodPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPaymentMethodPresenter.swift; sourceTree = "<group>"; };
+		4867D9B422804C010051461E /* SelectPaymentMethodPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPaymentMethodPresenterProtocol.swift; sourceTree = "<group>"; };
+		4867D9B522804C010051461E /* SelectPaymentMethodInitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPaymentMethodInitData.swift; sourceTree = "<group>"; };
+		4867D9B622804C010051461E /* SceneFactory+SelectPaymentMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneFactory+SelectPaymentMethod.swift"; sourceTree = "<group>"; };
+		4867D9B822804C010051461E /* SelectPaymentMethodViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectPaymentMethodViewController.storyboard; sourceTree = "<group>"; };
+		4867D9B922804C010051461E /* SelectPaymentMethodViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPaymentMethodViewProtocol.swift; sourceTree = "<group>"; };
+		4867D9BA22804C010051461E /* SelectPaymentMethodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPaymentMethodViewController.swift; sourceTree = "<group>"; };
+		4867D9BD22804C020051461E /* EnterDeliveryDetailsInitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterDeliveryDetailsInitData.swift; sourceTree = "<group>"; };
+		4867D9BE22804C020051461E /* EnterDeliveryDetailsPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterDeliveryDetailsPresenterProtocol.swift; sourceTree = "<group>"; };
+		4867D9BF22804C020051461E /* EnterDeliveryDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterDeliveryDetailsPresenter.swift; sourceTree = "<group>"; };
+		4867D9C022804C020051461E /* SceneFactory+EnterDeliveryDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneFactory+EnterDeliveryDetails.swift"; sourceTree = "<group>"; };
+		4867D9C222804C020051461E /* EnterDeliveryDetailsViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterDeliveryDetailsViewProtocol.swift; sourceTree = "<group>"; };
+		4867D9C322804C020051461E /* EnterDeliveryDetailsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EnterDeliveryDetailsViewController.storyboard; sourceTree = "<group>"; };
+		4867D9C422804C020051461E /* EnterDeliveryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterDeliveryDetailsViewController.swift; sourceTree = "<group>"; };
+		4867D9E922805D5E0051461E /* OrderFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFlow.swift; sourceTree = "<group>"; };
+		4867D9F0228068840051461E /* Street.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Street.swift; sourceTree = "<group>"; };
+		4867D9F2228068AE0051461E /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
+		4867D9F42280697B0051461E /* DeliveryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetails.swift; sourceTree = "<group>"; };
+		4867D9F622806A700051461E /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
+		4867D9F822806B900051461E /* OrderDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDraft.swift; sourceTree = "<group>"; };
+		4867D9FA22806F5D0051461E /* SelectAddressInitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectAddressInitData.swift; sourceTree = "<group>"; };
+		4867D9FE228077C30051461E /* DeliveryWaitingTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryWaitingTime.swift; sourceTree = "<group>"; };
+		4867DA0022807BBD0051461E /* FlowProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowProtocol.swift; sourceTree = "<group>"; };
+		4867DA0322807E9B0051461E /* order_flow_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = order_flow_test.swift; sourceTree = "<group>"; };
+		4867DA05228084680051461E /* order_flow_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = order_flow_tests.swift; sourceTree = "<group>"; };
+		4867DA07228099640051461E /* SelectAddressScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddressScene.swift; sourceTree = "<group>"; };
+		4867DA092280996F0051461E /* DeliveryDetailsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailsScene.swift; sourceTree = "<group>"; };
+		4867DA0B228099820051461E /* PaymentMethodScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodScene.swift; sourceTree = "<group>"; };
+		4867DA0D2280998C0051461E /* OrderConfirmationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationScene.swift; sourceTree = "<group>"; };
+		4867DA0F228099990051461E /* OrderSuccessScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSuccessScene.swift; sourceTree = "<group>"; };
+		4867DA122280A1170051461E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		4867DA162280A1320051461E /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		4867DA192280DF350051461E /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		4867DA1B2280DFAF0051461E /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
+		4867DA222281730D0051461E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		4867DA242281980D0051461E /* UIImage+Insets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Insets.swift"; sourceTree = "<group>"; };
+		4867DA2722819A090051461E /* Dropdown.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Dropdown.xib; sourceTree = "<group>"; };
+		4867DA2922819A1D0051461E /* Dropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
+		4867DA2C2281A11D0051461E /* LoadableFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableFromNib.swift; sourceTree = "<group>"; };
+		4867DA2E2281BA9D0051461E /* SingleLineTextInput.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleLineTextInput.xib; sourceTree = "<group>"; };
+		4867DA322281BD720051461E /* SingleLineTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineTextInput.swift; sourceTree = "<group>"; };
+		4867DA342282BB690051461E /* StreetDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetDto.swift; sourceTree = "<group>"; };
+		4867DA362282BB7C0051461E /* BuildingDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDto.swift; sourceTree = "<group>"; };
+		4867DA382282BE610051461E /* OrderServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServiceProtocol.swift; sourceTree = "<group>"; };
+		4867DA3A2282BE730051461E /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
+		4867DA3C2282BF3E0051461E /* MockOrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOrderService.swift; sourceTree = "<group>"; };
+		4867DA3E2282C0720051461E /* select_address_presenter_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = select_address_presenter_tests.swift; sourceTree = "<group>"; };
+		4867DA402282C0F40051461E /* MockSelectAddresssView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSelectAddresssView.swift; sourceTree = "<group>"; };
+		48B20D822284881D00B9954B /* ErrorToTextMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorToTextMapper.swift; sourceTree = "<group>"; };
+		48B20D842284D1B100B9954B /* BaseOrderFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOrderFlowViewController.swift; sourceTree = "<group>"; };
+		48B20D8622874F1100B9954B /* VoidResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidResponseDto.swift; sourceTree = "<group>"; };
+		48B20D88228754C100B9954B /* SettingsDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDto.swift; sourceTree = "<group>"; };
+		48B20D8B2287574A00B9954B /* AddressDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDto.swift; sourceTree = "<group>"; };
+		48B20D8D228767AD00B9954B /* ModelToDtoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelToDtoMapper.swift; sourceTree = "<group>"; };
 		48B20DD72288791F00B9954B /* pizza-delivery-fake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pizza-delivery-fake.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B20DDA22887A0800B9954B /* AppDelegate+TargetSpecific.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+TargetSpecific.swift"; sourceTree = "<group>"; };
 		48B20DDD22887B8200B9954B /* FakeServerUrlsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeServerUrlsConfig.swift; sourceTree = "<group>"; };
-		48B20DE522887FDF00B9954B /* PizzasSuccessfulResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PizzasSuccessfulResponse.json; sourceTree = "<group>"; };
 		48B20DE622887FDF00B9954B /* GETPizzasEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GETPizzasEndpoint.swift; sourceTree = "<group>"; };
 		48B20DE922887FDF00B9954B /* EndpointProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
 		48B20DEB22887FDF00B9954B /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
@@ -320,6 +560,7 @@
 			isa = PBXGroup;
 			children = (
 				4867D8F42279CDBB0051461E /* menu_tests.swift */,
+				4867DA05228084680051461E /* order_flow_tests.swift */,
 				4867D8FA2279D6950051461E /* Supporting */,
 				480637322278DBC800E006E5 /* Info.plist */,
 			);
@@ -329,6 +570,7 @@
 		4806373D2278DC1300E006E5 /* pizza-delivery-unit-tests */ = {
 			isa = PBXGroup;
 			children = (
+				4867DA0222807E7B0051461E /* Flows Tests */,
 				4867D94C227EEF790051461E /* Presenters Tests */,
 				4867D956227EF5250051461E /* Mocks */,
 				480637402278DC1300E006E5 /* Info.plist */,
@@ -336,14 +578,70 @@
 			path = "pizza-delivery-unit-tests";
 			sourceTree = "<group>";
 		};
+		48355CA4228B08D000AA0250 /* GET_streets */ = {
+			isa = PBXGroup;
+			children = (
+				48355CA6228B090600AA0250 /* GETStreetsEndpoint.swift */,
+				48355CB2228B0A0900AA0250 /* StreetsSuccessfulResponse.json */,
+			);
+			path = GET_streets;
+			sourceTree = "<group>";
+		};
+		48355CA5228B08DD00AA0250 /* GET_buildings_by_street */ = {
+			isa = PBXGroup;
+			children = (
+				48355CA8228B091800AA0250 /* GETBuildingsByStreetEndpoint.swift */,
+				48355CB6228B0A3200AA0250 /* BuildingsDefaultSuccessfulResponse.json */,
+				48355CB4228B0A1800AA0250 /* BuildingsAtStreet223SuccessfulResponse.json */,
+			);
+			path = GET_buildings_by_street;
+			sourceTree = "<group>";
+		};
+		48355CBC228B876300AA0250 /* POST_add_pizza */ = {
+			isa = PBXGroup;
+			children = (
+				48355CC2228B87D500AA0250 /* POSTAddPizzaEndpoint.swift */,
+				48355CCB228B894E00AA0250 /* AddPizzaSuccessfulResponse.json */,
+			);
+			path = POST_add_pizza;
+			sourceTree = "<group>";
+		};
+		48355CBD228B876D00AA0250 /* POST_update_address */ = {
+			isa = PBXGroup;
+			children = (
+				48355CC4228B87E600AA0250 /* POSTUpdateAddress.swift */,
+				48355CCD228B895400AA0250 /* UpdateAddressSuccessfulResponse.json */,
+			);
+			path = POST_update_address;
+			sourceTree = "<group>";
+		};
+		48355CBE228B877900AA0250 /* POST_save_cart */ = {
+			isa = PBXGroup;
+			children = (
+				48355CC6228B880300AA0250 /* POSTSaveCart.swift */,
+				48355CCF228B895900AA0250 /* SaveCartSuccessfulResponse.json */,
+			);
+			path = POST_save_cart;
+			sourceTree = "<group>";
+		};
+		48355CBF228B878F00AA0250 /* GET_settings */ = {
+			isa = PBXGroup;
+			children = (
+				48355CC0228B87C400AA0250 /* GETSettingsEndpoint.swift */,
+				48355CC9228B894800AA0250 /* SettingsSuccessfulResponse.json */,
+			);
+			path = GET_settings;
+			sourceTree = "<group>";
+		};
 		4867D8A5227998930051461E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				4867D987227F804B0051461E /* AccessibilityIdentitier.swift */,
-				4867D8EB2279AFAE0051461E /* Common Extensions */,
+				48B20D81228487EE00B9954B /* Common */,
 				4867D8DA2279AF650051461E /* Splash */,
 				4867D8FB2279E8DF0051461E /* Tabs */,
 				4867D960227F3E8F0051461E /* Menu */,
+				4867D9E822804C050051461E /* Order Flow */,
 				4867D969227F3E8F0051461E /* OrdersHistory */,
 			);
 			path = Scenes;
@@ -419,8 +717,14 @@
 		4867D8BF2279A4360051461E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4867D9302279FBBF0051461E /* Price.swift */,
+				4867D9FE228077C30051461E /* DeliveryWaitingTime.swift */,
+				4867D9302279FBBF0051461E /* MoneyAmount.swift */,
 				4867D92E2279FB940051461E /* Pizza.swift */,
+				4867D9F0228068840051461E /* Street.swift */,
+				4867D9F2228068AE0051461E /* Building.swift */,
+				4867D9F42280697B0051461E /* DeliveryDetails.swift */,
+				4867D9F622806A700051461E /* PaymentMethod.swift */,
+				4867D9F822806B900051461E /* OrderDraft.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -429,8 +733,11 @@
 			isa = PBXGroup;
 			children = (
 				4867D93F227A4CA50051461E /* DtoToModelMapper.swift */,
+				48B20D8D228767AD00B9954B /* ModelToDtoMapper.swift */,
 				4867D92C2279FB5F0051461E /* MenuServiceProtocol.swift */,
 				4867D937227A48B00051461E /* MenuService.swift */,
+				4867DA382282BE610051461E /* OrderServiceProtocol.swift */,
+				4867DA3A2282BE730051461E /* OrderService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -454,6 +761,7 @@
 				4867D8C62279A5250051461E /* Core */,
 				4867D8C52279A5250051461E /* Scene.swift */,
 				4867D950227EF3F40051461E /* Flow.swift */,
+				4867DA0022807BBD0051461E /* FlowProtocol.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -507,21 +815,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		4867D8EB2279AFAE0051461E /* Common Extensions */ = {
+		4867D8EB2279AFAE0051461E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				4867D8EC2279AFCB0051461E /* UIViewController+StoryboardInstance.swift */,
 				4867D98C228027B70051461E /* UIViewController+Alerts.swift */,
 				4867D983227F48380051461E /* UICollectionView+ReusableCells.swift */,
+				4867DA192280DF350051461E /* UIView+Gradient.swift */,
+				4867DA242281980D0051461E /* UIImage+Insets.swift */,
+				4867DA2C2281A11D0051461E /* LoadableFromNib.swift */,
 			);
-			path = "Common Extensions";
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4867D8EE2279C9E70051461E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4867DA112280A1040051461E /* Controls */,
 				4867D8EF2279CA0E0051461E /* SplashScene.swift */,
 				4867D8F12279CA2C0051461E /* MenuScene.swift */,
+				4867DA07228099640051461E /* SelectAddressScene.swift */,
+				4867DA092280996F0051461E /* DeliveryDetailsScene.swift */,
+				4867DA0B228099820051461E /* PaymentMethodScene.swift */,
+				4867DA0D2280998C0051461E /* OrderConfirmationScene.swift */,
+				4867DA0F228099990051461E /* OrderSuccessScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -568,20 +885,25 @@
 		4867D93A227A49D60051461E /* API */ = {
 			isa = PBXGroup;
 			children = (
-				4867D93B227A4A2F0051461E /* DTOs */,
+				48B20D8A2287573400B9954B /* Request DTOs */,
+				4867D93B227A4A2F0051461E /* Response DTOs */,
 				4867D941227A4D840051461E /* APIProtocol.swift */,
 				4867D944227A4E2E0051461E /* API.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
 		};
-		4867D93B227A4A2F0051461E /* DTOs */ = {
+		4867D93B227A4A2F0051461E /* Response DTOs */ = {
 			isa = PBXGroup;
 			children = (
+				48B20D8622874F1100B9954B /* VoidResponseDto.swift */,
+				4867D94A227AE5730051461E /* ResponseDto.swift */,
 				4867D93C227A4A460051461E /* PizzaDto.swift */,
-				4867D94A227AE5730051461E /* PizzasResponseDto.swift */,
+				4867DA342282BB690051461E /* StreetDto.swift */,
+				4867DA362282BB7C0051461E /* BuildingDto.swift */,
+				48B20D88228754C100B9954B /* SettingsDto.swift */,
 			);
-			path = DTOs;
+			path = "Response DTOs";
 			sourceTree = "<group>";
 		};
 		4867D943227A4DCE0051461E /* Common */ = {
@@ -597,6 +919,7 @@
 			isa = PBXGroup;
 			children = (
 				4867D94D227EEFBB0051461E /* menu_presenter_tests.swift */,
+				4867DA3E2282C0720051461E /* select_address_presenter_tests.swift */,
 			);
 			path = "Presenters Tests";
 			sourceTree = "<group>";
@@ -605,6 +928,7 @@
 			isa = PBXGroup;
 			children = (
 				4867D954227EF4680051461E /* OrderFlowInitData.swift */,
+				4867D9E922805D5E0051461E /* OrderFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -632,6 +956,7 @@
 			isa = PBXGroup;
 			children = (
 				4867D95E227EFB410051461E /* MockMenuView.swift */,
+				4867DA402282C0F40051461E /* MockSelectAddresssView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -640,6 +965,7 @@
 			isa = PBXGroup;
 			children = (
 				4867D95C227EFB310051461E /* MockMenuService.swift */,
+				4867DA3C2282BF3E0051461E /* MockOrderService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -708,8 +1034,229 @@
 			children = (
 				4867D980227F41DA0051461E /* PizzaCollectionViewCell.xib */,
 				4867D97E227F41C30051461E /* PizzaCollectionViewCell.swift */,
+				4867DA1B2280DFAF0051461E /* OrderButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4867D99322804C010051461E /* SelectAddress */ = {
+			isa = PBXGroup;
+			children = (
+				4867D99422804C010051461E /* SelectAddress+SceneFactory.swift */,
+				4867D99522804C010051461E /* Presenter */,
+				4867D99922804C010051461E /* View */,
+			);
+			path = SelectAddress;
+			sourceTree = "<group>";
+		};
+		4867D99522804C010051461E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4867D99822804C010051461E /* SelectAddressPresenterProtocol.swift */,
+				4867D9FA22806F5D0051461E /* SelectAddressInitData.swift */,
+				4867D99622804C010051461E /* SelectAddressPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4867D99922804C010051461E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4867D99B22804C010051461E /* SelectAddressViewProtocol.swift */,
+				4867D99A22804C010051461E /* SelectAddressViewController.swift */,
+				4867D99C22804C010051461E /* SelectAddressViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4867D99D22804C010051461E /* ConfirmOrder */ = {
+			isa = PBXGroup;
+			children = (
+				4867D99E22804C010051461E /* SceneFactory+ConfirmOrder.swift */,
+				4867D99F22804C010051461E /* Presenter */,
+				4867D9A322804C010051461E /* View */,
+			);
+			path = ConfirmOrder;
+			sourceTree = "<group>";
+		};
+		4867D99F22804C010051461E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4867D9A222804C010051461E /* ConfirmOrderPresenterProtocol.swift */,
+				4867D9A022804C010051461E /* ConfirmOrderPresenter.swift */,
+				4867D9A122804C010051461E /* ConfirmOrderInitData.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4867D9A322804C010051461E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4867D9A422804C010051461E /* ConfirmOrderViewController.storyboard */,
+				4867D9A522804C010051461E /* ConfirmOrderViewController.swift */,
+				4867D9A622804C010051461E /* ConfirmOrderViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4867D9A722804C010051461E /* OrderSuccessScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4867D9AC22804C010051461E /* SceneFactory+OrderSuccessScreen.swift */,
+				4867D9A822804C010051461E /* Presenter */,
+				4867D9AD22804C010051461E /* View */,
+			);
+			path = OrderSuccessScreen;
+			sourceTree = "<group>";
+		};
+		4867D9A822804C010051461E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4867D9A922804C010051461E /* OrderSuccessScreenPresenterProtocol.swift */,
+				4867D9AA22804C010051461E /* OrderSuccessScreenPresenter.swift */,
+				4867D9AB22804C010051461E /* OrderSuccessScreenInitData.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4867D9AD22804C010051461E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4867D9AE22804C010051461E /* OrderSuccessScreenViewController.swift */,
+				4867D9AF22804C010051461E /* OrderSuccessScreenViewController.storyboard */,
+				4867D9B022804C010051461E /* OrderSuccessScreenViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4867D9B122804C010051461E /* SelectPaymentMethod */ = {
+			isa = PBXGroup;
+			children = (
+				4867D9B622804C010051461E /* SceneFactory+SelectPaymentMethod.swift */,
+				4867D9B222804C010051461E /* Presenter */,
+				4867D9B722804C010051461E /* View */,
+			);
+			path = SelectPaymentMethod;
+			sourceTree = "<group>";
+		};
+		4867D9B222804C010051461E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4867D9B322804C010051461E /* SelectPaymentMethodPresenter.swift */,
+				4867D9B422804C010051461E /* SelectPaymentMethodPresenterProtocol.swift */,
+				4867D9B522804C010051461E /* SelectPaymentMethodInitData.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4867D9B722804C010051461E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4867D9B822804C010051461E /* SelectPaymentMethodViewController.storyboard */,
+				4867D9B922804C010051461E /* SelectPaymentMethodViewProtocol.swift */,
+				4867D9BA22804C010051461E /* SelectPaymentMethodViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4867D9BB22804C020051461E /* EnterDeliveryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				4867D9C022804C020051461E /* SceneFactory+EnterDeliveryDetails.swift */,
+				4867D9BC22804C020051461E /* Presenter */,
+				4867D9C122804C020051461E /* View */,
+			);
+			path = EnterDeliveryDetails;
+			sourceTree = "<group>";
+		};
+		4867D9BC22804C020051461E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4867D9BD22804C020051461E /* EnterDeliveryDetailsInitData.swift */,
+				4867D9BE22804C020051461E /* EnterDeliveryDetailsPresenterProtocol.swift */,
+				4867D9BF22804C020051461E /* EnterDeliveryDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4867D9C122804C020051461E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4867D9C222804C020051461E /* EnterDeliveryDetailsViewProtocol.swift */,
+				4867D9C322804C020051461E /* EnterDeliveryDetailsViewController.storyboard */,
+				4867D9C422804C020051461E /* EnterDeliveryDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4867D9E822804C050051461E /* Order Flow */ = {
+			isa = PBXGroup;
+			children = (
+				48B20D842284D1B100B9954B /* BaseOrderFlowViewController.swift */,
+				4867D99322804C010051461E /* SelectAddress */,
+				4867D9BB22804C020051461E /* EnterDeliveryDetails */,
+				4867D9B122804C010051461E /* SelectPaymentMethod */,
+				4867D99D22804C010051461E /* ConfirmOrder */,
+				4867D9A722804C010051461E /* OrderSuccessScreen */,
+			);
+			path = "Order Flow";
+			sourceTree = "<group>";
+		};
+		4867DA0222807E7B0051461E /* Flows Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4867DA0322807E9B0051461E /* order_flow_test.swift */,
+			);
+			path = "Flows Tests";
+			sourceTree = "<group>";
+		};
+		4867DA112280A1040051461E /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				48355CBA228B678400AA0250 /* SingleLineTextInput.swift */,
+				4867DA122280A1170051461E /* Button.swift */,
+				4867DA162280A1320051461E /* Picker.swift */,
+				48355CB8228B677B00AA0250 /* Dropdown.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		4867DA21228172790051461E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4867DA26228199E60051461E /* Input Controls */,
+				4867DA222281730D0051461E /* Button.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4867DA26228199E60051461E /* Input Controls */ = {
+			isa = PBXGroup;
+			children = (
+				4867DA2722819A090051461E /* Dropdown.xib */,
+				4867DA2922819A1D0051461E /* Dropdown.swift */,
+				4867DA2E2281BA9D0051461E /* SingleLineTextInput.xib */,
+				4867DA322281BD720051461E /* SingleLineTextInput.swift */,
+			);
+			path = "Input Controls";
+			sourceTree = "<group>";
+		};
+		48B20D81228487EE00B9954B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4867D8EB2279AFAE0051461E /* Extensions */,
+				4867DA21228172790051461E /* Views */,
+				48B20D822284881D00B9954B /* ErrorToTextMapper.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		48B20D8A2287573400B9954B /* Request DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				48B20D8B2287574A00B9954B /* AddressDto.swift */,
+			);
+			path = "Request DTOs";
 			sourceTree = "<group>";
 		};
 		48B20DD92288796600B9954B /* pizza-delivery-fake */ = {
@@ -747,7 +1294,13 @@
 		48B20DE222887FDF00B9954B /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
+				48355CA5228B08DD00AA0250 /* GET_buildings_by_street */,
+				48355CA4228B08D000AA0250 /* GET_streets */,
 				48B20DE422887FDF00B9954B /* GET_pizzas */,
+				48355CBF228B878F00AA0250 /* GET_settings */,
+				48355CBC228B876300AA0250 /* POST_add_pizza */,
+				48355CBD228B876D00AA0250 /* POST_update_address */,
+				48355CBE228B877900AA0250 /* POST_save_cart */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -756,7 +1309,7 @@
 			isa = PBXGroup;
 			children = (
 				48B20DE622887FDF00B9954B /* GETPizzasEndpoint.swift */,
-				48B20DE522887FDF00B9954B /* PizzasSuccessfulResponse.json */,
+				48355CB0228B09F900AA0250 /* PizzasSuccessfulResponse.json */,
 			);
 			path = GET_pizzas;
 			sourceTree = "<group>";
@@ -965,15 +1518,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48B20DF022887FDF00B9954B /* PizzasSuccessfulResponse.json in Resources */,
+				48355CCC228B894E00AA0250 /* AddPizzaSuccessfulResponse.json in Resources */,
 				48B20DCB2288791F00B9954B /* LaunchScreen.storyboard in Resources */,
 				48B20DCC2288791F00B9954B /* OrdersHistoryViewController.storyboard in Resources */,
+				48355CD0228B895A00AA0250 /* SaveCartSuccessfulResponse.json in Resources */,
 				48B20DCD2288791F00B9954B /* PizzaCollectionViewCell.xib in Resources */,
+				48355C8A228B070100AA0250 /* EnterDeliveryDetailsViewController.storyboard in Resources */,
+				48355C78228B06D800AA0250 /* Dropdown.xib in Resources */,
+				48355C9F228B071F00AA0250 /* OrderSuccessScreenViewController.storyboard in Resources */,
+				48355CB1228B09F900AA0250 /* PizzasSuccessfulResponse.json in Resources */,
+				48355C97228B071500AA0250 /* ConfirmOrderViewController.storyboard in Resources */,
+				48355C7A228B06D800AA0250 /* SingleLineTextInput.xib in Resources */,
+				48355CB3228B0A0900AA0250 /* StreetsSuccessfulResponse.json in Resources */,
+				48355CB5228B0A1800AA0250 /* BuildingsAtStreet223SuccessfulResponse.json in Resources */,
+				48355C90228B070B00AA0250 /* SelectPaymentMethodViewController.storyboard in Resources */,
 				48B20DCE2288791F00B9954B /* TabsViewController.storyboard in Resources */,
+				48355CCE228B895400AA0250 /* UpdateAddressSuccessfulResponse.json in Resources */,
 				48B20DCF2288791F00B9954B /* SplashViewController.storyboard in Resources */,
 				48B20DD02288791F00B9954B /* Localizable.strings in Resources */,
 				48B20DD12288791F00B9954B /* Assets.xcassets in Resources */,
+				48355CB7228B0A3200AA0250 /* BuildingsDefaultSuccessfulResponse.json in Resources */,
+				48355C85228B06FA00AA0250 /* SelectAddressViewController.storyboard in Resources */,
 				48B20DD22288791F00B9954B /* MenuViewController.storyboard in Resources */,
+				48355CCA228B894800AA0250 /* SettingsSuccessfulResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -981,13 +1548,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4867DA2F2281BA9D0051461E /* SingleLineTextInput.xib in Resources */,
 				48FE4CA62278D83F00881D72 /* LaunchScreen.storyboard in Resources */,
+				4867D9DE22804C020051461E /* SelectPaymentMethodViewController.storyboard in Resources */,
+				4867D9D022804C020051461E /* ConfirmOrderViewController.storyboard in Resources */,
 				4867D97D227F3E8F0051461E /* OrdersHistoryViewController.storyboard in Resources */,
+				4867D9E622804C020051461E /* EnterDeliveryDetailsViewController.storyboard in Resources */,
+				4867D9D822804C020051461E /* OrderSuccessScreenViewController.storyboard in Resources */,
 				4867D981227F41DA0051461E /* PizzaCollectionViewCell.xib in Resources */,
 				4867D9092279E8DF0051461E /* TabsViewController.storyboard in Resources */,
 				4867D8E72279AF650051461E /* SplashViewController.storyboard in Resources */,
 				4867D98F228029EE0051461E /* Localizable.strings in Resources */,
+				4867DA2822819A090051461E /* Dropdown.xib in Resources */,
 				48FE4CA32278D83F00881D72 /* Assets.xcassets in Resources */,
+				4867D9CB22804C020051461E /* SelectAddressViewController.storyboard in Resources */,
 				4867D975227F3E8F0051461E /* MenuViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1101,6 +1675,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-pizza-delivery-fake/Pods-pizza-delivery-fake-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -1111,6 +1686,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -1131,6 +1707,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-pizza-delivery/Pods-pizza-delivery-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -1140,6 +1717,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -1179,11 +1757,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				4867D8F02279CA0E0051461E /* SplashScene.swift in Sources */,
+				4867DA10228099990051461E /* OrderSuccessScene.swift in Sources */,
+				4867DA06228084690051461E /* order_flow_tests.swift in Sources */,
+				4867DA0C228099820051461E /* PaymentMethodScene.swift in Sources */,
 				4867D98B227F84540051461E /* AccessibilityIdentitier.swift in Sources */,
+				48355CB9228B677B00AA0250 /* Dropdown.swift in Sources */,
+				48355CBB228B678400AA0250 /* SingleLineTextInput.swift in Sources */,
 				4867D8F92279D60E0051461E /* ScenesRegistry.swift in Sources */,
 				4867D8F52279CDBB0051461E /* menu_tests.swift in Sources */,
+				4867DA0A2280996F0051461E /* DeliveryDetailsScene.swift in Sources */,
 				4867D8F22279CA2C0051461E /* MenuScene.swift in Sources */,
+				4867DA0E2280998C0051461E /* OrderConfirmationScene.swift in Sources */,
 				4867D8F72279D4FC0051461E /* BaseScene.swift in Sources */,
+				4867DA132280A1170051461E /* Button.swift in Sources */,
+				4867DA172280A1320051461E /* Picker.swift in Sources */,
+				4867DA08228099640051461E /* SelectAddressScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1192,7 +1780,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4867D958227EF6520051461E /* MockSceneNavigator.swift in Sources */,
+				4867DA0422807E9B0051461E /* order_flow_test.swift in Sources */,
+				4867DA3F2282C0720051461E /* select_address_presenter_tests.swift in Sources */,
+				4867DA3D2282BF3E0051461E /* MockOrderService.swift in Sources */,
 				4867D94E227EEFBB0051461E /* menu_presenter_tests.swift in Sources */,
+				4867DA412282C0F40051461E /* MockSelectAddresssView.swift in Sources */,
 				4867D95D227EFB310051461E /* MockMenuService.swift in Sources */,
 				4867D95F227EFB410051461E /* MockMenuView.swift in Sources */,
 			);
@@ -1202,61 +1794,122 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48355C9D228B071C00AA0250 /* OrderSuccessScreenInitData.swift in Sources */,
+				48355C92228B070B00AA0250 /* SelectPaymentMethodViewController.swift in Sources */,
+				48355C95228B071300AA0250 /* ConfirmOrderPresenter.swift in Sources */,
 				48B20D932288791F00B9954B /* OrdersHistoryPresenter.swift in Sources */,
+				48355C87228B06FE00AA0250 /* EnterDeliveryDetailsPresenterProtocol.swift in Sources */,
 				48B20D952288791F00B9954B /* SceneFactory+Splash.swift in Sources */,
 				48B20D962288791F00B9954B /* SplashPresenter.swift in Sources */,
 				48B20D972288791F00B9954B /* MenuPresenter.swift in Sources */,
 				48B20D982288791F00B9954B /* SceneFactory.swift in Sources */,
+				48355CA0228B071F00AA0250 /* OrderSuccessScreenViewProtocol.swift in Sources */,
 				48B20D992288791F00B9954B /* UICollectionView+ReusableCells.swift in Sources */,
 				48B20D9A2288791F00B9954B /* SceneFactory+OrdersHistory.swift in Sources */,
+				48355C8D228B070800AA0250 /* SelectPaymentMethodPresenter.swift in Sources */,
 				48B20D9B2288791F00B9954B /* TabsPresenter.swift in Sources */,
+				48355CC3228B87D500AA0250 /* POSTAddPizzaEndpoint.swift in Sources */,
 				48B20D9C2288791F00B9954B /* SceneNavigator.swift in Sources */,
 				48B20D9D2288791F00B9954B /* Flow.swift in Sources */,
 				48B20D9E2288791F00B9954B /* APIProtocol.swift in Sources */,
+				48355CA1228B073700AA0250 /* FlowProtocol.swift in Sources */,
+				48355C82228B06F700AA0250 /* SelectAddressPresenter.swift in Sources */,
 				48B20D9F2288791F00B9954B /* CompositionRoot.swift in Sources */,
+				48355C88228B06FE00AA0250 /* EnterDeliveryDetailsPresenter.swift in Sources */,
+				48B20E1B2288A4BF00B9954B /* OrderDraft.swift in Sources */,
 				48B20DA02288791F00B9954B /* UIViewController+Alerts.swift in Sources */,
-				48B20DA12288791F00B9954B /* Price.swift in Sources */,
+				48355C86228B06FE00AA0250 /* EnterDeliveryDetailsInitData.swift in Sources */,
+				48B20E152288A4BF00B9954B /* MoneyAmount.swift in Sources */,
 				48B20DF622887FDF00B9954B /* HttpMethod.swift in Sources */,
-				48B20DA22288791F00B9954B /* Pizza.swift in Sources */,
 				48B20DA32288791F00B9954B /* AppDelegate.swift in Sources */,
+				48B20E092288A4B800B9954B /* ResponseDto.swift in Sources */,
 				48B20DA42288791F00B9954B /* MenuViewController.swift in Sources */,
 				48B20DA52288791F00B9954B /* SceneFactory+Menu.swift in Sources */,
+				48355C7F228B06F300AA0250 /* SelectAddress+SceneFactory.swift in Sources */,
+				48B20E0D2288A4B800B9954B /* SettingsDto.swift in Sources */,
+				48355C7C228B06DA00AA0250 /* Button.swift in Sources */,
+				48B20E0B2288A4B800B9954B /* StreetDto.swift in Sources */,
+				48355C91228B070B00AA0250 /* SelectPaymentMethodViewProtocol.swift in Sources */,
+				48355C75228B06C600AA0250 /* OrderFlow.swift in Sources */,
+				48B20E1D2288A4C500B9954B /* OrderServiceProtocol.swift in Sources */,
+				48355C8F228B070800AA0250 /* SelectPaymentMethodInitData.swift in Sources */,
+				48355C80228B06F700AA0250 /* SelectAddressPresenterProtocol.swift in Sources */,
+				48355C84228B06FA00AA0250 /* SelectAddressViewController.swift in Sources */,
 				48B20DA62288791F00B9954B /* R.generated.swift in Sources */,
 				48B20DF822887FDF00B9954B /* JSONLoader.swift in Sources */,
-				48B20DA72288791F00B9954B /* PizzaDto.swift in Sources */,
+				48355C9A228B071900AA0250 /* SceneFactory+OrderSuccessScreen.swift in Sources */,
+				48355CA3228B07F900AA0250 /* OrderButton.swift in Sources */,
+				48355C8B228B070100AA0250 /* EnterDeliveryDetailsViewController.swift in Sources */,
+				48B20E182288A4BF00B9954B /* Building.swift in Sources */,
+				48B20E142288A4BF00B9954B /* DeliveryWaitingTime.swift in Sources */,
+				48355C9B228B071C00AA0250 /* OrderSuccessScreenPresenterProtocol.swift in Sources */,
+				48355CA2228B073D00AA0250 /* SceneFactory+EnterDeliveryDetails.swift in Sources */,
+				48355C7D228B06DE00AA0250 /* ErrorToTextMapper.swift in Sources */,
+				48355C81228B06F700AA0250 /* SelectAddressInitData.swift in Sources */,
+				48355C7E228B06F100AA0250 /* BaseOrderFlowViewController.swift in Sources */,
+				48B20E192288A4BF00B9954B /* DeliveryDetails.swift in Sources */,
 				48B20DF422887FDF00B9954B /* EndpointProtocol.swift in Sources */,
 				48B20DDE22887B8200B9954B /* FakeServerUrlsConfig.swift in Sources */,
 				48B20DA82288791F00B9954B /* OrderFlowInitData.swift in Sources */,
+				48355C94228B071300AA0250 /* ConfirmOrderPresenterProtocol.swift in Sources */,
+				48B20E172288A4BF00B9954B /* Street.swift in Sources */,
 				48B20DAA2288791F00B9954B /* OrdersHistoryViewController.swift in Sources */,
 				48B20DAB2288791F00B9954B /* CommonError.swift in Sources */,
 				48B20DAC2288791F00B9954B /* SceneNavigatorProtocol.swift in Sources */,
-				48B20DAD2288791F00B9954B /* PizzasResponseDto.swift in Sources */,
 				48B20DFA228881B300B9954B /* FakeWebServer.swift in Sources */,
+				48355CC7228B880300AA0250 /* POSTSaveCart.swift in Sources */,
+				48355CA7228B090600AA0250 /* GETStreetsEndpoint.swift in Sources */,
+				48B20E1E2288A4C500B9954B /* OrderService.swift in Sources */,
 				48B20DF122887FDF00B9954B /* GETPizzasEndpoint.swift in Sources */,
+				48355C7B228B06D800AA0250 /* SingleLineTextInput.swift in Sources */,
 				48B20DAE2288791F00B9954B /* UrlsConfigProtocol.swift in Sources */,
 				48B20DAF2288791F00B9954B /* DtoToModelMapper.swift in Sources */,
+				48355C83228B06FA00AA0250 /* SelectAddressViewProtocol.swift in Sources */,
 				48B20DB02288791F00B9954B /* OrdersHistoryViewProtocol.swift in Sources */,
 				48B20DB12288791F00B9954B /* CommonBlock.swift in Sources */,
+				48B20E0A2288A4B800B9954B /* PizzaDto.swift in Sources */,
 				48B20DB22288791F00B9954B /* OrdersHistoryPresenterProtocol.swift in Sources */,
+				48355C96228B071300AA0250 /* ConfirmOrderInitData.swift in Sources */,
 				48B20DB42288791F00B9954B /* SplashViewController.swift in Sources */,
+				48355CA9228B091800AA0250 /* GETBuildingsByStreetEndpoint.swift in Sources */,
+				48B20DFD2288A4B000B9954B /* AddressDto.swift in Sources */,
+				48355C77228B06CF00AA0250 /* LoadableFromNib.swift in Sources */,
 				48B20DB52288791F00B9954B /* SplashViewProtocol.swift in Sources */,
+				48355C99228B071500AA0250 /* ConfirmOrderViewProtocol.swift in Sources */,
 				48B20DB62288791F00B9954B /* SceneTransitionType.swift in Sources */,
 				48B20DB72288791F00B9954B /* MenuServiceProtocol.swift in Sources */,
+				48355C8E228B070800AA0250 /* SelectPaymentMethodPresenterProtocol.swift in Sources */,
 				48B20DB82288791F00B9954B /* UIViewController+StoryboardInstance.swift in Sources */,
+				48355C93228B070F00AA0250 /* SceneFactory+ConfirmOrder.swift in Sources */,
+				48B20E082288A4B800B9954B /* VoidResponseDto.swift in Sources */,
 				48B20DB92288791F00B9954B /* TabsViewController.swift in Sources */,
 				48B20DBA2288791F00B9954B /* UIWindow+RootReplacement.swift in Sources */,
 				48B20DBB2288791F00B9954B /* Scene.swift in Sources */,
 				48B20DBC2288791F00B9954B /* SceneFactory+Tabs.swift in Sources */,
+				48355C74228B069F00AA0250 /* UIView+Gradient.swift in Sources */,
 				48B20DBD2288791F00B9954B /* MenuPresenterProtocol.swift in Sources */,
 				48B20DBE2288791F00B9954B /* AccessibilityIdentitier.swift in Sources */,
 				48B20DBF2288791F00B9954B /* TabsPresenterProtocol.swift in Sources */,
+				48355CC1228B87C400AA0250 /* GETSettingsEndpoint.swift in Sources */,
 				48B20DC02288791F00B9954B /* TabsViewProtocol.swift in Sources */,
 				48B20DC12288791F00B9954B /* API.swift in Sources */,
+				48B20E1A2288A4BF00B9954B /* PaymentMethod.swift in Sources */,
 				48B20DDB22887A0800B9954B /* AppDelegate+TargetSpecific.swift in Sources */,
 				48B20DC22288791F00B9954B /* ProdUrlsConfig.swift in Sources */,
+				48B20E1C2288A4C500B9954B /* ModelToDtoMapper.swift in Sources */,
+				48355C9C228B071C00AA0250 /* OrderSuccessScreenPresenter.swift in Sources */,
+				48355C89228B070100AA0250 /* EnterDeliveryDetailsViewProtocol.swift in Sources */,
+				48B20E162288A4BF00B9954B /* Pizza.swift in Sources */,
 				48B20DC32288791F00B9954B /* MenuViewProtocol.swift in Sources */,
 				48B20DC42288791F00B9954B /* PizzaCollectionViewCell.swift in Sources */,
+				48355C98228B071500AA0250 /* ConfirmOrderViewController.swift in Sources */,
+				48B20E0C2288A4B800B9954B /* BuildingDto.swift in Sources */,
+				48355CC5228B87E600AA0250 /* POSTUpdateAddress.swift in Sources */,
+				48355C9E228B071F00AA0250 /* OrderSuccessScreenViewController.swift in Sources */,
+				48355C8C228B070400AA0250 /* SceneFactory+SelectPaymentMethod.swift in Sources */,
+				48355C76228B06CF00AA0250 /* UIImage+Insets.swift in Sources */,
 				48B20DC52288791F00B9954B /* MenuService.swift in Sources */,
+				48355C79228B06D800AA0250 /* Dropdown.swift in Sources */,
 				48B20DC62288791F00B9954B /* SplashPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1268,53 +1921,109 @@
 				4867D979227F3E8F0051461E /* OrdersHistoryPresenter.swift in Sources */,
 				4867D8EA2279AF650051461E /* SceneFactory+Splash.swift in Sources */,
 				4867D8E62279AF650051461E /* SplashPresenter.swift in Sources */,
+				4867D9D322804C020051461E /* OrderSuccessScreenPresenterProtocol.swift in Sources */,
 				4867D974227F3E8F0051461E /* MenuPresenter.swift in Sources */,
+				4867DA372282BB7C0051461E /* BuildingDto.swift in Sources */,
+				4867D9E322804C020051461E /* EnterDeliveryDetailsPresenter.swift in Sources */,
 				4867D8D72279A61A0051461E /* SceneFactory.swift in Sources */,
 				4867D984227F48380051461E /* UICollectionView+ReusableCells.swift in Sources */,
 				4867D978227F3E8F0051461E /* SceneFactory+OrdersHistory.swift in Sources */,
+				4867D9D422804C020051461E /* OrderSuccessScreenPresenter.swift in Sources */,
+				4867D9D122804C020051461E /* ConfirmOrderViewController.swift in Sources */,
 				4867D9072279E8DF0051461E /* TabsPresenter.swift in Sources */,
 				4867D8CF2279A5250051461E /* SceneNavigator.swift in Sources */,
 				4867D951227EF3F40051461E /* Flow.swift in Sources */,
+				4867D9DF22804C020051461E /* SelectPaymentMethodViewProtocol.swift in Sources */,
+				4867D9C622804C020051461E /* SelectAddressPresenter.swift in Sources */,
+				4867DA2D2281A11D0051461E /* LoadableFromNib.swift in Sources */,
 				4867D942227A4D840051461E /* APIProtocol.swift in Sources */,
 				4867D8D62279A61A0051461E /* CompositionRoot.swift in Sources */,
 				4867D98D228027B70051461E /* UIViewController+Alerts.swift in Sources */,
-				4867D9312279FBBF0051461E /* Price.swift in Sources */,
+				4867D9312279FBBF0051461E /* MoneyAmount.swift in Sources */,
 				4867D92F2279FB940051461E /* Pizza.swift in Sources */,
 				48FE4C9C2278D83E00881D72 /* AppDelegate.swift in Sources */,
+				4867D9EA22805D5E0051461E /* OrderFlow.swift in Sources */,
+				4867D9CC22804C020051461E /* SceneFactory+ConfirmOrder.swift in Sources */,
 				4867D976227F3E8F0051461E /* MenuViewController.swift in Sources */,
+				4867D9CA22804C020051461E /* SelectAddressViewProtocol.swift in Sources */,
 				4867D972227F3E8F0051461E /* SceneFactory+Menu.swift in Sources */,
+				4867DA2A22819A1D0051461E /* Dropdown.swift in Sources */,
+				4867D9F922806B900051461E /* OrderDraft.swift in Sources */,
+				4867D9CF22804C020051461E /* ConfirmOrderPresenterProtocol.swift in Sources */,
 				4867D99222802F280051461E /* R.generated.swift in Sources */,
 				4867D93D227A4A460051461E /* PizzaDto.swift in Sources */,
 				4867D955227EF4680051461E /* OrderFlowInitData.swift in Sources */,
+				4867D9C822804C020051461E /* SelectAddressPresenterProtocol.swift in Sources */,
+				4867D9FB22806F5D0051461E /* SelectAddressInitData.swift in Sources */,
+				4867D8D92279A7140051461E /* AppDelegate+TargetSpecific.swift in Sources */,
 				4867D8D92279A7140051461E /* AppDelegate+TargetSpecific.swift in Sources */,
 				4867D97B227F3E8F0051461E /* OrdersHistoryViewController.swift in Sources */,
 				4867D936227A47D80051461E /* CommonError.swift in Sources */,
+				4867DA332281BD720051461E /* SingleLineTextInput.swift in Sources */,
 				4867D8CC2279A5250051461E /* SceneNavigatorProtocol.swift in Sources */,
-				4867D94B227AE5730051461E /* PizzasResponseDto.swift in Sources */,
+				4867D94B227AE5730051461E /* ResponseDto.swift in Sources */,
 				4867D947227A52170051461E /* UrlsConfigProtocol.swift in Sources */,
+				4867D9C922804C020051461E /* SelectAddressViewController.swift in Sources */,
+				4867D9DA22804C020051461E /* SelectPaymentMethodPresenter.swift in Sources */,
 				4867D940227A4CA50051461E /* DtoToModelMapper.swift in Sources */,
+				4867D9FF228077C30051461E /* DeliveryWaitingTime.swift in Sources */,
+				4867D9E022804C020051461E /* SelectPaymentMethodViewController.swift in Sources */,
 				4867D97C227F3E8F0051461E /* OrdersHistoryViewProtocol.swift in Sources */,
 				4867D9342279FD250051461E /* CommonBlock.swift in Sources */,
 				4867D97A227F3E8F0051461E /* OrdersHistoryPresenterProtocol.swift in Sources */,
+				4867D9DD22804C020051461E /* SceneFactory+SelectPaymentMethod.swift in Sources */,
+				4867D9E222804C020051461E /* EnterDeliveryDetailsPresenterProtocol.swift in Sources */,
+				4867DA1C2280DFAF0051461E /* OrderButton.swift in Sources */,
 				4867D8E82279AF650051461E /* SplashViewController.swift in Sources */,
+				4867D9D722804C020051461E /* OrderSuccessScreenViewController.swift in Sources */,
+				48B20D8C2287574A00B9954B /* AddressDto.swift in Sources */,
+				4867D9F1228068840051461E /* Street.swift in Sources */,
 				4867D8E92279AF650051461E /* SplashViewProtocol.swift in Sources */,
+				4867D9D922804C020051461E /* OrderSuccessScreenViewProtocol.swift in Sources */,
+				4867D9CD22804C020051461E /* ConfirmOrderPresenter.swift in Sources */,
+				4867D9F3228068AE0051461E /* Building.swift in Sources */,
 				4867D8CD2279A5250051461E /* SceneTransitionType.swift in Sources */,
+				48B20D832284881D00B9954B /* ErrorToTextMapper.swift in Sources */,
+				4867D9DC22804C020051461E /* SelectPaymentMethodInitData.swift in Sources */,
 				4867D92D2279FB5F0051461E /* MenuServiceProtocol.swift in Sources */,
+				4867D9E722804C020051461E /* EnterDeliveryDetailsViewController.swift in Sources */,
+				4867D9F52280697B0051461E /* DeliveryDetails.swift in Sources */,
 				4867D8ED2279AFCB0051461E /* UIViewController+StoryboardInstance.swift in Sources */,
 				4867D90A2279E8DF0051461E /* TabsViewController.swift in Sources */,
+				4867DA232281730D0051461E /* Button.swift in Sources */,
 				4867D8CE2279A5250051461E /* UIWindow+RootReplacement.swift in Sources */,
+				4867D9D522804C020051461E /* OrderSuccessScreenInitData.swift in Sources */,
+				4867D9DB22804C020051461E /* SelectPaymentMethodPresenterProtocol.swift in Sources */,
+				4867D9D222804C020051461E /* ConfirmOrderViewProtocol.swift in Sources */,
 				4867D8CB2279A5250051461E /* Scene.swift in Sources */,
+				4867DA0122807BBD0051461E /* FlowProtocol.swift in Sources */,
 				4867D9082279E8DF0051461E /* SceneFactory+Tabs.swift in Sources */,
+				48B20D8722874F1100B9954B /* VoidResponseDto.swift in Sources */,
+				48B20D89228754C100B9954B /* SettingsDto.swift in Sources */,
 				4867D973227F3E8F0051461E /* MenuPresenterProtocol.swift in Sources */,
 				4867D988227F804B0051461E /* AccessibilityIdentitier.swift in Sources */,
+				4867DA352282BB690051461E /* StreetDto.swift in Sources */,
 				4867D9052279E8DF0051461E /* TabsPresenterProtocol.swift in Sources */,
+				4867D9E522804C020051461E /* EnterDeliveryDetailsViewProtocol.swift in Sources */,
+				4867D9CE22804C020051461E /* ConfirmOrderInitData.swift in Sources */,
 				4867D90B2279E8DF0051461E /* TabsViewProtocol.swift in Sources */,
+				48B20D852284D1B100B9954B /* BaseOrderFlowViewController.swift in Sources */,
 				4867D945227A4E2E0051461E /* API.swift in Sources */,
 				4867D949227A53930051461E /* ProdUrlsConfig.swift in Sources */,
+				4867D9D622804C020051461E /* SceneFactory+OrderSuccessScreen.swift in Sources */,
+				4867D9E122804C020051461E /* EnterDeliveryDetailsInitData.swift in Sources */,
 				4867D977227F3E8F0051461E /* MenuViewProtocol.swift in Sources */,
+				4867DA1A2280DF350051461E /* UIView+Gradient.swift in Sources */,
+				4867DA392282BE610051461E /* OrderServiceProtocol.swift in Sources */,
+				4867D9E422804C020051461E /* SceneFactory+EnterDeliveryDetails.swift in Sources */,
+				4867D9F722806A700051461E /* PaymentMethod.swift in Sources */,
 				4867D97F227F41C30051461E /* PizzaCollectionViewCell.swift in Sources */,
+				48B20D8E228767AD00B9954B /* ModelToDtoMapper.swift in Sources */,
+				4867DA3B2282BE730051461E /* OrderService.swift in Sources */,
 				4867D938227A48B00051461E /* MenuService.swift in Sources */,
 				4867D8E52279AF650051461E /* SplashPresenterProtocol.swift in Sources */,
+				4867D9C522804C020051461E /* SelectAddress+SceneFactory.swift in Sources */,
+				4867DA252281980D0051461E /* UIImage+Insets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1600,7 +2309,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.igor.karpov.pizza-delivery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1620,7 +2329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.igor.karpov.pizza-delivery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

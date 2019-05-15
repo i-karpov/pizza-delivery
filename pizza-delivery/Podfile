@@ -8,6 +8,8 @@ def shared_pods
   pod 'Kingfisher', '~> 5.4.0'
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'R.swift', '~> 5.0.3'
+  pod 'IQKeyboardManagerSwift', '~> 6.2.1'
+  
 end
 
 target 'pizza-delivery' do
@@ -16,5 +18,7 @@ end
 
 target 'pizza-delivery-fake' do
   shared_pods
-  pod 'Swifter', '~> 1.4.6'
+  # There is a bug with routing in v.1.4.6 so specific commit (which is newer) is used directly.
+  #pod 'Swifter', '~> 1.4.6'
+  pod 'Swifter', :git => 'https://github.com/httpswift/swifter.git', :commit => '56c89eaac4473d64ebea9e13a8fbc186f75bbb53'
 end
