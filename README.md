@@ -9,7 +9,7 @@ Simple iOS app which showcases app designing best practices and enables you to o
 
 Keywords: MVP, Flow Coordinator, Layered architecture, DI, Composition Root, UI / Unit Tests.
 
-Codebase is build with layered architecture and MVP. 
+Codebase is built with layered architecture and MVP. 
 
 * Presenters depend on Services Layer and Services Layer depends on Data Layer.
 * Data Layer is responsible for network requests and serialization/parsing of DTO-structs. DTOs implement Codable protocol.
