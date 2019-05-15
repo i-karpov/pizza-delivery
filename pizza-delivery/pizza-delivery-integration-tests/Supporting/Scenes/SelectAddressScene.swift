@@ -30,13 +30,13 @@ class SelectAddressScene: BaseScene {
     
     func loadingIndicatorIsDisplayed() {
         let view = app.otherElements[AccessibilityIdentitier.activityIndicator]
-        XCTAssert(view.exists && view.isHittable, "Loading indicator is not displayed.")
+        XCTAssert(view.exists, "Loading indicator is not displayed.")
     }
     
     func waitUntilLoadingIndicatorDisappears() {
         let view = app.otherElements[AccessibilityIdentitier.activityIndicator]
-        let isNotHittablePredicate = NSPredicate(format: "hittable == FALSE")
-        testCase.expectation(for: isNotHittablePredicate,
+        let isNotExistPredicate = NSPredicate(format: "exists == FALSE")
+        testCase.expectation(for: isNotExistPredicate,
                              evaluatedWith: view,
                              handler: nil)
         testCase.waitForExpectations(timeout: 5, handler: nil)

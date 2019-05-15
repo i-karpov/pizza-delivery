@@ -78,6 +78,8 @@ enum AccessibilityIdentitier {
         static let picker = "CommonInputControl_picker"
         static let pickerDoneButton = "CommonInputControl_pickerDoneButton"
         static let pickerCancelButton = "CommonInputControl_pickerCancelButton"
+        
+        static let keyboardDoneButton = "Done"
     }
     
     static let activityIndicator = "activity_indicator"

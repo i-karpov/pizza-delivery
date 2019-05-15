@@ -51,6 +51,9 @@ class SingleLineTextInput {
             .otherElements[id]
             .textFields[AccessibilityIdentitier.CommonInputControl.value]
             .typeText(valueToAppend)
+        app
+            .buttons[AccessibilityIdentitier.CommonInputControl.keyboardDoneButton]
+            .tap()
     }
 
 }
