@@ -12,6 +12,7 @@ class POSTAddPizzaEndpoint: EndpointProtocol {
     
     func handleRequest(_ request: HttpRequest) -> HttpResponse {
         let responseJSON = JSONLoader.loadFromResource(JSONResource.successfulResponse)
+        Thread.sleep(forTimeInterval: 0.5)
         return HttpResponse.ok(.json(responseJSON))
     }
 }

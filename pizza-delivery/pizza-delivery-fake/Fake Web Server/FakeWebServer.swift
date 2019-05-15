@@ -32,13 +32,9 @@ class FakeWebServer {
             POSTSaveCartEndpoint()
         ]
             
-        endpoints.forEach { endpoint in
-            var serverRoute = getRoute(in: server, for: endpoint.httpMethod)
-            serverRoute[endpoint.path] = { request in
-                Thread.sleep(forTimeInterval: 2.0)
-                return endpoint.handleRequest(request)
-            }
-            
+        endpoints.forEach {
+            var serverRoute = getRoute(in: server, for: $0.httpMethod)
+            serverRoute[$0.path] = $0.handleRequest
         }
     }
 

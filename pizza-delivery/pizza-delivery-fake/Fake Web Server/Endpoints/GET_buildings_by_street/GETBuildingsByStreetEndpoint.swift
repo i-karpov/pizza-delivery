@@ -19,6 +19,7 @@ class GETBuildingsByStreetEndpoint: EndpointProtocol {
             : JSONResource.defaultSuccessfulResponse
         
         let responseJSON = JSONLoader.loadFromResource(responseResource)
+        Thread.sleep(forTimeInterval: 2.0)
         return HttpResponse.ok(.json(responseJSON))
     }
 }
