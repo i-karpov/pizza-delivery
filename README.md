@@ -41,3 +41,23 @@ For UI tests there are two layers: classes which represent Scenes and know how e
 Integration tests are currently run on a local fake socket-based web server, which reproduces real JSON-responses copied from real server. This allows to not depend on slight changes in production data (which is updated often, e.g. pizza price can change) and not to affect production server during frequent tests (e.g. placing a real order each time we run test probably is not a good idea), but still such tests involve all layers of codebase, from UI to actual network requests. The only difference is that network requests are sent to localhost instead of production server.
 
 CI with code coverage reports are configured to make sure that codebase is stable.
+
+
+### Used Tools
+
+Supporitng tools:
+- Generamba for generating MVP-modules templates
+- Swiftlint for ensuring the adherance to guidelines
+
+External services:
+- Travis CI
+- Codecov
+
+Libraries:
+- Alamofire 5 for networking
+- Kingfisher for dealing with images
+- MBProgressHUD for activity indicator
+- R.swift for accessing resources (localized stirngs, fonts, images, etc.) in safe manner with compile time checks.
+- IQKeyboardManagerSwift for easy setup of automatic scrolling of content when keyboard is shown.
+- Swifter for implementing local socket-based web server for pseudo-integrations tests
+- XCTests for unit and UI tests
