@@ -25,3 +25,19 @@ Hence flow can modified / reordered without modifying any of MVP-scenes.
 * View-layer is implemented by ViewControllers which are instantiated from Storyboards. Each Storyboard usually contains just single view controller.
 
 All dependencies between layers are wrapped by protocols and carefully injected. DI is implemented with Composition Root, which is a single place in the app where dependencies are composed.
+
+
+### Tests / CI
+
+The described architecture allows for highly testable code. The following tests are present:
+- Unit tests for Presenters and Flows;
+- Integration UI test for core features / flows.
+
+All supporting code required for tests only (fake server, mocks, etc.) is defined in separate targets, so that bundle shipped to production would not contain any tests-related code.
+Composition Root (dependencies) is configured separately for production and test targets.
+
+For UI tests there are two layers: classes which represent Scenes and know how exactly to access specific parts of UI, and classes which contain actual tests, which ideally should be written in such a way, that they look like business specification.
+
+Integration tests are currently run on a local fake socket-based web server, which reproduces real JSON-responses copied from real server. This allows to not depend on slight changes in production data (which is updated often, e.g. pizza price can change) and not to affect production server during frequent tests (e.g. placing a real order each time we run test probably is not a good idea), but still such tests involve all layers of codebase, from UI to actual network requests. The only difference is that network requests are sent to localhost instead of production server.
+
+CI with code coverage reports are configured to make sure that codebase is stable.
